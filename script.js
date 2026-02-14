@@ -39,7 +39,7 @@ function initLanguage() {
 }
 
 function toggleLanguage() {
-    const newLang = AppState.currentLang === 'en' ? 'ar' : 'en';
+    const newLang = AppState.currentLang === 'en' ? 'de' : 'en';
     setLanguage(newLang);
     localStorage.setItem('portfolio-lang', newLang);
 }
@@ -49,10 +49,10 @@ function setLanguage(lang) {
     const html = document.documentElement;
     const body = document.body;
     
-    if (lang === 'ar') {
-        html.setAttribute('lang', 'ar');
+    if (lang === 'de') {
+        html.setAttribute('lang', 'de');
         html.setAttribute('dir', 'rtl');
-        body.setAttribute('data-lang', 'ar');
+        body.setAttribute('data-lang', 'de');
         body.setAttribute('data-dir', 'rtl');
     } else {
         html.setAttribute('lang', 'en');
@@ -68,7 +68,7 @@ function updateLanguageUI() {
     textElements.forEach(element => {
         const enText = element.getAttribute('data-text-en');
         const arText = element.getAttribute('data-text-ar');
-        if (AppState.currentLang === 'ar' && arText) {
+        if (AppState.currentLang === 'de' && arText) {
             element.textContent = arText;
         } else if (AppState.currentLang === 'en' && enText) {
             element.textContent = enText;
@@ -79,7 +79,7 @@ function updateLanguageUI() {
     placeholderElements.forEach(element => {
         const enPlaceholder = element.getAttribute('data-placeholder-en');
         const arPlaceholder = element.getAttribute('data-placeholder-ar');
-        if (AppState.currentLang === 'ar' && arPlaceholder) {
+        if (AppState.currentLang === 'de' && arPlaceholder) {
             element.setAttribute('placeholder', arPlaceholder);
         } else if (AppState.currentLang === 'en' && enPlaceholder) {
             element.setAttribute('placeholder', enPlaceholder);
@@ -90,7 +90,7 @@ function updateLanguageUI() {
     if (langToggle) {
         const langText = langToggle.querySelector('.lang-text');
         if (langText) {
-            langText.textContent = AppState.currentLang === 'en' ? 'AR' : 'EN';
+            langText.textContent = AppState.currentLang === 'en' ? 'de' : 'EN';
         }
     }
 }
@@ -229,7 +229,7 @@ function handleFormSubmit(e) {
     const data = Object.fromEntries(formData);
     console.log('Form submitted:', data);
     
-    const message = AppState.currentLang === 'ar' 
+    const message = AppState.currentLang === 'de' 
         ? 'تم إرسال الرسالة بنجاح!' 
         : 'Message sent successfully!';
     
