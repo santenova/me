@@ -1,22 +1,18 @@
-# Personal Portfolio
-
-Welcome to my personal portfolio!
-Live: [Link](https://santenova.github.io/me/index.html)
-
-There you find information about my projects, skills, experiences, and more.
-
 
 ## Table of Contents
 
-1. [Overview](#overview)
+1. [Personal Portfolio](#personal-portfolio)
 2. [Cool Projects](#cool-projects)
 3. [Skills](#skills)
 4. [AI and Data Science Skills](#ai-and-data-science-skills)
 5. [Contact](#contact)
 
-## Overview
 
-This portfolio is a static website built using HTML, CSS, JavaScript, and frameworks like React or Vue.js. It showcases my work and provides an easy way for potential employers or collaborators to learn more about me.
+## Personal Portfolio
+
+Welcome to my personal portfolio! Here you can find information about my projects, skills, experiences, and more.
+Live: [https://santenova.github.io/me/index.html](https://santenova.github.io/me/index.html)
+
 
 ## Cool Projects
 
