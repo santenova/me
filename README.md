@@ -1,7 +1,9 @@
 # Personal Portfolio
 
-Welcome to my personal portfolio! Here you can find information about my projects, skills, experiences, and more.
-Live: [https://santenova.github.io/me/index.html](https://santenova.github.io/me/index.html)
+Welcome to my personal portfolio!
+Live: [Link](https://santenova.github.io/me/index.html)
+Here you can find information about my projects, skills, experiences, and more.
+
 
 
 ## Table of Contents
