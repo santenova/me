@@ -1,3 +1,19 @@
+---
+title: "HagenGeissler-CV-2026.pdf"
+author: [Hagen Geissler]
+date: "2026-04-30"
+subject: "Personal Portfolio"
+keywords: [Python, TypeScript, AI, Data, Developer, CV]
+subtitle: "Here you can find information about my projects, skills, experiences, and more"
+lang: "en"
+titlepage: true,
+titlepage-text-color: "FFFFFF"
+titlepage-rule-color: "360049"
+titlepage-rule-height: 0
+titlepage-background: "background.pdf"
+...
+
+
 
 ## Table of Contents
 
@@ -10,8 +26,7 @@
 
 ## Personal Portfolio
 
-Welcome to my personal portfolio! Here you can find information about my projects, skills, experiences, and more.
-Live: [https://santenova.github.io/me/index.html](https://santenova.github.io/me/index.html)
+[https://santenova.github.io/me/index.html](https://santenova.github.io/me/index.html)
 
 
 ## Cool Projects
