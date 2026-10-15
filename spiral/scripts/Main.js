@@ -1,7 +1,7 @@
 var pool = {
 	loading:{
 		API_MODE: "production", // Possible states: "local", "local_dynamic", "production"
-		URL_BASE_PRODUCTION:"/ross_api/static/",
+		URL_BASE_PRODUCTION:"./ross_api/static/",
 		URL_BASE_LOCAL:'./data_resources/tables/',
 		URL_BASE_LOCAL_DYNAMIC:"http://curriculum.int/ross_api/index.php/export/",
 		URL_PANELS_TABLE:'https://docs.google.com/spreadsheet/pub?key=0At94558jIRmcdEpsR3l4a05vS1ZheXB1T0tPcEJlMGc&single=true&gid=0&output=csv',
