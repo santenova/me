@@ -1,0 +1,441 @@
+<div class="detailsView" ng-mouseover="sideBarMouseOut()">
+  <!--{{myData.list_unit}}
+  <span ng-show="node.{{item}}" class="panelField panelField_title" ng-repeat="item in myData.list_unit">
+
+    *** <b>{{node[item]}}</b>: <a href="#/domain/{{myData.properties[item.name].id}}" target="_self">{{myData.properties[item.name].title}}</a>
+  </span>
+  -->
+
+
+
+
+
+  <!-- ========================================================================================== -->
+  <!--                  NAVIGATION ARROWS                     -->
+  <!-- ========================================================================================== -->
+
+  <div ng-show="myData.node.type" style="text-align: right; top: -15px; position: relative;">
+    <div style="display: inline; position: relative; top: 9px; font-size: 21px; right: -26px;">
+      <!-- <a href="#" id="backButton" style="color: #aaa">
+        <i class="icon-chevron-left icon-gray"></i>
+      </a> -->
+
+      <!-- <a href="#" id="forwardButton" style="color: #aaa">
+        <i class="icon-chevron-right icon-gray"></i>
+      </a> -->
+    </div>
+  </div>
+
+  <!-- _______________________________ THREAD NAVIGATION MODE SPACER  _________________________________________   -->
+  <!-- ========================================================================================== -->
+    <div ng-show="currentThread" style="position: relative; height: 120px;">
+
+    </div>
+
+  <!-- ========================================================================================== -->
+  <!--                  HIERARCHY HEADER                      -->
+  <!-- ========================================================================================== -->
+
+  <div ng-show="myData.node.type == 'domain'" style="">
+    <a class="topLevelLink" href="#/home/domains">← All Domains</a>
+  </div>
+  <div ng-show="myData.node.type == 'grade'" style="">
+    <a class="topLevelLink" href="#/home/grades">← All Grades</a>
+  </div>
+  <div ng-show="myData.node.type == 'thread'" style="">
+    <a class="topLevelLink" href="#/home/threads">← All Threads</a>
+  </div>
+  <div ng-show="myData.node.type == 'ecology'" style="">
+    <a class="topLevelLink" href="#/home/ecologies">← All Ecologies</a>
+  </div>
+  <div ng-show="myData.node.type == 'mentality'" style="">
+    <a class="topLevelLink" href="#/home/mentalities">← All Mentalities</a>
+  </div>
+
+  <div ng-show="myData.node.domain" style="">
+    <div>
+      <!-- _______________________________ GRADE  _________________________________________ -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.grade" class="panelField" style="float:right; font-size: 16px; margin-bottom: 0px;">
+         <a href="#/grade/{{myData.node.grade.id}}"
+          target="_self"
+           ng-mouseover="onItemOver(myData.node.grade)"
+            ng-mouseout="onItemOut()"
+          onclick="selectObjectById('{{myData.node.grade.id}}'); return false;"
+          style="font-size: 12px; background-color: #bbb; padding: 3px 6px; color: #fff;">{{myData.node.grade.grade_name}}
+         </a>
+      </div>
+      <!-- _______________________________ DOMAIN  _________________________________________  -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.domain" class="panelField" style="float:left; font-size: 16px; margin-bottom: 6px; font-style: italic;">
+        <a href="#/domain/{{myData.node.domain.id}}" target="_self" style="" ng-mouseover="onItemOver(myData.node.domain)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{myData.node.domain.id}}'); return false;">
+          <font style="color: {{myData.node.domain.color}}; opacity: 0.6;">•</font> {{myData.node.domain.title}}
+        </a>
+      </div>
+       <!-- <div ng-show="myData.node.course" class="panelField" style="clear: both; font-weight: bold; margin-bottom: 0px;">
+         <a href="#/course/{{myData.node.course.id}}" target="_self"  onclick="selectObjectById('{{myData.node.course.id}}'); return false;">{{myData.node.course.title}}</a>
+      </div> -->
+      <!-- _______________________________ COURSE in Unit _________________________________________ -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.type == 'unit'" class="panelField hierarchyLevel hierarchyLevel0">
+         <a href="#/course/{{myData.node.course.id}}" target="_self" ng-mouseover="onItemOver(myData.node.course)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{myData.node.course.id}}'); return false;">↳ Course: {{myData.node.course.title}}</a>
+      </div>
+
+      <!-- _______________________________ COURSE in LE or IP_________________________________________  -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.type == 'le' || myData.node.type == 'integration'" class="panelField hierarchyLevel hierarchyLevel0">
+         <a href="#/course/{{myData.node.unit.course.id}}" target="_self" ng-mouseover="onItemOver(myData.node.unit.course)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{myData.node.unit.course.id}}'); return false;">↳ Course: {{myData.node.unit.course.title}}</a>
+      </div>
+
+      <!-- _______________________________ UNIT  (in LE or IP) _________________________________________  -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.type == 'le' || myData.node.type == 'integration'" class="panelField hierarchyLevel hierarchyLevel1">
+         <a href="#/unit/{{myData.node.unit.id}}" target="_self" ng-mouseover="onItemOver(myData.node.unit)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{myData.node.unit.id}}'); return false;">↳ Unit: {{myData.node.unit.title}}</a>
+      </div>
+
+      <!-- _______________________________ SUPERLEVEL UNITS  _________________________________________  -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.type == 'unit'" id="superlevelChart" class="hierarchyLevel hierarchyLevel1">
+        <div class="superlevelTitle">↳ Units: </div>
+        <div class="superlevelItems">
+          <div class="superLevelCircleContainer" ng-repeat="item in myData.node.course.units" ng-class="{ superLevelCircleContainerSelected:myData.node.id == item.id, superLevelCircleContainerRLS: item.rls }">
+            <a href="#/unit/{{item.id}}" ng-mouseover="sideBarMouseOver( item.id, $event )" ng-mouseout="sideBarMouseOut()">
+              <div class="superLevelCircle"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- _______________________________ SUPERLEVEL LES  _________________________________________  -->
+      <!-- ========================================================================================== -->
+      <div ng-show="myData.node.type == 'le'" id="superlevelChart" class="hierarchyLevel hierarchyLevel2">
+        <div class="superlevelTitle">↳ Learning Experiences: </div>
+        <div class="superlevelItems">
+          <div class="superLevelCircleContainer" ng-repeat="item in myData.node.unit.les" ng-class="{ superLevelCircleContainerSelected:myData.node.id == item.id, superLevelCircleContainerRLS: item.rls }">
+            <a href="#/le/{{item.id}}" ng-mouseover="sideBarMouseOver( item.id, $event )" ng-mouseout="sideBarMouseOut()">
+              <div class="superLevelCircle"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================================================================================== -->
+  <!--                  HIERARCHY HEADER SEPARATOR                -->
+  <!-- ========================================================================================== -->
+
+  <div style="clear: both; margin-top: 0px;" ng-show="myData.node.domain">
+    <hr class="style-two"/>
+  </div>
+
+
+
+
+
+
+
+<!-- ========================================================================================== -->
+  <!--                  CURRENT ITEM DATA                       -->
+  <!-- ========================================================================================== -->
+  <div style="padding-top: 0px;">
+    <!-- _______________________________ TYPE  _________________________________________  -->
+    <!-- ========================================================================================== -->
+    <div  style="font-size: 12px; color: #999; clear: both; margin-top: 0px;">
+      {{ myData.typeTitle}}:
+    </div>
+    <!-- _______________________________ TITLE  _________________________________________ -->
+    <!-- ========================================================================================== -->
+    <div ng-show="myData.node.title" class="panelField panelField_title">
+      <span ng-show="myData.node.type == 'grade'">{{myData.node.grade_name}}: </span><span ng-bind-html-unsafe="myData.node.titleHtml"></span>
+    </div>
+    <!-- _______________________________ SUBTITLE  _________________________________________  -->
+    <!-- ========================================================================================== -->
+    <div ng-show="myData.node.subtitle" class="panelField panelField_subtitle">
+      {{myData.node.subtitle}}
+    </div>
+    <!-- _______________________________ DATE  _________________________________________  -->
+    <!-- ========================================================================================== -->
+    <div ng-show="myData.node.type == 'grade' && myData.node.date_start >= -25000000 && myData.node.order!=12" style="margin-bottom: 20px; margin-top: -17px; font-style: italic;">
+      <span>{{ myData.node.date_start | bigDateFormat }} - {{ myData.node.date_finish | bigDateFormat }}</span>
+    </div>
+  </div>
+
+
+  <!-- _______________________________ DESCRIPTION  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.description" class="panelField panelField_description scrollable">
+    <!-- {{myData.node.description}} -->
+    <span ng-bind-html-unsafe="myData.node.descriptionHtml"></span>
+  </div>
+
+
+  <!-- _______________________________ CENTRAL POINT LINK  _________________________________________    -->
+  <!-- ========================================================================================== -->
+  <div id="centralPointLink" ng-show="centralPointLink" style="text-align: center; margin: 35px;">
+    <a href="{{centralPointLink}}" target="_blank" alt="Click for extended information" style="color:#999; background-color: #eee; border-radius: 5px; border: solid 1px #ccc; padding: 5px 9px; font-size: 0.9em;">View Complete {{myData.typeTitle}}
+      <img class="linkToSpiral" src="images/externallink.png" style="    width: 12px; margin-left: 5px;">
+    </a>
+  </div>
+
+  <!-- _______________________________ INTEGRATION DOMAINS  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.domains.length > 1" class="panelField panelField_flower">
+    <div id="panelFlowerLabels">
+      <div  class="panelField panelField_domains" style="width: 260px;">
+        <div class="fieldLabel">
+          Integration <!-- <span style="font-size:13px;">({{myData.node.domains.length}})</span> -->
+
+        </div>
+        <ul>
+          <li ng-repeat="item in myData.node.domains | orderBy:'order'"><div style="display:inline-block;">
+            <font style="color: {{item.color}};">•</font>
+            <!-- <a href="#/domain/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;">
+              {{item.title}}</div>
+            </a> -->
+            {{item.title}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="panelFlowerContainer">
+      <canvas id="panelFlower" width="80" height="80"></canvas>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- _______________________________ SUBDOMAINS  _________________________________________    -->
+  <!-- ========================================================================================== -->
+  <div ng-show="subdomains.length > 0" class="panelField panelField_subdomains">
+    <div class="fieldLabel">
+      Subdomains<!--  <span style="font-size:13px;">({{subdomains.length}})</span>           -->
+    </div>
+    <ul class="aridList">
+      <li ng-repeat="item in subdomains">
+        <a href="#/domains/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;">
+          {{item.title.split(":")[1]}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- _______________________________ COURSES  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.courses.length > 0" class="panelField panelField_courses">
+    <div class="fieldLabel">
+      <a href="" ng-click="changeToggleList('courses', $event)">Courses<!--  <span style="font-size:13px;">({{myData.node.courses.length}})</span> -->
+        <span style="font-size: 11px;" ng-show="toggleList.courses">▼</span>
+        <span style="font-size: 11px;" ng-hide="toggleList.courses">▲</span>
+      </a>
+    </div>
+    <ul class="aridList" ng-show="toggleList.courses">
+      <li ng-repeat="item in myData.node.courses">
+        <a href="#/course/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- _______________________________ GRADES LIST  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.grades.length > 0" class="panelField panelField_grades">
+    <div class="fieldLabel">
+      <a href="" ng-click="changeToggleList('grades', $event)">Grades<!--   <span style="font-size:13px;">({{myData.node.grades.length}})</span> -->
+        <span style="font-size: 11px;" ng-show="toggleList.grades">▼</span>
+        <span style="font-size: 11px;" ng-hide="toggleList.grades">▲</span>
+      </a>
+    </div>
+    <ul class="aridList" ng-show="toggleList.grades">
+      <li ng-repeat="item in myData.node.grades">
+        <a href="#/grade/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- _______________________________ UNITS  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.units.length > 0" class="panelField panelField_units">
+    <div class="fieldLabel">
+      <a href="" ng-click="changeToggleList('units', $event)">Units<!--   <span style="font-size:13px;">({{myData.node.units.length}})</span> -->
+        <span style="font-size: 11px;" ng-show="toggleList.units">▼</span>
+        <span style="font-size: 11px;" ng-hide="toggleList.units">▲</span>
+      </a>
+    </div>
+    <ul class="aridList" ng-show="toggleList.units">
+      <li ng-repeat="item in myData.node.units">
+        <a ng-class="{ featuredItemLink: item.rls}"  href="#/unit/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;">
+          {{item.title}}
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- _______________________________ LES  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.les.length > 0 && myData.node.type != 'domain'" class="panelField panelField_les">
+    <div class="fieldLabel">
+      <a href="" ng-click="changeToggleList('les', $event)">Learning Experiences<!--   <span style="font-size:13px;">({{myData.node.les.length}})</span> -->
+        <span style="font-size: 11px;" ng-show="toggleList.les">▼</span>
+        <span style="font-size: 11px;" ng-hide="toggleList.les">▲</span>
+      </a>
+    </div>
+    <ul style="list-style: none; padding:0;" ng-show="toggleList.les">
+      <li ng-repeat="item in myData.node.les" style="margin-bottom: 8px;">
+        <a ng-class="{ featuredItemLink: item.rls, blink: $index == 0 && myData.node.type == 'thread'}" ng-show="myData.node.type=='thread'" href="#/le/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{item.id}}'); return false;" ng-click="enterThread( myData.node.id, $event)" alt="{{item.title}}" title="{{item.title}}" id="pnl-le-{{item.id}}">{{item.title}} <div class="thread-start-here" ng-show="$index == 0 && myData.node.type == 'thread'"><img src="images/thread_le_arrow.png"/></div></a>
+        <a ng-class="{ featuredItemLink: item.rls}" ng-show="myData.node.type!='thread'" href="#/le/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{item.id}}'); return false;" alt="{{item.title}}" title="{{item.title}}" id="pnl-le-{{item.id}}">{{item.title}} </a>
+
+      </li>
+    </ul>
+  </div>
+
+  <!-- _______________________________ IPs  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="injectedIPs.length > 0 && myData.node.type == 'unit'" class="panelField panelField_les">
+    <div class="fieldLabel">
+      <a href="" ng-click="changeToggleList('injIPs', $event)">Integrated Projects<!--   <span style="font-size:13px;">({{injectedIPs.length}})</span> -->
+        <span style="font-size: 11px;" ng-show="toggleList.injIPs">▼</span>
+        <span style="font-size: 11px;" ng-hide="toggleList.injIPs">▲</span>
+      </a>
+    </div>
+    <ul style="list-style: none; padding:0;" ng-show="toggleList.injIPs">
+      <li ng-repeat="item in injectedIPs" style="margin-bottom: 8px;">
+        <a ng-class="{ featuredItemLink: item.rls, blink: $index == 0 && myData.node.type == 'thread'}" ng-show="myData.node.type=='thread'" href="#/integration/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  onclick="selectObjectById('{{item.id}}'); return false;" ng-click="enterThread( myData.node.id, $event)" alt="{{item.title}}" title="{{item.title}}" id="pnl-le-{{item.id}}">{{item.title}} <div class="thread-start-here" ng-show="$index == 0 && myData.node.type == 'thread'"><img src="images/thread_le_arrow.png"/></div></a>
+        <a ng-class="{ featuredItemLink: item.rls}" ng-show="myData.node.type!='thread'" href="#/integration/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()" onclick="selectObjectById('{{item.id}}'); return false;" alt="{{item.title}}" title="{{item.title}}" id="pnl-le-{{item.id}}">{{item.title}} </a>
+
+      </li>
+    </ul>
+  </div>
+
+  <!-- _______________________________ THREADS  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.threads.length > 0" class="panelField panelField_threads">
+    <div class="fieldLabel">
+      <span ng-show="currentThread && myData.node.threads.length > 1">Other Threads</span>
+      <span ng-show="!currentThread">Threads</span>
+        <!-- <span style="font-size:13px;" ng-show="currentThread">({{ myData.node.threads.length-1 }})</span>
+        <span style="font-size:13px;" ng-hide="currentThread">({{ myData.node.threads.length }})</span>    -->
+    </div>
+    <ul class="aridList">
+      <li ng-show="currentThread != item" ng-repeat="item in myData.node.threads" style="color: {{item.color}};">
+        <!-- <a ng-show="myData.indexInThread[item.id]!=0"
+          href="#/le/{{ item.les[myData.indexInThread[item.id]-1].id }}"
+          title="{{ item.les[myData.indexInThread[item.id]-1].title }}" >
+          <i class="icon-chevron-left" style="position: relative; bottom: -3px; margin-right: 5px; color: #999;"></i>
+        </a>  -->
+
+        <a href="#/thread/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  ng-click="enterThread( item.id, $event)">
+          {{item.title}}
+        </a>
+        <!--
+        <a ng-show="currentThread != item" href="#/thread/{{item.id}}" target="_self" ng-mouseover="onItemOver(item)" ng-mouseout="onItemOut()"  ng-click="enterThread( item.id, $event)">
+          {{item.title}}
+        </a>  -->
+
+        <!-- <span ng-show="currentThread == item" style="color: #aaa;">{{item.title}}</span> -->
+
+         <!-- <a ng-show="myData.indexInThread[item.id]<item.les.length-1"
+          href="#/le/{{ item.les[myData.indexInThread[item.id]+1].id }}"
+          title="{{ item.les[myData.indexInThread[item.id]+1].title }}" >
+          <i class="icon-chevron-right" style="position: relative; bottom: -3px; margin-left: 5px; color: #999;"></i>
+         </a> -->
+        <!-- <br/>
+        <a ng-repeat="otherLE in item.les" href="sd" alt="{{otherLE.title}}" title="{{otherLE.title}}">s</a>  -->
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- _______________________________ IMAGE  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-show="myData.node.image_file_name" style="margin-bottom: 30px; padding: 0px;">
+      <img ng-click="showLightboxImage(myData)" ng-src="{{myData | getImage }}" style="cursor: pointer;"/>
+      <div ng-bind-html-unsafe="myData.node.caption" style="font-size: 12px; padding-top: 2px;"></div>
+    </div>
+    <!-- to-do: by now we're using hardocded example. Change for this condition when DB is available:
+        ng-show="myData.node.video_url"
+  http://localhost:9000/#/le/45
+  -->
+
+    <!-- _______________________________ VIDEO  _________________________________________   -->
+  <!-- ========================================================================================== -->
+    <div ng-show="myData.node.video_url" style="margin-bottom: 30px; ">
+      <iframe ng-show="myData.node.video_url" ng-src="{{ myData | getVimeoVideo }}" width="375" height="210" webkitallowfullscreen mozallowfullscreen allowfullscreen style="border:none;"></iframe>
+    </div>
+
+
+
+
+
+
+
+    <!-- ========================================================================================== -->
+  <!--                  THREAD NAVIGATION               -->
+  <!-- ========================================================================================== -->
+  <div id="threadNavContainer" ng-show="currentThread">
+    <div style="margin-top: 10px; margin-right: 30px;">
+      <a class="topLevelLink" href="#/home/threads">← All Threads</a>
+    </div>
+    <div style="font-size: 12px; color: #999; clear: both; margin-top: 20px; margin-left: 30px;" class="ng-binding">
+      Thread:
+    </div>
+    <div style="padding-left: 30px; padding-right: 30px;">
+      <a href="#/thread/{{currentThread.id}}"
+        target="_self"
+         ng-mouseover="onItemOver(currentThread)" ng-mouseout="onItemOut()"
+        onclick="selectObjectById('{{currentThread.id}}'); return false;" class="panelField panelField_title" style="">{{currentThread.title}}</a>
+    </div>
+    <div class="threadNavRibbon">
+      <a  id="threadNavArrowLeft" ng-show="myData.indexInThread[currentThread.id] > 0"
+        style="float: left; padding: 2px 0px 0px 33px; color: #666;"
+        href="#/le/{{ currentThread.les[myData.indexInThread[currentThread.id]-1].id }}"
+         ng-mouseover="onItemOver(currentThread.les[myData.indexInThread[currentThread.id]-1])" ng-mouseout="onItemOut()" ng-click="onItemOver(currentThread.les[myData.indexInThread[currentThread.id]-2])"
+        title="{{ currentThread.les[myData.indexInThread[currentThread.id]-1].title }}" >
+        <i class="icon-chevron-left" style=""></i>
+      </a>
+      <div style="width: 400px; color: #666; font-size: 12px; padding-left: 5px;">
+        Viewing #<span style="color:#000;">{{myData.indexInThread[currentThread.id]+1}}</span> of {{currentThread.les.length}} Learning Experiences
+      </div>
+       <a id="threadNavArrowRight" ng-show="myData.indexInThread[currentThread.id]<currentThread.les.length-1"
+        style="float: right; margin-top: -23px; position: relative; padding: 4px 33px 0px 0px; color: #666;"
+        href="#/le/{{ currentThread.les[myData.indexInThread[currentThread.id]+1].id }}"
+         ng-mouseover="onItemOver(currentThread.les[myData.indexInThread[currentThread.id]+1])" ng-mouseout="onItemOut()" ng-click="onItemOver(currentThread.les[myData.indexInThread[currentThread.id]+2]); stopThreadBlink();"
+        title="{{ currentThread.les[myData.indexInThread[currentThread.id]+1].title }}" >
+        <i class="icon-chevron-right"></i>
+       </a>
+    </div>
+  </div>
+
+
+    <!-- _______________________________ Copyright  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div ng-hide="currentThread" class="copyRight"></div>
+  <div ng-show="currentThread" class="copyRight" style="background-color: #fff;">© 2023 </div>
+
+
+    <!-- _______________________________ HISTORY  _________________________________________   -->
+  <!-- ========================================================================================== -->
+  <div id="historyPanel">
+    <h4>Navigation History</h4>
+    <div class="historyContainer">
+      <div class="historyItem" ng-class="{ current: $index == historyIndex }" ng-repeat="item in history">
+        <a href="#/{{item.type}}/{{item.id}}">
+          <div class="type">{{item.type}}</div>
+          <div class="objectTitle">{{item.title}}</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,217 @@
+<!doctype html>
+
+<!--      TEST 23 from master      -->
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ross Spiral Curriculum</title>
+    <meta content="Ross Spiral Curriculum" property="og:title" />
+    <meta content="Ross Spiral Curriculum" property="og:site_name" />
+    <meta content="https://spiral.ross.org/spiral" property="og:url" />
+    <meta content="images/thumb.png" property="og:image" />
+    <meta content="The Ross Spiral Curriculum is a literary narrative of the evolution of human consciousness. It is taught chronologically through the grades as a dynamic system expanding in complexity. Cultural History is at the core of the Ross Curriculum, interwoven with all of the other domains. While each discipline offers its own rigorous curriculum, integration between domains creates a dynamic choreography of learning. Using this interdisciplinary approach, each grade focuses on a particular historical period and theme. The Spiral provides a cohesive architecture for analysis of the past as a dynamical system and enables students to more fully understand the present while envisioning the future." property="og:description" />
+
+    <meta name="description" content="">
+
+    <meta id="viewport" name="viewport" content="initial-scale=0.85, minimum-scale=0.85, maximum-scale=0.85" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Cinzel:400,700,900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Gudea:400,700,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- bootstrap and fontAwesome -->
+        <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    <style type="text/css" media="screen">
+       html, body{ height:100%;}
+       body { margin:0; padding:0; overflow:hidden; }
+       textarea:focus { border: 2px solid red; outline: 0px; resize: none; }
+       body {font-family: Arial}
+    </style>
+
+</head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div id="panelSuperContainer">
+      <div id="infoPanelCloseButton" onclick="toggleInfoPanel()" style="cursor: pointer;" >
+          <i style="color: #ccc;" id="paneltoggler" class="icon-large icon-circle-arrow-right"></i>
+      </div>
+      <div id="panelContainer" class="scrollable">
+        <div id="panelSubContainer" class="container" ng-view="" >
+          </div>
+      </div>
+    </div>
+
+
+  <div id="maindiv">
+        <canvas id="main">Your browser does not have support for Canvas.</canvas>
+      </div>
+
+      <div id="removeDiv"></div>
+
+      <div id="generalTooltip">
+        <div id="tooltipBox" class="arrow_box">
+          <div class="tooltipContent">
+          Hi there, this is a tooltip
+          </div>
+        </div>
+      </div>
+
+      <div id="helpPanelShowButton">
+          <i style="cursor: pointer; color: #ccc; padding-top: 5px; margin-bottom: 15px;" onclick='openHelp();' id="helpToggler" class="icon-large icon-question"></i>
+          <div style=" padding-top: 5px; margin-bottom: 0px;">
+            <a style="color: #ccc;" href="https://twitter.com/home?status=Explore%20the%20Ross%20Learning%20System%20interactive:%20http://spiral.ross.org/spiral" target="_blank" >
+              <i class="icon-large icon-twitter"></i>
+            </a></div>
+          <div style=" padding-top: 5px; margin-bottom: 0px;">
+            <a style="color: #ccc;" href="https://www.facebook.com/sharer/sharer.php?u=http://spiral.ross.org/spiral" target="_blank" >
+              <i class="icon-large icon-facebook"></i>
+            </a></div>
+      </div>
+
+      <div id="mainHelp" style="display: none;">
+        <div id="helpHintsLayer" class="helpGroup">
+          <img class="helpTip helpTip_01" src="images/help/images/timeline.png"/>
+          <img class="helpTip helpTip_02" src="images/help/images/zoom.png"/>
+          <img class="helpTip helpTip_03" src="images/help/images/grade.png"/>
+          <img class="helpTip helpTip_04" src="images/help/images/unit.png"/>
+          <img class="helpTip helpTip_05" src="images/help/images/help.png"/>
+          <img class="helpTip helpTip_06" src="images/help/images/spiral.png"/>
+        </div>
+        <div id="helpInteractionLayer" class="helpGroup" style="display: none;">
+          <iframe id="videoFrame_helpInteractionLayer" src="//player.vimeo.com/video/99184103" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <div id="helpMenu">
+
+          <img id="helpMenuBtn_helpHintsLayer" src="images/help/images/btn_hints.png" onclick="switchHelpLayer('helpHintsLayer')" style="display: none;"/>
+          <img id="helpMenuBtn_helpInteractionLayer" src="images/help/images/btn_video.png" onclick="switchHelpLayer('helpInteractionLayer')"/>
+          <img  src="images/help/images/btn_close.png" onclick='$("#mainHelp").fadeOut(); resetHelpVideos();'/>
+
+         <!--  <a id="helpMenuBtn_helpHintsLayer" class="helpMenuItemActive" onclick="switchHelpLayer('helpHintsLayer')">Hints</a>
+          <a id="helpMenuBtn_helpInteractionLayer" onclick="switchHelpLayer('helpInteractionLayer')">Interaction video</a>
+          <a id="helpMenuBtn_helpCurriculumLayer" onclick="switchHelpLayer('helpCurriculumLayer')">Curriculum video</a> -->
+        </div>
+      </div>
+      <div id="lightBox" onclick="hideLightboxImage();">
+        <img src=""/>
+      </div>
+
+      <img src="images/cursor.png" id="fakeCursor"/>
+
+
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-70423635-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+
+
+    <!-- build:js scripts/vendored.js -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="scripts/jquery.pulse.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/underscore.js"></script>
+    <script src="scripts/underscore.string.js"></script>
+
+    
+        <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+        <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js scripts/modules.js -->
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <!-- endbuild -->
+
+        <!-- <script>var hashTag = window.location.hash</script> -->
+
+      <script type="text/javascript">var LOADED_FONT = "Arial";</script>
+
+      <!-- libraries -->
+
+      <!-- FRAMEWORK -->
+      <!-- <script type="text/javascript" src="scripts/classes/all.min.js"></script> -->
+      <!-- <script type="text/javascript" src="scripts/classes/framework_concat.js"></script> -->
+      <!-- <script type="text/javascript" src="../../../../../frameworks2/IncludeAll.js"></script> -->
+
+      <!-- build:js scripts/framework.js -->
+      <!-- <script type="text/javascript" src="scripts/classes/moebioFramework.min.js"></script> -->
+      <script type="text/javascript" src="scripts/classes/framework_concat.js"></script>
+      <!-- endbuild -->
+
+
+      <!-- build:js({.tmp,app}) scripts/scripts.js -->
+      <!-- CLASSES -->
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/DrawSubmenusSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/Draw2DSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/InteractionSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/ControlSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/interface/TimeSliderSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/DrawSE.js"></script>
+      <script type="text/javascript" src="scripts/classes/SpiralEnvironement/TimeProjectionSE.js"></script>
+
+      <script type="text/javascript" src="scripts/classes/DrawMethods.js"></script>
+      <script type="text/javascript" src="scripts/classes/Control.js"></script>
+      <script type="text/javascript" src="scripts/classes/Process.js"></script>
+      <script type="text/javascript" src="scripts/classes/Loading.js"></script>
+      <script type="text/javascript" src="scripts/classes/Cookies.js"></script>
+
+      <script type="text/javascript" src="scripts/Main.js"></script>
+      <script type="text/javascript" src="scripts/automaticInteraction.js"></script>
+      <script type="text/javascript" src="scripts/descriptions.js"></script>
+
+      <script src="scripts/panelUtils.js"></script>
+      <script src="scripts/app.js"></script>
+      <script src="scripts/ui/help.js"></script>
+      <script src="scripts/ui/tooltip.js"></script>
+      <script src="scripts/ui/intercom.js"></script>
+      <script src="scripts/utils/dataParse.js"></script>
+      <script src="scripts/ui/panelInteraction.js"></script>
+      <script src="scripts/controllers/main.js"></script>
+      <script src="scripts/controllers/infoPanel.js"></script>
+      <script src="scripts/controllers/structure.js"></script>
+      <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,220 @@
+<div class="detailsView">
+  <div class="panelField panelField_title">
+    &nbsp;
+  </div>
+
+
+
+<div class="bs-example bs-example-tabs">
+      <div class="input-group">
+        <form ng-submit="seachByText()">
+            <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term" ng-model="searchTerm">
+                <button class="btn btn-default" type="submit" style="position: relative; top: -5px;">
+                  <i class="icon icon-search"></i>
+                </button>
+                </form>
+        </div>
+        <div id="search-results" ng-show="showSearchResults">    
+          <div class="searchResultsTtitle">Found {{searchResultsTree.totalNumResults}} matches:</div>  
+          <div class="clearSearchResults" ng-click="clearSearchResults($event)" href="#"><i class="icon icon-remove"></i></div>
+            <div  ng-repeat="course in searchResultsTree">
+              <div class="panelField searchResultCourse">
+                <a href="#/course/{{course.id}}" target="_self" onmouseover="objectOveredInPanel( '{{ course.id }}' )" onmouseout="objectOutedInPanel()" onclick="selectObjectById('{{course.id}}'); return false;" alt="{{course.title}}" title="{{coursele.title}}" id="{{course.id}}" class="ng-binding" ng-bind-html-unsafe="course.titleHighlighted"></a>
+              </div>
+            <hr/>
+              <ul>
+                <li class="panelField" ng-repeat="unit in course.units">  
+                  <div class="searchResultUnit">
+                    <a href="#/unit/{{unit.id}}" target="_self" onmouseover="objectOveredInPanel( '{{ unit.id }}' )" onmouseout="objectOutedInPanel()" onclick="selectObjectById('{{unit.id}}'); return false;" alt="{{unit.title}}" title="{{unitle.title}}" id="{{unit.id}}" class="ng-binding" ng-bind-html-unsafe="unit.titleHighlighted"></a>
+                  </div>
+
+                  <ul>
+                    <li class="panelField searchResultLE" ng-repeat="le in unit.les">
+                      <a href="#/le/{{le.id}}" class=target="_self" onmouseover="objectOveredInPanel( '{{ le.id }}' )" onmouseout="objectOutedInPanel()" onclick="selectObjectById('{{le.id}}'); return false;" alt="{{le.title}}" title="{{le.title}}" id="{{le.id}}" class="ng-binding" ng-bind-html-unsafe="le.titleHighlighted"></a>                  
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          
+        </div>
+      <ul id="infoPanelTabList" class="nav nav-tabs" ng-hide="showSearchResults">
+        <!-- <li ng-class="{ active : currentTable == 'about' }"><a id="tabItem_about" href="#about" dataid="about">Home</a></li> -->
+        <li ng-class="{ active : currentTable == 'domains' }"><a id="tabItem_domains" href="#domains" dataid="domains">Domains</a></li>
+        <li ng-class="{ active : currentTable == 'grades' }"><a id="tabItem_grades" href="#grades" dataid="grades">Grades</a></li>
+        <li ng-class="{ active : currentTable == 'threads' }"><a id="tabItem_threads" href="#threads" dataid="threads">Threads</a></li>
+        <li ng-class="{ active : currentTable == 'ecologies' }"><a id="tabItem_ecologies" href="#ecologies" dataid="ecologies">Ecologies</a></li>
+        <li ng-class="{ active : currentTable == 'mentalities' }"><a id="tabItem_mentalities" href="#mentalities" dataid="mentalities">Mentalities</a></li>
+      </ul>
+      <div id="myTabContent" class="tab-content homeTabContents" ng-hide="showSearchResults">
+        <div class="tab-pane" id="about">
+          <div class="homeIntroText">
+            <p>Hi.</p>
+            <p>This interactive model in a Spiral.</p>
+          </div>
+        </div> 
+        <div class="tab-pane" id="domains">
+           <div class="panelField panelField_domains">
+
+            <div class="homeIntroText">
+                <!--// {{type_descriptions.domains}} //-->
+            </div>
+
+
+              <div style="position: relative; -webkit-transform: scale(0.95); left: -35px; overflow: visible;">
+                <svg id="homeFlower" version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               width="380px" height="320px" viewBox="0 0 380 320" enable-background="new 0 0 380 320" xml:space="preserve">
+                  <circle onmouseover="objectOveredInPanel('d_7')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_7')" class="flowerPetal" data-domain-id="PA" opacity="0.5" fill="#F68603" cx="203.97" cy="104.454" r="50.755"/>
+                  <circle onmouseover="objectOveredInPanel('d_6')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_6')" class="flowerPetal" data-domain-id="WE" opacity="0.5" fill="#839D37" cx="247.598" cy="113.438" r="50.755"/>
+                  <circle onmouseover="objectOveredInPanel('d_8')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_8')" class="flowerPetal" data-domain-id="WL" opacity="0.5" fill="#B94F9D" cx="265.416" cy="153.208" r="50.755"/>
+                  <circle onmouseover="objectOveredInPanel('d_2')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_2')" class="flowerPetal" data-domain-id="VA" opacity="0.5" fill="#009FC3" cx="243.883" cy="195.495" r="50.756"/>
+                  <circle onmouseover="objectOveredInPanel('d_4')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_4')" class="flowerPetal" data-domain-id="MS" opacity="0.5" fill="#006789" cx="203.97" cy="204.345" r="50.755"/>
+                  <circle onmouseover="objectOveredInPanel('d_3')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_3')" class="flowerPetal" data-domain-id="MA" opacity="0.5" fill="#333092" cx="168.455" cy="175.542" r="50.756"/>
+                  <circle onmouseover="objectOveredInPanel('d_5')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_5')" class="flowerPetal" data-domain-id="SC" opacity="0.5" fill="#D81F26" cx="167.375" cy="131.285" r="50.756"/>
+                  <circle onmouseover="objectOveredInPanel('d_1')" onmouseout="objectOutedInPanel()" onclick="selectObjectById('d_1')" class="flowerPetal" data-domain-id="CH" opacity="0.5" fill="#046839" cx="216.309" cy="152.51" r="50.755"/>
+                </svg>
+                <div style="position: absolute; top: 0px; left: 0px; font-size: 12px;">
+                  <div style="width: 65px; line-height: 14px; text-align: left; position: absolute;  top: 64px; left: 300px;">
+                    <a href="#/domain/d_6" db-id="d_6" onmouseover="objectOveredInPanel('d_6')"  onmouseout="objectOutedInPanel()">
+                      Performing Arts
+                    </a>
+                  </div>
+                  <div style="width: 60px; line-height: 14px; text-align: left; position: absolute;  top: 144px; left: 330px;">
+                    <a href="#/domain/d_8" db-id="d_8" onmouseover="objectOveredInPanel('d_8')"  onmouseout="objectOutedInPanel()">
+                      Wellness
+                    </a>
+                  </div>
+                  <div style="width: 100px; line-height: 17px; text-align: left; position: absolute;  top: 230px; left: 290px;">
+                    <a href="#/domain/d_2" db-id="d_2" onmouseover="objectOveredInPanel('d_2')" style=" margin-bottom: 10px;"  onmouseout="objectOutedInPanel()">
+                      World Languages and Literature
+                    </a><br/>
+                    <!-- <a href="#/domain/d_10" db-id="d_10" style="margin-left: 6px;">
+                      · English
+                    </a><br/>
+                    <a href="#/domain/d_11" db-id="d_11" style="margin-left: 6px;">
+                      · Mandarin
+                    </a><br/>
+                    <a href="#/domain/d_12" db-id="d_12" style="margin-left: 6px;">
+                      · Spanish
+                    </a> -->
+                  </div>
+                  <div style="width: 100px; line-height: 14px; text-align: left; position: absolute;  top: 31px; left: 175px;">
+                    <a href="#/domain/d_7" db-id="d_7" onmouseover="objectOveredInPanel('d_7')"  onmouseout="objectOutedInPanel()">
+                      Visual Arts
+                    </a>
+                  </div>
+                  <div style="width: 70px; line-height: 14px; text-align: left; position: absolute;  top: 94px; left: 40px;">
+                    <a href="#/domain/d_5" db-id="d_5" onmouseover="objectOveredInPanel('d_5')"  onmouseout="objectOutedInPanel()">
+                      Media Studies and Technology
+                    </a>
+                  </div>
+                  <div style="width: 100px; line-height: 14px; text-align: left; position: absolute;  top: 207px; left: 40px;">
+                    <a href="#/domain/d_3" db-id="d_3" onmouseover="objectOveredInPanel('d_3')"  onmouseout="objectOutedInPanel()">
+                      Mathematics
+                    </a>
+                  </div>
+                  <div style="width: 100px; line-height: 14px; text-align: left; position: absolute;  top: 265px; left: 171px;">
+                    <a href="#/domain/d_4" db-id="d_4" onmouseover="objectOveredInPanel('d_4')"  onmouseout="objectOutedInPanel()">
+                      Science
+                    </a>
+                  </div>
+                  <div style="width: 80px; line-height: 14px; text-align: center; position: absolute;  top: 140px; left: 174px;">
+                    <a href="#/domain/d_1" db-id="d_1" style="color: #DADADA;"  onmouseover="objectOveredInPanel('d_1')"  onmouseout="objectOutedInPanel()">
+                      Cultural History
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane" id="grades">
+          <div class="homeIntroText">
+               <!--// {{type_descriptions.grades}} //-->
+            </div>
+            <br/>
+           <div class="panelField panelField_grades">
+            <div class="fieldLabel" style="margin-left: 10px;">
+              Grades
+            </div>
+            <ul class="tabbedList" style="margin-left: 20px;">
+              <li ng-repeat="item in lists.grades">
+                <a href="#/grade/{{item.id}}" target="_self" onmouseover="objectOveredInPanel('{{item.id}}')" onmouseout="objectOutedInPanel()"  onclick="selectObjectById('{{item.id}}'); return false;">
+                  <span style="font-size: 15px; color:#333;">{{item.grade_name}}: </span><br/><span style="font-size: 14px; color:#666; ">{{item.title}}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="threads">
+          <div class="homeIntroText">
+              <!--//  {{type_descriptions.threads}} //-->
+            </div>
+            <br/>
+           <div class="panelField panelField_threads">
+            <div class="fieldLabel" style="margin-left: 10px;">
+              Threads
+            </div>
+            <ul class="tabbedList" style="margin-left: 20px;">
+              <li ng-show="item.title != ''" ng-repeat="item in lists.threads">
+                <a href="#/thread/{{item.id}}" style="opacity:0.6" ng-class="{ featuredthread: item.id=='t_10' || item.id=='t_11' }" target="_self" onmouseover="objectOveredInPanel('{{item.id}}')" onmouseout="objectOutedInPanel()"  onclick="selectObjectById('{{item.id}}'); return false;">
+                  {{item.title}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="ecologies">
+          <div class="homeIntroText">
+              <!--//  {{type_descriptions.ecologies}} //-->
+            </div>
+            <br/>
+           <div class="panelField panelField_ecologies">
+            <div class="fieldLabel" style="margin-left: 10px;">
+              Ecologies
+            </div>
+            <ul class="tabbedList" style="margin-left: 20px;">
+              <li ng-repeat="item in lists.ecologies">
+                <a href="#/ecology/{{item.id}}" target="_self" onmouseover="objectOveredInPanel('{{item.id}}')" onmouseout="objectOutedInPanel()"  onclick="selectObjectById('{{item.id}}'); return false;">
+                  {{item.title}}
+                  <!-- <br/>
+                  <div style="overflow: hidden; width: 100px; height: 100px">
+                    <img src="https://dl.dropboxusercontent.com/u/41822654/G9_ptype_sample_images_27092013/ecologies/{{item.image_file_name}}"/>
+                  </div> -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="mentalities">
+          <div class="homeIntroText">
+              <!--//  {{type_descriptions.mentalities}} //-->
+            </div>
+            <br/>
+           <div class="panelField panelField_mentalities">
+            <div class="fieldLabel" style="margin-left: 10px;">
+              Mentalities
+            </div>
+            <ul class="tabbedList" style="margin-left: 20px;">
+              <li ng-repeat="item in lists.mentalities">
+                <a href="#/mentalitiy/{{item.id}}" target="_self" onmouseover="objectOveredInPanel('{{item.id}}')" onmouseout="objectOutedInPanel()"  onclick="selectObjectById('{{item.id}}'); return false;">
+                  {{item.title}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<br/>
+<center><a href="#/structure">View full structure</a></center>
+
+
+‚</div>

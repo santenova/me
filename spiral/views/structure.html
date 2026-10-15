@@ -1,0 +1,100 @@
+
+
+<div class="detailsView">
+  <h4>Cardinality</h4>
+  <table>
+    <thead>
+      <th class="debugStructure_header" style="width: 150px">Table</th>
+      <th class="debugStructure_header">Items</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Grades</td>
+        <td>{{modelObjects.grades.length}}</td>
+      </tr>
+      <tr>
+        <td>Domains</td>
+        <td>{{modelObjects.domains.length}}</td>
+      </tr>
+      <tr>
+        <td>ecologies</td>
+        <td>{{modelObjects.ecologies.length}}</td>
+      </tr>
+      <tr>
+        <td>mentalities</td>
+        <td>{{modelObjects.mentalities.length}}</td>
+      </tr>
+      <tr>
+        <td>threads</td>
+        <td>{{modelObjects.threads.length}}</td>
+      </tr>
+      <tr>
+        <td>courses</td>
+        <td>{{modelObjects.courses.length}}</td>
+      </tr>
+      <tr>
+        <td>units</td>
+        <td>{{modelObjects.units.length}}</td>
+      </tr>
+      <tr>
+        <td>les</td>
+        <td>{{modelObjects.les.length}}</td>
+      </tr>
+      <tr>
+        <td>integrations</td>
+        <td>{{modelObjects.integrations.length}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+
+  <h4>Grades Summary</h4>
+  <table>
+    <thead>
+      <th class="debugStructure_header" style="width: 150px">Name</th>
+      <th class="debugStructure_header">Courses</th>
+      <th class="debugStructure_header">Units</th>
+      <th class="debugStructure_header" style="width: 10px">LEs</th>
+      <th class="debugStructure_header">&nbsp;</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="grade in gradesSummary">
+        <td ng-show="grade.numLes == 0" ng-style="{ 'color': '#f66' }">{{grade.grade_name}}</td>
+        <td ng-show="grade.numLes > 0">{{grade.grade_name}}</td>
+        <td>{{grade.numCourses}}</td>
+        <td>{{grade.numUnits}}</td>
+        <td>{{grade.numLes}}</td>
+        <td>
+          <div ng-style="{ 'height': '10px', 'background-color': '#999', 'width': ( grade.numLes/maxLesPerGrade*50 )+ 'px' }">&nbsp;</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+
+  
+
+  <h4>Courses</h4>
+  <ul>
+    <li ng-repeat="item in lists.courses">
+      <a style="color: #0088cc;" href="#/{{item.type}}/{{item.id}}">{{item.title}}   </a> <br/>  
+      <div ng-show="item.units.length > 0">
+        <ul>
+          <li ng-repeat="unit in item.units">
+            <a style="color: #60AACF;" href="#/{{unit.type}}/{{unit.id}}"><i>{{unit.title}}</i></a> {{unit.les.length}}<br/>  
+              <div>
+              <h4>LEs: </h4>{{unit.les.length}}
+              <ul>
+                <li ng-repeat="le in unit.les">
+                  <a href="#/{{le.type}}/{{le.id}}">{{le.id}}. {{le.title}}  </i><br/>  
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>
