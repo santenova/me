@@ -1,0 +1,656 @@
+id,order,title,subtitle,description,id_domain,id_grade,duration,caption,list of units ids,image file name
+35,0,Cultural History Kindergarten,"Creation, Elemental Force, and Symbols","<p>This course introduces students to the classroom and the beginnings of the academic rigors of school. After an introduction to the functions and meanings of various signs and symbols as abstract systems that help humans make sense of the world, students explore the fundamental concepts of origins and change over time. The idea of change leads to an exploration of the changing seasons and their impact on the environment as well as students&rsquo; reflection on their own experience of those changes. After broadening students&rsquo; perspective to embrace the environment, the course focuses on a sensory-based exploration of the forces of earth, fire, air, and water in their own environment, which promotes a holistic way of viewing the world as well as understanding of the balance of the elements in the natural world and their own place in this complex, dynamic system. By beginning to grasp these concepts&mdash;symbols as tokens of meaning and understanding; the recurrence of change; a holistic view of the world and experience; and the place of humans in complex, dynamic systems&mdash;students receive a foundation on which to build future learning.</p>
+",1,1,,,211|212|213|214,
+70,1,English Kindergarten,,"<p>During their kindergarten studies, students are introduced to and build their knowledge of&nbsp;creation stories, elemental forces, seasonal changes and migration, and the concept of naming. At the same time, they&nbsp;further their love of literature and storytelling, while building basic skills&nbsp;through shared daily reading and writing experiences and small, guided reading groups.&nbsp;Students study the concept of beginnings and learn that every living organism has a beginning. As they examine the concept, students experience beginnings in&nbsp;fiction, nonfiction, and poetry and learn to make text-to-self connections.&nbsp;They engage in retelling, dramatizing, and discussing books and explore storytelling through drawing, dictation, and independent writing. Extending their studies of symbols from Cultural History, students investigate the concepts of letters representing sounds and different sounds working together to form words. They listen to the sounds they hear and experiment with phonetic spelling when they write, while increasing their awareness of sound/symbol correspondence.&nbsp;A formal handwriting program engages students in letter formation, while they&nbsp;practice asking questions, following directions, taking turns speaking, listening to classmates,&nbsp;and exploring the everyday world with one another.</p>
+",10,1,,,368|369|370|371,
+31,2,Science Kindergarten,,"<p>In Kindergarten, the world&nbsp;is explored&nbsp;by engaging in scientific inquiry through nature walks, exploration, and discovery. Students learn that scientists collect data and form hypotheses based on observations and experimentation and&nbsp;then applying this scientific approach to the&nbsp;study of&nbsp;elemental forces of nature: earth, fire, air, and water. Through planting and harvesting, the young scientists explore how Earth breeds plant life. They investigate opposite forces: light and dark, heat and cold, and high and low. Students deepen their understanding of origins by exploring creation stories from around the world, and they address their own birth stories to understand personal journeys of growth and change.</p>
+",4,1,,,280|281|282,
+46,3,Mathematics Kindergarten,,"<p>Students in kindergarten explore numbers in real-world situations. In conjunction with the symbols component of their Cultural History curriculum, they identify numerals and begin grouping, comparing, rote counting, and understanding one-to-one correspondence. In addition, they apply their newly-learned measurement skills&nbsp;to determine length and mass&nbsp;in their integrated project as well as to their study of elemental forces and seasons. After collecting data, they display&nbsp;and compare it using simple bar graphs, and then they use the data to make estimations and predictions. Through exploration with math manipulatives and other tools, kindergarten students study the attributes of different objects, including two- and three-dimensional figures, and learn to verbalize comparisons of numbers and measures with phrases such as bigger than,&nbsp;lighter than,&nbsp;slower than,&nbsp;and the same as.&nbsp;They also recognize, copy, and extend patterns involving shapes, letters, and numbers.</p>
+",3,1,,,324|325|326|327,
+47,4,Media Studies and Technology Kindergarten,,"<p>Kindergarten students begin their exploration of media exploring the five senses. Spending time in the natural ecosystems in their surrounding areas and the school garden, students immerse themselves in the sights, smells, sounds, and tastes of nature. They explore light and dark as they imagine the ways day and night impact life. Students then extend their explorations of light and nature by making sun prints of items found in their outdoor explorations. They integrate Cultural History by exploring various cultures&#39; use of shadow puppets before making their own. Using their observations of the natural world, kindergarten students create a &ldquo;magic forest&rdquo; where they use camouflage and movement to relate with nature and communicate with each other.</p>
+
+<p>Students then move on to studying various types of symbols as forms of communication. Using colors, pictures, letters, and gestures, they understand how people communicate in many ways. Finally, students use their symbols, and then words, to compose stories about the magic forest.</p>
+",5,1,,,248,
+61,5,Visual Arts Kindergarten,,"<p>As students explore the origins of life, creations, birth stories, signs and symbols, seasonal changes, and the elements (earth, air, fire, and water) in Cultural History and Science, they use a variety of art materials both to build understanding and to extend expression through two- and three-dimensional media. In application of their understanding from their other courses, students use visual arts to create representations of symbols they find in their world, create illustrations for stories, and images of the four elements (earth, air, fire, and water). To complement their study of stories in World Languages and Literature: English, students use artistic expressions to communicate stories visually. As students investigate a variety of art media such as clay, paint, and weaving with natural materials, they explore how art can show the interaction between humans and the natural world.</p>
+",7,1,,,453|454|477,
+100,6,Performing Arts: Music / Theater Kindergarten,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In Performing Arts: Music, kindergarten students continue their study of beginnings, creation and the world around them&nbsp;through engagement in nursery rhymes and lullabies. In relation to their study of the elemental forces of air, water, earth, and fire in Science, they explore breath and how it contributes to the making of music. Students listen for the different attributes of music, in much the same way that they identify attributes of shapes in Mathematics. Based on these attributes, they explore their emotional response to a song, applying their skills from Visual Arts to draw their interpretation of the music they hear. As part of their integrated project with Cultural History, students discover the soothing effect of lullabies, which people sing to babies around the world. While practicing lullabies and nursery rhymes, students experience the joy music brings to the spirit; they then bring joy to others through a culminating performance.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}""><br move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"" />
+Theater is an imagined world that comes to life as students explore and learn about their lives. Progressing from natural play to an artistic discipline, kindergarten students become aware of theatrical storytelling. After developing an awareness of their bodies and movements, students listen to stories and focus on how a storyteller uses body gestures and facial expressions to convey emotion. They use their mind, body, and spirit to give rise to a creativity that expresses personal and cultural beliefs, such as creation myths like the ones studied in Cultural History. Being trained through theater games and exercises, students gain confidence in their ability to express their stories, and their repertoire expands to include choreographed dance&nbsp;productions. In conjunction with Science and Cultural History, students use improvisational skits, dance, and a culminating performance to present their understanding of the elemental forces of the natural world.</p>
+",6,1,,,457|458,
+45,7,Wellness Kindergarten,,"<p>Students explore how storytelling, signs and signals, and the basic Earth elements can be applied to wellness through movement in  a variety of fitness activities. They perform fundamental locomotor (running, hopping, skipping, jumping, leading, sliding, and galloping) and nonlocomotor (bending, twisting, turning, rocking, swaying, balancing, stretching, pushing, and pulling) skills. Students explore elementary skills of manipulating simple objects with purposeful movement (throwing, catching, striking, kicking, bouncing, and rolling). Students learn classroom and playground safety rules through signs and symbols as they enter the wellness classroom for the first time. Storytelling through dance is explored as students put movement to music, and students explore the element of air as it applies to respiration and movement. Units include social skills, fitness, movement qualities, and manipulatives, as well as nutritional studies and the basic needs of both plants and animals. Integrating Wellness studies with other domains, students explore patterns of movement and how elemental forces change and alter the environment around us. In addition to the three main integrated units, ample time is provided between units for cultural- and population-specific movement, dance, and skills. Time is available to develop life skills appropriate to a kindergarten student, such as hygiene, disease prevention, developing communication and listening skills, building self esteem, and practicing safe and healthy daily behaviors.</p>
+",8,1,,,259|260|261,
+28,8,Cultural History Grade 1,Patterns and Cycles,"<p>Grade 1 students&nbsp;spend the year discovering predictable patterns and cycles in the world and explore them through nature study, rhyme, music, art, movement, and mathematics. They learn that naming, numbering, listing, cataloging, and remembering make the things around them distinct. They memorize poems and songs from around the globe and are introduced to geography and place names. They engage in units focused on the life cycles of specific plants and animals and on their unique characteristics&nbsp;and patterns. They compare their studies of life cycles of living organisms to nonliving cycles, such as seasonal cycles, rock cycle, and the water cycle,&nbsp;and then use the information and knowledge from these explorations to study human&mdash;created cycles for reducing, reusing, and recycling. Students&nbsp;in grade 1 also discover that tools and instruments&nbsp;pencils, paint brushes, levers, hammers, drums, chimes&mdash;are extensions of their bodies and minds that help them to create, describe, and share their world.&nbsp;It is a year of discovery and organization and of understanding the predictability of the natural world.</p>
+",1,2,,,297|298|299|300,
+114,9,English Grade 1,Patterns and Cycles,"<p>Grade 1 students research and identify important patterns used in reading and writing in order to&nbsp;create literature, spell words, and write poetry. They develop an awareness of story structure, main idea, and characters, while learning to put sounds together to read words themselves. Using their knowledge of sounds and letters, as well as patterns in words, they begin to develop and identify both familiar and unfamiliar words and use classroom resources, such as charts and word walls to help with spelling. Investigating natural patterns and cycles in Cultural History and Science helps students build their vocabulary, and,&nbsp;as they follow those themes through a variety of reading and writing genres, they learn to make connections by comparing a variety of genres.&nbsp;As they discover, understand, and explore patterns within words, in punctuation, and in literature genres, students gain appreciation that patterning is a valuable&nbsp;method for organizing the world around them.</p>
+",10,2,,,439|440|441|442|443,
+29,10,Science Grade 1,,"<p>The grade 1 student is immersed in a yearlong investigation of regular patterns&nbsp;and cycles&nbsp;in the world, and&nbsp;in Science&nbsp;they explore these patterns and cycles through&nbsp;a series of nature studies. They learn that identifying patterns (e.g., tree rings, animal markings) is a way of organizing the world around them﻿,&nbsp;and they learn to recognize the ritualistic patterns that characterize a culture&rsquo;s celebrations and values. Students discover that patterns can be dynamic and organize themselves&nbsp;through time&nbsp;into cycles.&nbsp;As students study a variety of patterns and cycles in nature, they begin to recognize various phases and the transformations in specific cycles, such as the monarch butterfly and the water cycle. As part of their investigations, students discover that tools and instruments are extensions of their bodies and minds that help them create, describe, and share their world.&nbsp;They end the year with an exploration of recycling and learn the importance of using nature&rsquo;s patterns and cycles to sustain the natural world.</p>
+",4,2,,,277|278|279,
+78,11,Mathematics Grade 1,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">As grade 1 students study patterns in Cultural History and Science, they also explore repeating and growing patterns in numbers and shapes through a wide array of mathematical experiences. After reading, writing, and counting numerals 0&ndash;100 by 1s, 2s, 5s, and 10s, they also discover the patterns of odd and even numbers and place value for 1s and 10s. They further organize their mathematical world as they extend patterns to addition and subtraction, including identifying and replacing variables in number sentences up to 10 and solve real-world environmentally conscious problems. Applying the definition of fractions as parts of a whole, students are able to identify coin values as well as tell time to the nearest half hour.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Through the year, students&rsquo; knowledge of measurement expands to include estimating and measuring length and weight using inches, centimeters, and pounds. They use&nbsp;Fahrenheit and Celsius thermometers to measure temperature and&nbsp;inequalities to compare measurements.&nbsp;In conjunction with their study of patterns in cycles in Cultural History, students study picture and standard graphs, collect and interpret data, and make predictions based on repeated events and patterns, specifically as they relate to the calendar. Being able to describe, model, draw, compare, and classify common two-dimensional and three-dimensional shap",3,2,,,228|229|230|231|232|233,
+106,12,Media Studies and Technology Grade 1,Patterns and Cycles,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Grade 1 students explore the power of screens in storytelling as they engage in a study of television and screens. Students are instilled with a critical understanding of television programing&rsquo;s place in world culture and a mindful awareness of their use of various types of screens in daily life.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Then students continue their study of representation by examining the work of artists such as Georges Seurat, Paul Signac, Nam June Paik, and Gunther Uecker and relate these artists&rsquo; work to the technology used to make cathode-ray tube, liquid-crystal-display, and plasma televisions. Students separate the content represented on screens, the form of screens, the technology behind them, and the producers of both the medium and the message. Next they study silent films, from Kabuki, Charlie Chaplin, and Buster Keaton, to understand how these art forms relied on nonverbal communication. The course culminates when students use their knowledge from the unit to create a projection performance piece that is screened for visitors at the end of the year.</p>
+",5,2,,,383,
+64,13,Visual Arts Grade 1,,"<p>In grade 1, students explore predictable patterns and cycles in the natural world through reading, researching, observation, and the visual arts. Students learn that tools, such as paintbrushes, pens, pastels, and other art media, are extensions of their bodies and minds that help them to create, describe, and share their world. Through a variety of activities, such as weaving, printmaking, and painting, students investigate a variety of patterns and cycles: linear, circular, branching, spirals, and symmetry. They use their studies of patterns and cycles to express environmental benefits of reducing, reusing, and recycling behaviors. As part of their investigations, they are introduced to art masters such as Piet Mondrian and study a variety of his work and identify his expressive use of patterns. Thematic student involvement in the art studio is closely integrated with classroom studies, and students realize how humans use patterns and cycles from nature to express thoughts and ideas.</p>
+",7,2,,,352|353|354,
+101,14,Performing Arts: Music / Theater Grade 1,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In Performing Arts: Music,&nbsp;students complement their study of patterns and cycles in other domains by exploring musical patterns, particularly&nbsp;ritualistic patterns animated by dance and song that characterize a culture&rsquo;s celebrations and values. Students hear examples of traditional rhythms from a variety of world cultures, connecting this course with their learning in Cultural History. In their studies, students learn about different rhythmic and melodic patterns in music, are introduced to the basics of musical notation, and gain hands-on experience by making their own musical instruments and compositions.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}""><br move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"" />
+In Theater, continuing their grade 1 investigation of patterns and cycles, students explore patterns, rhythms, and cycles through the use of rhythmic movements and sounds in telling dramatic stories. Students find ways to express the six basic patterns found in nature and connect this with their learning in Performing Arts: Music and World Languages and Literature: English by exploring the patterns in rhythmic sound, poetry, and song, while also learning to portray a character.</p>
+",6,2,,,459|460,
+88,15,Wellness Grade 1,Patterns and Cycles,"<p>Students practice wellness and develop a greater understanding of movement patterns and cycles through movement in a variety of fitness activities. They perform fundamental locomotor (running, hopping, skipping, jumping, leading, sliding, galloping) and non-locomotor (bending, twisting, turning, rocking, swaying, balancing, stretching, pushing, and pulling) skills. Students begin to manipulate objects with purposeful movement as they practice using tools as an extension of themselves (throwing, catching, striking, kicking, bouncing, and rolling). Students develop understanding of patterns and rhythm through square and pattern dancing, which also develops social skills and fosters teamwork and communication. Unit goals include development of social skills, fitness, movement qualities, and manipulative skills, as well as nutritional studies on sustainable nutrition and environmental responsibilities. Integrating Wellness studies with other domains, students explore patterns of movement, the early use of tools, understanding patterns in nature, and environmental stewardship. Time is reserved between the three major units for population and culturally specific movement skills, games, rituals, dances, sport development, or testing. In addition, time is reserved for developing life and health skills of a non-nutritional study. Topics appropriate for the grade level include, but are not limited to, hygiene and disease prevention; safety; communication and relationships; self-esteem activities; and mental, emotional, and social health.&nbsp;</p>
+",8,2,,,262|263|264,
+1,16,Cultural History Grade 2,Systems,"<p>Students spend the year exploring classroom and community systems and the individual&rsquo;s role within larger systems, such as the family, the grade 2 classroom, and the local community, and comparing these human systems with systems in nature. As the year progresses, students begin to see that the world is one large, interconnected system that may break down because of conflict or disorder. In order to seek stability, orderliness, and serious learning, students become problem solvers who are driven by curiosity about the world around them and what makes that world operate. At this stage in their development, students begin to understand the concepts of time, space, and quantity, but they still need to make the direct link to the natural environment. In Cultural History class, students investigate the Solar System, Earth&rsquo;s systems, weather systems, and ecosystems, discovering the fragility, strengths, and interdependence of each system. Through a variety of learning experiences, students weave grade-level themes into a story that started with the kindergarten study of beginnings and elemental forces, continued through patterns and cycles in grade 1, and connects to systems in grade 2.</p>
+",1,3,,,156|157|158|159,
+20,17,English Grade 2,Systems,"<p>Complementing their study of systems in both Cultural History and Science, students explore the solar system, Earth systems, weather systems, and ecosystems through fiction and nonfiction texts. While learning to apply strategies for reading comprehension, such as making text-to-text, text-to-self, and text-to-world comparisons, students continue with all the components of Reader&rsquo;s Workshop,&nbsp;summarizing&nbsp;main ideas in their reading and identifying other literary elements as they explore these systems and what can cause them to break down. Students also continue to practice strategies for decoding words when new vocabulary, including technical terms related to the systems, enters the texts.&nbsp;As they research and discover the complex systems of the world and universe, students apply their learning to write paragraphs, myths, and books as well as create illustrations, videos, and performances. They continue to improve their writing, through revision and editing techniques in order to make their writing pieces longer and more complex. As students write, they begin to incorporate language and ideas from books they read independently or during read-aloud time and revise their work,&nbsp;employing proper punctuation and spelling in the editing process.</p>
+",10,3,,,165|166|167|168,
+18,18,Science Grade 2,Systems,"<p>In grade 2, students learn that they are part of an interconnected world and Universe made up of a variety of systems. The year begins with the study of the Solar System, and students evaluate data about the Solar System and examine Earth&rsquo;s role in it. Next, students explore Earth&rsquo;s geological systems and the part that these systems play in the history and structure of Earth and its surface topography over hundreds of millions of years. By exploring local saltwater and terrestrial environments, students learn about ecosystems&mdash;their living and nonliving components, the roles of producers and consumers, food webs, etc.&mdash;and discuss what can happen when the delicate balance of an ecosystem is upset. Through their explorations, students recognize the harmful physical outcomes that can result when Earth&rsquo;s systems are in jeopardy, and they examine what it takes to sustain life systems in a rapidly changing world.</p>
+",4,3,,,178|179|180|181,
+73,19,Mathematics Grade 2,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Through their studies of the interconnected world of complex systems in grade 2, students expand their understanding of time, place, and quantity. After learning to read, write, and count numbers 0&ndash;999 using both expanded notation and place value, they learn to add and subtract two- and three-digit numbers as well as demonstrate the ability to use the commutative and associative properties when solving problems involving weather-related data that they collected in Cultural History. They further discuss temperature, including specific measures, such as melting point, and relative measures, such as warm and cool. They explore patterns using number lines, charts, and graphs and identify and replace variables in number sentences. After demonstrating competency with addition and subtraction facts, they describe multiplication as repeated addition. Students also expand their knowledge of monetary notation and measurement and learn to tell time to the nearest five minutes.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Using math manipulatives and technology, students explore the concept of change, perform experiments, and record outcomes as they relate to ecosystems. They also describe the Solar System using quantitative measures that stem from human-made systems such as place value and the metric system. They use the language of fractions and the language of probability and highlight the interrelation as t",3,3,,,169|170|171|172,
+75,20,Media Studies and Technology Grade 2,,"<p>Grade 2 students continue to examine the central question, &ldquo;What is Media?&rdquo; as they study the evolution of media technology. To begin, students collect data about what media they have in their homes and how it is used. Next, students visualize the stages of a selected type of technology innovation and development, usage, and disposal. Then they explore the power of communicating messages via media and the importance of &ldquo;media literacy&rdquo; as they mindfully and critically analyze the validity of advertisements.</p>
+
+<p>Students in grade 2 also learn to use Scratch animation software and animate species from their studies of estuaries. To accompany the animation, they create an estuary soundscape. Using their estuary animations and soundscape, the class creates a multimedia installations of an estuary habitat for others to visit that incorporates animated estuary plants and animals, backdrops illustrating the non-living parts of the habitat, the immersive soundscape, and puppets of any disruptive external factors.&nbsp;</p>
+",5,3,,,174,
+22,21,Visual Arts Grade 2,,"<p>In grade 2 Visual Arts class, students begin the year by creating observational self-portraits that reflect their individuality. Using oil pastels, they create a peer portrait of a classmate to reflect on their physical similarities and differences. As students move into the next unit of study, they explore mixing colors, using primary colors, and creating color systems that convey mood and expression. The illustrations of Eric Carle are studied, as students play with color and texture, while making large planets for their Solar Systems unit. The artwork of several mentor artists is explored, such as Pablo Picasso, Josef Albers, and Eliot Porter, and students end the year with a long study of the many natural sculptures of Andy Goldsworthy as they investigate local ecosystems. The year ends with a collage mural of a temperate deciduous forest with overlapping textured shapes using warm and cool colors and other skills learned throughout the year.</p>
+",7,3,,,187|188|189,
+102,22,Performing Arts: Music / Theater Grade 2,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In this Performing Arts: Music course, as in the other courses in grade 2, students explore systems as a collection of components that interconnect and interact with one another. As in Cultural History, they develop an understanding of the role of the individual in complex social and cultural systems, in this case, in the harmonious contributions of individual instruments and voices to music. Students deepen their understanding of systems by looking at musical notation as a system, which connects to their study of mathematical notation. Like in World Languages: English, students continue to make connections between themselves and their world as they explore music. They see the interconnectedness of the parts, and complementing their Science studies, they identify music as a complex system. Working in musical ensembles, students continue to explore their individual role as a member of a system, which reinforces what they are discovering in Cultural History. Acting as problem solvers, students collaborate to make music together through computer software, vocal pieces, and body percussion.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In second grade, students investigate the dynamics of systems as they pertain to the world around them. Thus, in Performing Arts: Theater, students apply their understanding of systems as they explore movement, dance, improvisation, and choreography. Students use their mind and voice, along with their bodies, while working with peers to design and then give creative and confident performances that connect to the thematic units from Science and Cultural History. Specific performances are created using music and dance to show the interdependence of the components of the Solar System, the systems that formed the layers of Earth, and the systems that led to the genesis of Earth. This study also connects to their work in World Languages and Literatures: English, as students explore characters and their feelings, through movement and words, and record their personal reflections using drawings and writing in their sketchbooks.&nbsp;Most importantly, students learn about the specific systems that are necessary as they work together to deliver a cohesive, informative, and entertaining performance.</p>
+",6,3,,,350|351,
+76,23,Wellness Grade 2,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Following the Systems theme, students practice movement in relationship to each other in a defined space and work cooperatively as a group. Students perform a variety of fundamental locomotor (running, hopping, skipping, jumping, leaping, sliding, galloping) and non-locomotor (bending, twisting, turning, rocking, swaying, balancing, stretching, pushing, and pulling) skills. They manipulate objects with a partner (throwing, catching, striking, kicking, bouncing, and rolling) and participate in fitness development exercises. Through the three major integrated units, students learn about systems and how to function as a system. They expand their systems understanding as they reinforce their learning of the Solar System.&nbsp;Movement skills develop&nbsp;as students learn the human body systems and begin to develop skills that sports teams need to function as a system. In addition, through the integrated units, students explore the sports team as a system and reinforce the pattern theme of first grade.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}""><span style=""line-height: 1.42857;"">Units include development of social skills, teamwork, safety, fitness, movement education, and manipulative skills, as well as nutritional studies and disease prevention. Lessons also introduce students to the systems of the human body. Time is reserved between these three major integrated units to conduct population and culturally",8,3,,,265|266|267,
+36,24,Cultural History Grade 3,Evolution of Life on Earth,"<p>In grade 3, students begin their formal study of the history of human culture from the beginning of organisms through 10,000 BCE, a study that will carry them through the rest of their school experience. They approach history through an understanding of themselves situated in time and the unfolding of the world before and after the present day and begin with a unit about the evolution of life on Earth. From bacteria to dinosaurs to&nbsp;Homo sapiens, students learn that life has changed and evolved over millions of years and continues to change. They learn that biology and geology are coevolving systems and as the physical Earth transformed so did the organisms living on land and in the seas. They study fossil evidence and the discoveries of many famous naturalists, archaeologists, and anthropologists, such as Charles Darwin, Mary, Meave, and Richard Leakey, and Mary Anning, and end the year exploring early Stone Age dwellings. Through this yearlong investigation of the evolution of human consciousness, students realize that they are empowered to participate in and affect history. They begin to understand that knowledge of the past helps people know what to do in the present.</p>
+",1,4,,,301|302|303|348,
+77,25,English Grade 3,,"<p>As they read both for pleasure and to gather information about the world around them, the grade 3 students explore&nbsp;a variety of&nbsp;literature&nbsp;containing increasingly challenging text.&nbsp;They investigate themes related to their Cultural History and Science studies&nbsp;of geological time and the evolution of life on Earth and, at the same time, expand their vocabulary and develop a rapidly growing list of sight words. Connecting these literacy components in a cohesive way, students utilize both fiction and nonfiction genres to explore new topics related to the evolving planet&nbsp;and the evolution of human consciousness. They&nbsp;develop&nbsp;fact-based questions and answers by analyzing data from their concurrent Cultural History explorations and apply critical reading skills and reasoning to help them evaluate information, leading to predictions regarding the natural world&rsquo;s impact on human survival. Distinguishing between opinion and fact, students&nbsp;practice supporting their ideas and viewpoints with details and examples. They also learn to choose genres of writing  that best suit what they want to communicate and to select details that establish mood and keep readers interested. Students use various literacy tools to&nbsp;explore the origins of art, symbolic signs, and spiritual beliefs and develop an advance awareness of themselves&nbsp;as readers, writers, and learners.</p>
+",10,4,,,224|225|226|227,
+30,26,Science Grade 3,,"<p>Students analyze geological history, focusing on geological time and using fossil evidence to understand ancient life. They examine and describe the properties and formation of metamorphic, igneous, and sedimentary rocks, and how they are used as indicators of age. Hands-on experiments introduce the basics of rock, soil, and fossil formation. Students study the evolution of life on Earth from bacteria to mammals, and the connection to human evolution. They also discover the role that adaptations play in animal and plant survival over successive generations. Finally, students consider how cycles in natural systems affected the behavior of early human dwellers, and how adaptations led to their survival and reproduction.</p>
+",4,4,,,274|275|276,
+79,27,Mathematics Grade 3,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In the context of evolutionary events in Earth&rsquo;s history, grade 3 students read, write, count, compare, and work with numbers up to 100,000, incorporating expanded notation and place value. They represent and analyze patterns and functions using tables and solve subtraction sentences using variables. Demonstrating competency with multiplication and division facts, students multiply three-digit numbers by single-digit numbers. After studying the zero, identity, commutative, and associative properties of multiplication, students apply computation and estimation to real-world problems such as establishing a multiplicative comparison between modern and prehistoric mammals. They use human dental records to compose and decompose division facts and explore fractions, including the relationship between fractions and decimals. While using metric measures such as kilograms and grams, students explore patterns with 0. To practice measuring length, including the use of fractions and mixed numbers, they measure and compare their body lengths to early hominids. Students use their understanding of multiplication and division to make scale drawings. They also include other measures such as the surface area and volume of the brain. Estimating and measuring the sizes of various objects, including perimeter and area, students use standard tools to analyze archaeological dig sites.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purp",3,4,,,234|235|236|237,
+81,28,Media Studies and Technology Grade 3,,"<p>&nbsp;</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In grade 3, students address media technology in the context of Cultural History. In this unit, students connect the media of the Paleolithic era to contemporary media that they and others create. They discuss how and why different media messages are made and how the messages affect the audience who receives the messages. Students compare the marks left by people in the Paleolithic era to the digital footprint left by people with media they place on the Internet today, and they learn to safely use the Internet.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Next students study film production by studying examples of film techniques, types of shots, and styles of lighting. Then they take time to learn the process of developing screenplays and set lists. Once students understand these processes, they work in groups on basic video-making skills to produce autobiographical videos, using the new skills they learned in this unit and expanding to incorporate some experimental cinema in their videos. The unit culminates with the production of a Media Cave installation project in which students create a tunnel or cave in their classroom and project and display their autobiographical videos on its walls. Students consider how Paleolithic artists used the contours of cave walls to display their work and apply their learning to help them use the irregular walls of their classroom cave to display their vi",5,4,,,249,
+69,29,Visual Arts Grade 3,,,7,4,,,444|445|446,
+103,30,Performing Arts: Music / Theater Grade 3,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Throughout grade 3, students study early humans and explore the possible vocal and nonvocal sounds made or created by early humans. While we do not know what forms of communication early humans used, we can surmise that humans appreciated and copied the musical sounds made in nature, from songbirds to the rhythmic beat of galloping hooves to the wind whistling through the trees. Students also take a look at the first musical instruments, which were probably the human voice and percussion instruments. Taking into consideration the lack of certainty about these issues, students compare communication that could have happened in prehistoric communities to communication in modern communities. They extend their study of human culture from Cultural History as they explore these sounds&mdash;what they communicate and what emotions they evoke. Using research skills developed in World Languages and Literature: English, students discover that music is a foundation for human bonding. They apply their understanding of sounds to create both vocal and nonvocal sound performances for their Wax Museum project.<br move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"" />
+<br move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"" />
+In grade three, students express their understanding of the evolution of life on Earth and the formation of human culture through a variety of activities, including acting as early humans&nbsp;and recounting original stories that reveal their survival skills&nbsp;and relate important events in early human history. They create performances that combine music, dance, and song to demonstrate how geological and biological forces shaped Earth. Concluding the year, students perform a dramatic movement piece about the evolution of life on Earth and prepare and present their Wax Museum performance, a culmination of their study of early humans from all domains, synthesizing what they have learned of the development of human consciousness.</p>
+",6,4,,,461|462,
+89,31,Wellness Grade 3,Evolution of Life on Earth,"<p>Students learn how to react and respond to others. As they learn about the emergence of humans, bands and clans, in Wellness, students practice and perform patterns and combinations of movements using locomotor and non-locomotor skills as they relate to and reinforce the understanding of early humans and human evolution. They continue to manipulate objects with a partner and analyze their performance to learn or improve a movement skill. Students also continue to participate in fitness development exercises and apply rules related to the use of equipment, safety, and games. Activities include development of more complex movements and skills, while students explore how movement has evolved from simple to more complex, how sport skills also develop from the simple and involve teamwork and each student developing personal responsibility to the group as they provide a specific role, as would early bands and clan members. In addition, students develop valuable skills as they explore early human hunting bands and develop basic survival, hunting and archery skills, while developing more intermediate levels of fitness components (speed, agility, strength, flexibility, and balance). Students reflectively connect their understandings of how early humans taught their young through play to their own Wellness learning. Time has been reserved in between the three integrated units to explore population and culturally specific movement, games, dance or activities, in addition to yearly fitness testing. Time has been reserved as well for reviewing life skills and health topics, including hygiene, germ prevention, safety, communication, self esteem, growth and development and family, as well as various additional personal health topics.</p>
+",8,4,,,268|269|270,
+50,32,Cultural History Grade 4,Evolution of Life on Earth,"<p>Grade four begins with a look back to prehistory. Students resume where they left off in grade three, with a look at how imagination impacted the evolution of early humans&mdash;from nomadic peoples to early settlers. Focusing on the cultures of early humans, students examine how early human migration influenced the development of cultural diversity. As people migrated, cultures became diverse, dependent upon geography, climate, and resources. Through their study of artifacts, students uncover why early peoples found it necessary to move. They compare their findings with reasons for human migration throughout history. Early traditions and beliefs are explored through the study of cave art and ritual.</p>
+
+<p>&nbsp;</p>
+
+<p>Students also consider cultural differentiation through the study of archaeology. An anthropologist&#39;s lens sheds light on cultural sensitivity, from the Neolithic period to current worldviews. The period between 10,000 and 3500 BCE represents the climactic phase of &quot;natural&quot; humans, with emphasis on evolving ecology; development of early shelter to human settlement; megalithic monuments; and the shift from magical shamanism to great goddess worship, iconography, and cosmology. This shift is explored as the primary spiritual force and governing belief of early matristic societies.</p>
+",1,5,,,304|305|306,
+53,33,English Grade 4,"Social Systems, Early Settlements, and Agriculture",,10,5,,,400|401|402,
+60,34,Science Grade 4,,"<p>Students make ongoing connections with the ways early clans worked together for the survival of the species and the consequences when they did not. They compare animal migration to the human migration studied in Cultural History, reviewing migratory maps of various animals, particularly birds. They also discuss basic genetics, focusing on what inherited traits tell us about our ancestors.</p>
+
+<p>Students complement their lessons on Neolithic Period plant and animal domestication by examining methods of planting, including the differences between gathered wild seeds/plants and cultivated ones. They research both domesticated and wild animals, and further explore archaeology by excavating (planted) on-site pot remnants in an attempt to piece them together again.</p>
+",4,5,,,283|284|285,
+80,35,Mathematics Grade 4,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In grade 4, students expand on their understanding of the decimal place value system, the four major arithmetic operations with whole numbers (including division of&nbsp;three- and four-digit numbers by a double-digit number), inverse operations, and number theory concepts such as prime and composite numbers, factors, multiples, and square numbers through investigations of these concepts in the context of the nature of early human communities, the history of&nbsp;Homo sapiens, the development of social systems and culture, and the human conception of time. They begin by identifying, reading, writing, counting, and comparing numbers up to 1,000,000, using expanded notation and place value. Using tables, they also analyze and represent patterns and functions, and using variables, they solve multiplication and division sentences. To facilitate further understanding, students investigate ancient artifacts such as the Blanchard and Ishango bones and create a lunar calendar incorporating natural elements as part of their integrated studies on cycles of time. After collecting data to answer a question or test a hypothesis, students create, read, and interpret line graphs, bar graphs, pictograms, and line plots and solve problems using data from graphs, charts, tables, and diagrams. They also explore the concept of random sampling using real-world polls. Students apply data analysis skills and probability concepts to their Clan Baby Project in Cultural History and investigate geometric figures, measurements, and spatial relationships in an effort to understand how Neolithic societies may have developed and utilized some of the same mathematical concepts. By studying basic g",3,5,,,238|239|240,
+82,36,Media Studies and Technology Grade 4,,"<p>Grade 4 investigates the mechanics of moving image media, such as cinema and television. Students master and put to use basic concepts, such as continuity editing and montage, as well as more advanced techniques, such as the &ldquo;Kuleshov Effect,&rdquo; in the creation of short films. Through this process students discover how information can be distorted and manipulated using these techniques. In the culminating activity of this unit grade 4 students create short, live-action silent dramatizations based on original scripts that incorporate a variety of moving image strategies to articulate movement and ideas.</p>
+",5,5,,,250,
+87,37,Visual Arts Grade 4,,"<p>Students begin the year with a self-portrait and progress to a focus on observational drawings and still-life paintings. Using observational skills as a foundation for an illustrative drawing, students juxtapose objects in an atypical environment to create a work of art inspired by history. They create a work of art that integrates observation with imagination. Through integrated studies, students gain an awareness of the interconnectedness of concepts and ideas. They explore a variety of art processes and techniques, including painting, drawing, construction, collage, and printmaking.&nbsp;</p>
+",7,5,,,255|256|257,
+104,38,Performing Arts: Music / Theater Grade 4,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Complementing their study of the Iroquois and Mississippian cultures in Cultural History, Science, and Mathematics, students explore the role of Native American music in their Performing Arts: Music cours. Through listening, reading, dancing, chanting, playing instruments, and building flutes, students add music to their list of nonverbal forms of communication that they have compiled in their World Languages and Literature: English&nbsp;class. After listening to Native American percussion and wind instruments, students actively relate the role of music in the Iroquois culture by playing rhythms, singing chants, and performing dances. They also apply their research skills as they seek to find unique information about Native American music.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In Performing Arts: Theater, students bring the perspective of theater to their yearlong exploration of human communities and Paleolithic and Neolithic cultures. In creating a theatrical version of an Iroquois story, which connects to their studies in Cultural History and other domains, they take on various roles, gaining insight into the theater as a community and, by performing that piece, experience theater in the context of their community of family and friends.</p>
+",6,5,,,463|464,
+90,39,Wellness Grade 4,"Social Systems, Early Settlements, and Agriculture","<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Through three major integrated units, students analyze the transition from hunter and gatherer societies to agricultural societies and the human activities and development of settlements in this society.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In the first unit, students explore the functioning of a team, as they become more versed in individual responsibility within a functioning whole, and relate the concept of team to Neolithic communities.&nbsp;Working together as a group, students learn to appreciate personal differences and value the rights of others.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">This unit also serves to model clan based food procurement skills of the hunter gatherer, as the students learn archery. In addition early animism and spirituality is&nbsp;explored as students practice the concept of aknowledging spirit animals.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing pur",8,5,,,271|272|273,
+37,40,Cultural History Grade 5,The Rise of the Riverine Civilizations,,1,6,,,307|308|309|310|311,
+43,41,English Grade 5,The Rise of the Riverine Civilizations,,10,6,,,372|373|374|375,
+32,42,Science Grade 5,,"<p>Students explore archeology and astronomy as examples of both scientific study and the way we learn about past cultures, with a particular focus on the contributions of ancient Sumerian and Egyptian astronomers. They see how science developed from the practical need to predict, record, and cope with natural phenomena, and discuss the relationships among culture, religion, and environment.</p>
+
+<p>Students also learn about landforms, the water cycle, and erosion, applying their understanding to early human settlement and agriculture patterns. They investigate simple machines used to transfer energy and facilitate work, and examine the physical properties of building materials.</p>
+",4,6,,,286|287|288|289,
+25,43,Mathematics Grade 5,,"<p>Students review whole-number arithmetic and estimation skills, learn about the evolution of number systems, and work with geometry tools to construct and measure angles, segments, and triangles. They deepen their appreciation of math through applications in astronomy, pyramid building, and land surveying. Students learn procedures for working with decimals and fractions, and apply them to percents and probability. These concepts are expanded upon using the soroban, a Japanese abacus.</p>
+",3,6,,,408|409|410|411|412|413,
+83,44,Media Studies and Technology Grade 5,,"<p>In Grade 5 of Media Studies and Technology, students expand their definition of media to include architecture and explore how architecture helped to support the emergence of organized religion . They learn about the development of cuneiform, which involved etching symbols into clay tablets, and study contemporary tablets, computers, games, and phone interfaces as types of architecture. . They analyze the similarities between comics and pictograms used by ancient culture. In addition, students examine narrative and orality in all forms of media and communication. Students also explore higher-level concepts, such as &quot;the other.&quot;</p>
+",5,6,,,251,
+42,45,Visual Arts Grade 5,,"<p>Students explore the river civilizations of Mesopotamia, India, Egypt, China, Caral-Supe in Peru, and Crete through a number of integrated projects. These include studying archaeology, sculpting goddess figures, throwing pots, drawing on papyrus, and creating cuneiform tablets and cylinder seals. Students next examine the architecture and great monuments associated with the ancient river cultures. They also learn the principles and vocabulary of visual elements, focusing on shapes, patterns, and symbols.</p>
+",7,6,,,447|448|449|476,
+105,46,Performing Arts: Music / Theater Grade 5,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}""><span style=""line-height: 1.42857;"">As part of their study of the riverine ecology of ancient Egypt, students explore ancient Egyptian music and its connection to the broader Egyptian culture. In addition to listening to the sounds made by various Egyptian instruments, students learn about the daily lives of musicians from this civilization and about the connections between music and Egyptian gods and goddesses. These studies help deepen their understanding of Egyptian culture.</span></p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}""><span style=""line-height: 1.42857;"">In grade 5 Theater, students explore a variety of theatrical skills while using and expressing their growing knowledge of ancient riverine civilizations. Through various exercises, students develop their skills of improvisation, voice, dance, and characterization; write and perform monologues and dialogues; and deliver speeches. In a capstone project that unifies their learning in all domains, students collaborate to write and perform original vignettes that demonstrate their understanding of riverine civilizations.</span></p>
+",6,6,,,465|466,
+123,47,Wellness Grade 5,The Rise of Riverine Civilizations,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Throughout three main integrated units, students make connections between ball sports in early city-state and state-controlled civilizations and modern sports, such as soccer. They develop beginner sports-specific, intermediate locomotor, and manipulative skills, as well as demonstrate development of fitness components. While developing valuable sportsmanship and interpersonal teamwork skills by working in small groups and teams, students embrace personal differences and perspectives (maturity levels, physical differences, physical abilities, cultures, and gender differences).</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Units include a historical exploration of various sports and movement endeavors during the development of the Geometric Mentality; an analysis of the diet, medicine, sport, wellness, and health of early civilizations that used the Geometric Mentality, including the riverine cultures during 3500&ndash;1450 BCE; and a study of the roots of modern baseball in colonial&nbsp;America as it emerged within native America in the 17th and 18th centuries.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">First, students study ball games in ear",8,6,,,478|479|480,
+38,48,Cultural History Grade 6,Prophecy and Cultural Transformation,"<p>Students begin by exploring the Olmec culture in the Americas and then inquire into the nature and relevance of such classical civilizations as Phoenicia, Greece, India, and China. Within a general shift from theocratic monopolies to the separation of political powers and the growth of trade, students recognize that the highest good is now expressed not in terms of polytheistic powers in nature but in the emergence of universalizing religions. Excellence becomes a matter of accord with this transcendent realm, and the signs of such accord are harmony, balance, and proportion. Students examine how certain individuals&mdash;prophets&mdash;emerge from the tribal collective in order to begin asserting the superiority of the ideal over reality. Additionally, prophets and sages (Moses, Buddha, Confucius, Lao Tzu, and Socrates) acknowledge that individuals have the right to determine what is worth living and dying for.</p>
+",1,7,,,312|313|314|315,
+44,49,English Grade 6,Prophecy and Cultural Transformation,,10,7,,,376|377|378,
+33,50,Science Grade 6,,"<p>At the beginning of the year, students deepen their study of astronomy and archaeoastronomy by comparing patterns of climate and civilization. They research the effects of humans on the environment, past and present, by examining the global characteristics of biomes. Students then look at geography, climate, and the diverse ecosystems of the cultures studied.</p>
+
+<p>&nbsp;</p>
+
+<p>In preparation for the integrated monochord project, students extend their understanding of sound and vibration to embrace music and wellness. They investigate Western medical practices and compare them with Chinese herbal medicine. Students also learn about earthquakes, rocks, and minerals. They explore the anatomy and physiology of body systems, relating their understanding of these systems to that of the ancient Greeks.</p>
+",4,7,,,340|341|342|343,
+59,51,Mathematics Grade 6,,"<p>Students strengthen their fraction and decimal skills, applying them to ratio and proportion. They use geometry to construct polygons and understand perpendicular and parallel lines; next, they transfer this knowledge to sacred geometry and Platonic solids, measuring angles and studying Euclidean constructions. Students investigate prime factors and multiples, and apply these concepts to musical scales to develop skills using the arithmetic of integers, fractions, and decimals. These concepts are reinforced using the Japanese soroban.</p>
+",3,7,,,241|242|243,
+84,52,Media Studies and Technology Grade 6,,"<p>In this Media Studies and Technology course, Grade 6 students examine a period in history during which the appearance of rhetoric and portable systems of writing spread by a new merchant and trading class enabled individuals to share and adopt ideas and values across cultures. By&nbsp;studying the sacred texts of prophets from this period, they learn how to decipher implicit messages encoded in texts and speech in order to explore how media and language shape the understanding of content. Students learn that ancient cultures created myths as a way to give structure and meaning to their societies. They explore how these myths eventually become naturalized and universalized. They analyze how biases based on assumed beliefs can be found in news media and the language of public figures in today&#39;s world. They investigate the idea of the monomyth or &quot;hero&#39;s journey&quot; and the Hero Project is an app-based project where students use HTML5 or JavaScript to create simple interactive apps that tell their own original myths that either follow or subvert the monomyth structure.</p>
+",5,7,,,252,
+63,53,Visual Arts Grade 6,,"<p>Students strengthen their technical skills in the areas of drawing, painting, printmaking, sculpting, and visualizing. They examine the artifacts and architecture of the Mesoamerican Olmecs and the Hebrews, as well as those of the classical civilizations of ancient Greece and China. Students focus on the application of geometry and harmonic proportion in temples and palaces, respectively. Discussion of the important characteristics of these time periods introduces students to new vocabulary and concepts that enable them to thoughtfully consider works of art and understand art criticism. This includes an examination of the role of the artist in society, then and now.</p>
+",7,7,,,355|356|357,
+117,54,Performing Arts: Music / Theater Grade 6,Prophecy and Cultural Transformation,"<p>Students explore the nature and relevance of classical society&nbsp;through their experiences with ancient Greek music. As they connect the past to the present, they examine the harmony, balance, and proportion studied in Cultural History as it exists in the music of ancient Greece. Through listening to instruments played in ancient Greece, they draw comparisons between the instruments and their sounds, including learning to identify audibly ascending and descending notes. To complement what they learn in Mathematics, students investigate Pythagoras and his theory of music, both its function and its composition. They also explore the application of ratios to music, both in ancient and modern times.</p>
+
+<p>To deepen their understanding of the role of theater in ancient Greek culture, students in this course explore basic theatrical techniques and formats. By engaging with different types of theatrical pieces, both through performance and critical analysis, students develop an understanding of the different components that contribute to effective theatrical storytelling. In a culminating project that integrates this course with their studies in Cultural History and World Languages and Literature: English, students create and perform their own theatrical presentation.</p>
+",6,7,,,467|468,
+107,55,Wellness Grade 6,Prophecy and Cultural Transformation,"<p>Throughout three main integrated units, students develop a historical understanding of wellness during the period when the Geometric mentality spread to the ancient Hebrew, Greek, and Chinese civilizations. During this process, students develop intermediate sport specific, locomotive, and manipulative skills, as well as demonstrate development of fitness components. They analyze their performances, participate in fitness development exercises, and assess their personal fitness. While developing valuable sportsmanship and interpersonal teamwork skills by working in small groups and teams, students embrace personal differences and perspectives (maturity levels, physical differences, physical abilities, cultures, and gender differences).</p>
+
+<p>Units include an exploration of sports, movement endeavors, diet, medicine, wellness and health during the time period when societies used the Geometric mentality to establish standing armies, portable writing systems, and extensive trade networks that spread values and ideas.</p>
+
+<p>First, students analyze the wellness practices of the ancient Hebrews, as they design their own personal wellness stories in the form of a plan. This plan involves strength and conditioning, maintaining fitness, and nutrition logs. Students explore modern nutrition, learning about nutrients and documenting their food choices and portions. Then through the study of ancient Greece, students re-create the ancient Olympic games, as well as explore the food and healing of this culture. They develop fitness components, track and field skills, wrestling and specific cultural activities. This unit also serves as the platform for students to discuss the modern Olympic games and athletes in order to better understand the evolution of global games and the development of the modern athlete. After this, students explore the wellness practices of ancient China, as they develop skills of Chinese martial arts, energy balance, and Chinese food and healing pract",8,7,,,384|385|386,
+24,56,Cultural History Grade 7,World Empires and Universal Religions,"<p>Students begin with an introduction to the idea of empire building and universalizing religions. Focusing on the years 350 BCE to 800 CE, they study classical civilizations of the Maya; Alexander the Great and the Hellenistic period; the Silk Road as it links Asia, Africa, and Europe in trade networks; and the Romans at the time of imperial expansion.</p>
+
+<p>&nbsp;</p>
+
+<p>Students then consider the life and teachings of Ashoka, a Buddhist leader in ancient India, as an example of a charismatic leader inspired by religion to unite a large territory under imperial authority. Next, they examine early Christianity and the origins of Islam as examples of universalizing religions in a changing classical world. The course concludes with an overview of the processes of geographical spread and empire consolidation, as well as patterns of cultural change through worldviews based on religion.</p>
+",1,8,,,215|216|217|218|219|220,
+67,57,English Grade 7,,,10,8,,,390|391|392|393|394,
+34,58,Science Grade 7,,"<p>Students focus on the contributions that the ancient Maya, Greek, and Roman civilizations made to the scientific world, while learning to develop and train their own scientific minds. They begin by exploring the relationships among Maya astronomy, religion, and agriculture. Students learn about the ways in which forces and motion influence the movements of celestial bodies, particularly the retrograde motion of Venus; discuss the formation of the universe; and explain the causes of the seasons. They investigate how the Mayas domesticated corn and developed agricultural methods to suit a variety of ecosystems.</p>
+
+<p>&nbsp;</p>
+
+<p>Students also discover Aristotle&#39;s revolutionary contributions to the fields of botany, optics, and the classification of living things. Their exploration of the Hellenistic and Roman eras leads to a study of the composition of Earth and the causes of natural disasters, such as the eruption of Mount Vesuvius and the destruction of Pompeii. A geographical survey of the Silk Road, a study of Roman machines, and a student-directed science project culminate the year. Through their investigations, students describe the needs of growing civilizations, how humans can impact the environment both positively and negatively in their efforts to meet those needs, and sustainable approaches to problems.</p>
+",4,8,,,362|363|364|365|366|367,
+39,59,Mathematics Grade 7,,"<p>Students compare the Mayan base-20 and Roman number systems. They consider zero, integers, and negative numbers, and begin studying algebra by solving monomials and single-step inequalities and graphing linear relationships. They explore the connection between probability and statistical concepts, such as sampling, bias, measures of central tendency, and appropriate displays of data. This includes designing and conducting experiments to test predictions, and then comparing theoretical probability to actual results.</p>
+
+<p>Students next examine solids by measuring surface area and volume. They analyze angle-pair relationships formed by transversals. Finally, students connect the mathematical developments of Maya and Roman civilizations to their relative sophistication, scale, and lasting influence upon surrounding areas.</p>
+",3,8,,,244|245|246|247,
+85,60,Media Studies and Technology Grade 7,,"<p>This Media Studies and Technology course involves Grade 7 students exploring how ancient empires used media to expand and consolidate their domains. They also explore the Silk Road and how it fueled cultural interactions between empires, thereby contributing to globalization. Students connect the consolidation of empires to today&#39;s world by studying how media is used by modern nations to promote a uniform culture. They also examine how media has contributed to today&#39;s global culture by relating the Internet to the Silk Road. In addition, students explore the role of narrative in shaping and defining national identities by comparing Virgil&#39;s foundational epic of the Roman Empire, the&nbsp;Aeneid, to the culture, myths, and histories of modern nations. Finally, students use visual and rhetorical techniques to create national identity websites for neighboring nations they have studied.</p>
+",5,8,,,253,
+62,61,Visual Arts Grade 7,,"<p>Students explore architecture, art and artifacts, and the creation of objects in the medieval world. Topics include mosque design, Islamic architecture, and calligraphy in conjunction with study of the Golden Age of Islam. While focusing on medieval Europe, students examine depictions of Norse deities, heraldic shield design, stained glass, stone carving, mosaics, and cathedral architecture as part of a guild project. They compare the design of Japanese teahouses and samurai armor to the feudal style of medieval Europe. In their study of medieval West Africa trade routes, they appreciate the colorful textiles and intricate mud architecture of these kingdoms.</p>
+",7,8,,,358|359|360|361,
+115,62,Performing Arts Grade 7,Performing Arts: Music,"<p>In conjunction with their studies of Mesoamerica in Cultural History, students explore the music of the Maya people before their contact with Europeans. They examine Maya instruments, Maya vocal music, and the integral roles of music and musicians in classical Maya society. Applying their research skills from World Languages&nbsp;and Literature: English, students research a self-selected topic related to Maya music. As a complement to these individual tasks, students learn as an ensemble to sing a Maya song and to play on ocarinas at their Maya Day Festival.</p>
+",6,8,,,455,
+118,63,Wellness Grade 7,World Empires and Universal Religions,"<p>This course explores the concept of wellness in three major civilizations as they extended their political boundaries to become central ruling societies: the Maya, ancient Rome, and the United States. Within this context, the course provides health education and physical wellness education. The integrated units help to develop fitness components and fitness skills, as well as sportsmanship and teamwork.</p>
+
+<p>First, through the study of classical Maya health and wellness, students are able to learn the skills and locomotor and manipulative skills associated with Maya ball in order to understand ball sports today, such as soccer and basketball.&nbsp;Also, by examining Maya artifacts and architecture, students explore this society&rsquo;s food production, diet,&nbsp;ancient healing techniques,&nbsp;and sustainable nutrition. The classical Maya unit serves as a platform to explore modern sustainable nutrition, nutrition building blocks, and the understanding of modern food production.</p>
+
+<p>Through the study of Roman wellness, students explore the agriculture, food, health, hygiene, and medicine of this society as it expanded into an empire. By studying the ancient Roman gladiator culture, students examine how it relates to fanaticism today. Also, students learn about the similarities of gladiator combat games and the principals of modern U.S. football. Students understand these elements within the context of universalizing religions and how ideas and values began to spread beyond the boundaries of the originating culture. The Roman wellness unit serves as a platform to speak about hygiene as it relates to the historical period, as well as to pre-adolescence. In addition, it continues the discussion about puberty and development and begins the dialogue about reproduction.</p>
+
+<p>The third unit, which aligns with the U.S. History unit, allows students to explore the health, wellness, and social values in the time of Theodore Roosevelt, which provide a foundation",8,8,,,469|470|471,
+26,64,Cultural History Grade 8,The Climax of Hierarchical Civilizations,"<p>In grade 8 Cultural History, students consider medieval civilizations as hierarchical societies that derived their identity from religious faith but based their social structures on land tenure and warrior status and display. As competition and conflict arose among religious civilizations, new ideas were disseminated across boundaries, and new religious orders and mystical movements emerged that sought to relate the individual in an unmediated way to the source of the sacred. This shift from the temple-formed Geometric Mentality to the individually experienced Algebraic Mentality is expressed in new forms of literature that reveal an emphasis on the vision quest and personal romantic love. It is also expressed in new forms of calligraphy, manuscript illumination, and mathematical understanding that demonstrate a shift from the concrete object or worldly state to a spiritual vision. This transcendental ideal is expressed in the celestial notation of the empowering script of alchemy and algebra. The course concludes with students examining the consolidation of the U.S. empire from 1914 through the Great Depression.</p>
+",1,9,,,292|293|405|406|407,
+54,65,English Grade 8,The Climax of Hierarchical Civilizations,"<p>Students explore the rich and diverse world literature from 800 to 1416 as well as American literature from 1914 to 1939. They explore patterns of language development and usage from Old English through early modern English. Along with fiction, plays, memoirs, poetry, and biographies from medieval Baghdad and the Iberian Peninsula, Northern Europe, West Africa, Japan, and the United States, students explore contemporary nonfiction, documentary films, and journalism regarding those areas. Present and past resonate in classroom and small-group discussions and group projects as students attempt to define universal experiences and how they relate to the concerns of the adolescent journey and the challenges of global citizenry.</p>
+",10,9,,,379|380|381|382,
+40,66,Science Grade 8,,"<p>Students investigate the importance of positional astronomy during the Golden Age of Islam and construct and use their own instruments for determining the elevation of objects on Earth and in the sky through the use of geometry. Students then explore the development of alchemy in the Islamic world as a precursor to the empirical science of chemistry and appreciate the contributions of alchemy to our understanding of chemical reactions and energy transfer. They investigate both physical and chemical properties of elements and study the periodic table. Students explore microbiology and the spread of infectious diseases in the context of the plagues that recurred throughout the Middle Ages in both the Islamic and European worlds. Students end the year investigating electricity and magnetism and observing the relationship between the two through a series of hands-on explorations.</p>
+",4,9,,,344|345|346|347,
+96,67,Mathematics Grade 8,The Climax of Hierarchical Civilizations,"<p>Students begin their studies by investigating verbal, symbolic, and graphical representations of linear relationships. They use proportional and functional relationships to study linear equations in two variables and represent these equations on the Cartesian coordinate plane. Students apply systems of linear equations to solve mathematical, historical, and real-world problems. They then investigate linear inequalities and absolute value equations in one and two variables. Students define polynomials and perform operations, including factoring and binomial expansions. They learn various methods for factoring and solving quadratic equations. Students graph quadratic functions on the coordinate plane and connect multiple representations of quadratic functions. They simplify, solve, and graph rational and radical expressions, equations, and functions. Students explore the symbolic use of numbers and geometric shapes in Islamic art and medieval rose windows, and they apply these ideas to create their own designs. They also research numerical patterns in economic data from the Great Depression. Throughout the course, students make connections to the contributions of al-Khwarizmi and other Islamic mathematicians to the development of polynomial algebra.</p>
+",3,9,,,321|322|323,
+86,68,Media Studies and Technology Grade 8,,"<p>In the Media Studies and Technology course for grade 8, students use cyberspace to guide them toward greater insight into the medieval worldview and the processes that worked upon it, including new religious orders and mystical movements. Students explore how medieval civilizations began to use art such as manuscript illumination and painting to represent space in a way that transcends the concrete worldly state. By doing this, these artists conveyed symbolic and spiritual meanings, such as divine and romantic love. Students also compare how people in medieval times viewed space differently than we do today. Students analyze what cyberspace &ldquo;is&rdquo; in terms of the history of the Internet and the hardware and human resources that make it possible. In addition, students compare cyberspace to representations of space in medieval art and then build a website about medieval art that emphasizes medieval sensibilities of time and space.</p>
+",5,9,,,254,12
+65,69,Visual Arts Grade 8,,"<p>Students engage in the study of architecture, art and artifacts, and the creation of objects in the medieval world. Topics include mosque design, Islamic architecture, and calligraphy in conjunction with study of the Golden Age of Islam. As they move on to medieval Europe, they examine depictions of Norse deities, heraldic shield design, stained glass, stone carving, mosaics, and cathedral architecture as part of a guild project. They also explore the design of Japanese teahouses and samurai armor, as well as African textiles and mud architecture, as they learn of medieval West Africa trade routes.</p>
+",7,9,,,450|451|452,
+116,70,Performing Arts Grade 8,Performing Arts: Music,"<p>Reflecting on the dawn of the Middle Ages as studied in Cultural History, students compare the early Gregorian chant and its connection to the Roman Catholic Church to recordings of modern-day Gregorian chants. They apply their research and presentation skills from World Languages and Literature:English to describe the relationship between the art and history. Delving&nbsp;into musical theory, students explore the musical structure and its notation through the eight church modes followed by the creation of their own original Gregorian chants, which they enhance with illuminations from Visual Arts.&nbsp;</p>
+",6,9,,,456,
+108,71,Wellness Grade 8,The Climax of Hierarchical Civilizations,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">The course provides historically rooted health education and physical wellness education over three major integrated units. Students explore the wellness of two major medieval civilizations as they competed with each other and ideas spread between them. Also, students examine the wellness in the United States during the 1920s and make connections between this period and medieval times. The integrated units help to develop intermediate fitness components and skills&nbsp;and provide a platform for fitness testing. Also, they offer a chance to explore cultural dances, such as the dance of the Whirling Dervish and the Charleston. In addition, the course develops sport specific skills of field hockey and tennis.</p>
+",8,9,,,387|388|389,
+17,72,Cultural History Grade 9,The Emergence of the Modern Perspective,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">The guiding theme for grade 9 is movement. This course charts the movement of paper money across borders and across time, of sailing vessels across oceans, of three dimensions with the use of formal perspective in paintings, of discovery of the circulatory system of the body, and of people across social classes. Students understand that these dramatic changes have contributed to the emergence of &ldquo;the individual,&rdquo; to city-states and early mercantilism, to societies based on reason over faith, and to a global worldview that would reshape cultures and continents.&nbsp;<span style=""line-height: 1.42857;"">Students investigate the major shifts that occurred between the years 1416 and 1688. The early modern period gave rise to oceanic exploration both in the East and the West and resulted in collisions and coexistence of cultures in Europe, Asia, and the Americas. The spread of the Ottoman Empire with its capture of Constantinople and the Byzantine Empire, the expulsion of Muslims and Jews from Spain as a result of the Reconquista, and the conquest of native peoples in the Americas created their own collisions of religion and culture. While the birth of humanism and formal perspective in Renaissance Italy inspired new forms of literature, governance, art, and architecture, the Northern Renaissance and the Reformation ushered in an unmediated relationship with the divine. A revolutionary shift in worldview from a geocentric to a heliocentric model of the solar system, along with the emergence of empiricism, introduced a new way of understanding phenomena. The establishment of European colonies in North America were hallmarks of this cultural transition.</span></",1,10,,,151|152|153|154|155,
+21,73,English Grade 9,The Emergence of the Modern Perspective,"<p>Students study the literature from 1416 to 1688, including the texts of the early Spanish explorers to the Americas, the Florentine Academy, Machiavelli, Shakespeare, More, Petrarch, and Cervantes. Themes includes the rise of the individual (Petrarch, Columbus, letters of Cort&eacute;s, Smith), how-to literature (Machiavelli, Castiglione), the democratization of literature (the Gutenberg Bible, Luther&rsquo;s 95 Theses, Brandt&rsquo;s&nbsp;Ship of Fools), protest literature (Lazarillo de Tormes,&nbsp;Don Quixote,&nbsp;Utopia), the legitimization of the English language (King James Bible, Shakespeare, Elizabethan theater), artistic uses of new scientific discoveries (Donne, Shakespeare), and the influence of religion on art (Dante, Milton, Moli&egrave;re). In their studies, students engage in literary responses, interpretation, written analysis, discussion, public speaking, and various project-based assessments.</p>
+",10,10,,,160|161|162|163|164,
+19,74,Science Grade 9,"Integrated Earth Science, Physics, and Biology","<p>The Renaissance is the time period in which modern science was not only born,&nbsp;but&nbsp;it also came to be a dominant perspective for viewing human experience&nbsp;of the natural and physical world. Students&nbsp;learn content in specific scientific disciplines while studying the scientific method itself and investigating its power and limitations. First, students examine the shift from the old geocentric view of the Universe to the heliocentric model of Copernicus. Next, they explore anatomy and physiology, culminating in an integrated project with the Visual Arts domain, in which they create sketchbooks of a dissection that emulate those of Leonardo da Vinci. Students delve into the physical laws that govern&nbsp;interactions of matter on Earth. They repeat some of Galileo&rsquo;s experiments in order to derive physical laws themselves, and they explore the laws of motion and gravitation discovered by Isaac Newton&mdash;laws that ultimately unified celestial and terrestrial physics.</p>
+",4,10,,,182|183|184,
+110,75,Mathematics: Geometry,,"<p>In their study of geometry, students learn that Euclid developed an axiomatic system in his work&nbsp;Elements, which was used as the standard geometry textbook for centuries. They develop a system similar to that of Euclid, starting with undefined terms and axioms and building definitions and theorems using deductive reasoning. Students discuss the contributions of other mathematicians, artists, and architects to the field of geometry. They investigate Columbus&rsquo;s estimate of Earth&rsquo;s circumference and its impact on his planned voyage. They also examine the use of geometry in art from various cultures and times and create original works of art that incorporate geometric properties. Students learn trigonometric ratios in right triangles and understand contributions of the Babylonians and Chinese to trigonometry. They apply trigonometry to solve real-world problems, such as estimating distances from stars to Earth. Students construct geometric figures by hand and using technology and compare their methods to the methods of Euclid and D&uuml;rer. They study the properties and the history of the five Platonic solids and then research and apply Euler&rsquo;s polyhedral formula.</p>
+",3,10,,,414|415|416|417|418|419,
+74,76,Media Studies and Technology Grade 9,,"<p>Media Studies and Technology in Grade 9 examines how cultural innovations like perspective became conventions for a rational and ideal representation of space and how print media solidified and disseminated the cultural revival of the Renaissance and laid the groundwork for the Reformation. Studying historical and contemporary artifacts from different domains, students acquire an understanding of how innovations in communication technology structure and influence thought and perception. The unit culminates with students creating a multimedia product that combines their own original typeface designs with a second new medium. This project demonstrates students&rsquo; understanding of key Renaissance media concepts and how media are content in and of themselves that shape us as we use them.</p>
+",5,10,,,173,
+68,77,Visual Arts Grade 9,,"<p>Students learn fundamental drawing skills and begin to observe, think, and perform like a Renaissance artist. They study works of art from the period and draw inspiration from these works for their own art production. The major focus is on producing pages for the Leonardo Sketchbook, a project in which students create drawings, notes, and calculations based on their own observations and experiences. Students learn Renaissance drawing methods, such as cross-hatching, foreshortening, and perspective, and use them to create botanical drawings, drawings of inventions and mechanical objects, master copies, studies from the model, and other observational drawings.</p>
+",7,10,,,185,
+48,78,Performing Arts Grade 9,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In this course, students explore the way in which the performing arts influenced economics, education, literacy, entertainment, and religion&nbsp;during the Renaissance. They are introduced to the parallel development of theater, plays, and performance within the prevailing political, social, and economic climate&nbsp;in which Shakespeare and other playwrights wrote.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Students examine the structure of Shakespeare&rsquo;s verse, exploring iambic pentameter, meter, and the specific uses of verse and prose to better understand character interaction.&nbsp;They are also introduced to the use of blank verse, prose structure, imagery, and metaphor. Students utilize class discussions to share their insights from the play and collaborate to channel their combined knowledge&nbsp;during rehearsal&nbsp;into a semiformal performance before peers.</p>
+",6,10,,,186,
+119,79,Wellness: Archery,,"<p>This trimester elective, taught throughout the year, allows students the opportunity to practice and improve their archery skills. Students learn archery history, safety, technique, mental concentration, core-strengthening physical fitness, and the value of self-improvement. Throughout the course, students learn proper form, safety rules, rules of archery competition, style, and function of equipment, and they develop the strength, concentration, focus, and hand-eye coordination required to perform the sport. In addition to their training, students explore the origins and evolution of archery in prehistoric societies and ancient Egyptian, Roman-Greco, Asian, Western European, Japanese, and Native American cultures.</p>
+",8,10,,,472,
+27,80,Cultural History Grade 10,Revolution and the Rise of the Individual,"<p>Grade 10 Cultural History addresses the period 1688 to 1865; the three units are titled Enlightenment and Enslavement, Revolution and Resistance, and The Industrial Revolution and the Romantic Reaction. Students use literature, art, and various media sources to contemplate the rise of the individual, new models of governance, changing modes in the acquisition of knowledge and capital, and the expansion of the world economy. Investigation of mercantilism and slavery provides students with comparative perspectives on changing political, economic, and social structures of the time period. Students examine the natures of revolution and emerging nationalism in the context of Enlightenment philosophy. An in-depth study of the Industrial Revolution and the Romantic movement in literature, art, and music reveals the tension between technological progress and a nostalgic idealization of nature and the supernatural. The triumph of capitalism and the abolition of slavery herald the development of the modern industrial nation-state, while workers and socialists offer severe critiques of the new capitalist order and women assert their rights.</p>
+",1,11,,,208|210,
+55,81,English Grade 10,Revolution and the Rise of the Individual,"<p>In grade 10 World Languages and Literature: English, students use literature, art, and various media sources to contemplate the rise of the individual, new models of governance, changing modes in the acquisition of knowledge and capital, and the changing nature and expansion of the world economy. They examine the changing political and social structures of the time period, the nature of revolution, and emerging nationalism in the context of key works of Enlightenment philosophy, novels, and poetry of the period. An in-depth study of the Industrial Revolution and the Romantic movement in literature, art, and music reveals the tension between technological progress and a nostalgic idealization of nature and the supernatural, as well as introduces a feminist reaction to Enlightenment ideas.</p>
+",10,11,,,221|222|223,
+41,82,Science Grade 10,"Integrated Physical Sciences, Environmental Sciences, and Biology","<p>Students focus on the role empirical evidence plays in shifting scientific paradigms. They review the history of alchemy as a precursor to modern chemistry. Students also learn about the kinetic theory of matter and how scientists of this period (Bernoulli, Boyle, Charles, Lavoisier, Mendeleev) often repeated and extended the works of others. They examine Newton&#39;s empirical studies and Voltaire&rsquo;s letter on optics. They discover the contributions of Hooke and van Leeuwenhoek on microbial species and the development of the smallpox vaccine. Finally, students explore problems of the Industrial Age through the lens of environmental sciences and ecology, and discuss the work of Malthus with questions about environmental sustainability throughout time.</p>
+",4,11,,,331|332|333|334|335,
+111,83,Mathematics: Intermediate Algebra and Trigonometry,,"<p>Students focus on the study of functions and their graphs, with an emphasis on the historical development of this field. They explore contributions of mathematicians, including Descartes&rsquo;s invention of the coordinate plane and Euler&rsquo;s function notation. Students investigate the relationship of the equations and graphs of different types of functions, including quadratic, polynomial, exponential, logarithmic, rational, and trigonometric functions. They transform the graphs of parent functions, solve related equations, and explore real-world examples of each type of function. Students graph conic sections, write their equations, and use conic sections to model real-world situations. They research the history of probability, develop counting techniques, and apply them to determine probabilities of mathematical and real-world events.&nbsp;</p>
+",3,11,,,420|421|422|423|424|425|426|427,
+97,84,Media Studies and Technology Grade 10,Revolution and the Rise of the Individual,"<p>Media Studies and Technology in grade 10 examines the dynamic between mass media and democracy. Students learn about early struggles for a &ldquo;free press&rdquo; and consider the role of free press today. Focusing primarily on journalism and photography, students use Susan Sontag&rsquo;s classic essays&nbsp;<em>Regarding the Pain of Others</em>&nbsp;and&nbsp;<em>On Photography</em>&nbsp;to understand not only the implications of photography during war, but the cultural conditions of current war journalism. In the culminating integrated project, students learn black-and-white photography and darkroom techniques to gain a foundation of technical skills and a deeper understanding of photography&rsquo;s conceptual inner workings. Each student visualizes his or her lived experience of the philosophical and political legacies of the Enlightenment period through a mixed media photographic art piece and short essay.</p>
+",5,11,,,328,
+92,85,Visual Arts Grade 10,Revolution and the Rise of the Individual,"<p>In this trimester course, tenth grade students explore Romanticism and the influences that led up to this movement through painting, drawing, and printmaking. They study the characteristics and themes of artwork from the period and then&nbsp;explore particular Romantic artists by creating an artistic book&nbsp;with writings, drawings, plexi etchings, linoleum prints, block prints, collage, poetry, and paintings&nbsp;inspired by those artists. They explore themes related to art of this period (social commentary, statements and images about war, landscape, self-portraiture) and experience plein air painting.</p>
+",7,11,,,291,
+66,86,Performing Arts Grade 10,,"<p>This course examines the music of the Baroque, Classical, and Romantic periods&nbsp;within the larger context of Western music.&nbsp;Students engage with musical and historical texts in a variety of ways, including echoing melodies and rhythms, playing instruments, listening to music recordings, and reading notation&nbsp;and historical texts. Throughout the course, music is related to the social, political, and technological shifts that take place over the period studied, including the effects of industrialization, the rise of the middle class, and how the role of a composer evolved to reflect a societal shift toward individualism and artistic freedom.</p>
+",6,11,,,336,
+120,87,Wellness: Tai Chi,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In this course, students learn tai chi by exploring the &ldquo;Simplified 24 Taijiquan (Tai Chi Chuan) Form in the Yang Style&rdquo; that has been popularized in China and is now being taught in the West. In learning the &ldquo;24 Form,&rdquo; students learn the benefits of tai chi and basic qigong exercises as a wellness practice with its historical roots in martial arts and its development into a means of physical conditioning with applications in the healing arts.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Students learn each movement in the sequence while synthesizing the elements of body alignment, balance, strength, control, endurance, and focus that are foundational in tai chi. They practice the different movements and the whole form together as a group and experience this &ldquo;meditation in motion&rdquo; in a fluid, graceful continuous cycle.&nbsp;Students develop a personal understanding of how to use their bodies according to the dynamics of&nbsp;yin&nbsp;and&nbsp;yang&nbsp;so they can experience the practical application of the underlying philosophy, which gives cultural as well as personal meaning to their Wellness education. Students become versed in the principles underlying the movements of tai chi and its basis in Taoist concepts as they explore its range as a means of building life force energy and an open, relaxed, and aware state of mind and gain insight into how to think, feel, and",8,11,,,473,
+58,88,Cultural History Grade 11,Global Economic Consolidation and Visionary Revolts,"<p>The Grade 11 Cultural History curriculum covers the period of global history from 1851 to the present. The yearlong course is divided into five units. In the first two units, students study the climax of the modern consciousness in the late 19th and early 20th centuries, characterized by accelerated modernization, the global projection of Western triumphalism, and colonial and modernist responses. In the third unit, students study the emerging concept of self-determination and with that the desire for the end to colonialism. This third unit emphasizes an emerging global consciousness, characterized by the growth of internationalism and transnational phenomena. The final two units explore the tensions between the competing internationalisms that vied to unite human beings as inhabitants of a single planet, including the globalization of world economies and the push to establish a renewed world order, as well as the implications for planetary consciousness that emerged from various struggles for decolonization.</p>
+",1,12,,,203|204|205|206|209|296,
+109,89,English Grade 11,Global Economic Consolidation and Visionary Revolts,"<p>The grade 11 World Languages and Literature: English curriculum addresses the period of global history from 1866 to the present. The yearlong course is divided into five units. Students begin their studies by focusing on late&nbsp;19th- to early&nbsp;20th-century European colonialism, with specific attention to the native resistance to colonialism and the flowering of anticolonial literature. The second unit emphasizes the formal progression in literature from romantic to scientific and realistic perspectives. Additionally, students trace how writers moved from creating works centered on objectivity to composing subjective texts that emphasize the writer&rsquo;s own psychological perspective<em>.</em>&nbsp;They then explore modern poetry and the development of free verse. The third unit uses essential works of 20th-century feminism to explore the portrayal of women in literature and examine gender and race roles as they relate to economic opportunity. In addition, students read works about&nbsp;the Holocaust to understand the wide-reaching impact of this horrific period in history, both on individuals and on society as a whole. In the fourth unit, students draw connections between world events of the mid-20th century and the vulnerability of different political systems to corruption, the struggles&nbsp;individuals face in times of intense cultural conflict and change, and the responsive developments of&nbsp;dystopian and post-modern literature.&nbsp;The final unit continues&nbsp;the focus on native expressions from so-called &ldquo;undeveloped&rdquo; regions. Students explore these additional voices that emerge in the post-colonial era, as literature became increasingly international or transnational.</p>
+",10,12,,,395|396|397|398|399,
+56,90,Science Grade 11,"Integrated Biology, Physics, and Environmental Science","<p>Students focus on the role empirical evidence plays in shifting scientific paradigms. Students first review the history of alchemy as &nbsp;a precursor to modern chemistry and trace the rise of empirical, repeatable measurement as a new way of exploring the natural world. They learn about the kinetic theory of matter and how scientists of this period (Bernoulli, Boyle, Charles, Lavoisier, Mendeleev) often repeated and extended the works of others. They examine Newton&rsquo;s empirical studies on optics and Voltaire&rsquo;s letter on this topic. They examine the contributions of Hooke and van Leeuwenhoek and the role of technology in the discovery of microbial species, as well as Jenner&rsquo;s work in the development of smallpox vaccine. Finally, they explore problems of the Industrial Age through the lens of environmental sciences and ecology and discuss the work of Malthus, raising questions about environmental sustainability in that time period, today, and in the future.</p>
+",4,12,,,337|338|339,
+112,91,Mathematics: Statistics and Pre-Calculus,,"<p>Students begin the course with a study of descriptive statistics, including numerical and graphical displays of data, normal distributions, least-squares regression, and two-way tables. Next, they study trigonometry, beginning with trigonometric functions on the unit circle. They analyze and graph trigonometric functions and their inverses, prove trigonometric identities, solve trigonometric equations, and explore the history and applications of trigonometry. Students then investigate polar coordinates and polar graphs, including logarithmic and Archimedean spirals, Bernoulli&rsquo;s lemniscate, Pascal&rsquo;s lima&ccedil;on, the cardioid, and the rose curve. They analyze arithmetic and geometric sequences and series and prove statements by using mathematical induction. Next, students find limits of functions, discuss discontinuities and asymptotes, and explore fractals and fractal dimensions. They analyze and construct fractals such as Sierpinski triangles, Sierpinski carpets, fractal trees, and Koch snowflakes, and they discover the unusual properties of these fractals.</p>
+",3,12,,,428|429|430|431|432,
+98,92,Media Studies and Technology Grade 11,Global Economic Consolidation and Visionary Revolts,"<p>In Media Studies and Technology grade 11, students examine in greater depth the ways in which new media technologies are a vehicle for mass communication in service of the ideologies of nations, religions, and economic movements such as capitalism and, when in the hands of the people, can be wielded as a tool for representing marginalized voices and promoting social and political change. Utilizing the theories of media scholars studied, students analyze the products of new media innovations&mdash;objects, artworks, films, architecture, and aesthetics as texts&mdash;while unpacking altered cultural conditions that now embrace psychology, the consumer, internationalism, and the modern individual. Students connect these ideas to contemporary media in their everyday lives. In a culminating creative integrated project, students produce a work of propaganda in support of an ideological cause using the persuasive techniques of 20th-century propagandists and 21st-century advertisers.</p>
+",5,12,,,329,
+91,93,Visual Arts Grade 11,Global Economic Consolidation and Visionary Revolts,"<p>In this trimester course, grade 11 Visual Arts students study the history of modern art and develop skills in drawing, painting, collage, and bookbinding. They trace the development of modernism in art (Manet, C&eacute;zanne, Picasso), explore the development of major modern art movements, and chart their chronology. They learn about Symbolism, explore Cubism and its connection to both to the science of the time and to the European interest in African art, and discuss Freud&#39;s impact on German Expression ism and the Surrealists. In their own art production, students incorporate various modernist approaches, including the use of fractured images, vivid color, multiple perspectives, and dream imagery.</p>
+",7,12,,,290,
+49,94,Performing Arts Grade 11,,"<p>In this trimester course, students focus on the development of modern theater and its role in challenging existing social and political barriers, as well as its role in reflecting and mirroring existing issues, beliefs, and events. Students read and analyze plays in terms of theme, structure, interpretation, character development, and social context. Students carry out research in order to collaboratively devise and write scripts to be performed for the integrated Visionary Leaders Trial Project.</p>
+",6,12,,,207,
+121,95,Wellness: Modern Dance,,"<p>In this course, students become versed in the technical aspects of modern dance as they explore its cultural, artistic, and personal meaning in relation to their Wellness education. At the same time, this course is strongly centered in performing arts that elaborate on themes learned in Cultural History. Through the kinetic experience of this art form, students develop a personal understanding of healthy technique and of dance as an evolving art form with contemporary significance. Students learn and apply principles of movement structure, anatomy, and kinesiology to develop good body alignment, balance, strength, control, endurance, flexibility, and focus in performance, developing coordination and spatial awareness. They learn combinations from classic modern dance and explore the basics of dance composition and the work of major choreographers in the genre. Throughout the course, students are exposed to a variety of music in order to broaden their experience to help them develop a mature understanding of movement coordinated with music and silence as an artful means of self expression.</p>
+",8,12,,,474,
+51,96,Cultural History Grade 12,Evolution of Consciousness,"<p>This course provides an overview of the Evolution of Consciousness as studied in the Spiral Curriculum from&nbsp;third grade through eleventh grade. The course is divided into five units, each of which covers one of the Artistic-Mathematical Mentalities and its related cultural ecology and archetypal concepts.&nbsp;In the first unit, students review the Arithmetic Mentality, including the rise of the Sylvan/Savannahan/Lacustrian/Glacial and Riverine Ecologies by exploring Paleolithic artifacts and the role of the shaman; early Neolithic and matric cultures; and the move from matristic to patriarchal society. In the second unit, students examine the first bifurcation: the shift to the Transcontinental Ecology and Geometric Mentality by studying the rise of prophetic figures, the transformation from magic and mythology to mathematics and philosophy, and the accompanying formation and expansion of empires. In the third unit, students study the Algebraic Mentality that arose in medieval civilizations that saw the rise of new cultural forms celebrating the transcendent ideal and the invisible powers that animate the physical world. In the fourth unit, students examine the Dynamical Mentality that lasted from the mid-15th to the 19th century and focused on movement, the formation of global connectivity, and intellectual, political, and technological revolutions. The final unit explores the Dynamical Mentality, the mentality of our time, as humans twice experience the trauma of global conflict, confront challenges to the rational world order, and develop&nbsp;Complex Dynamical systems.</p>
+",1,13,,,190|191|192|193|194,
+52,97,English Grade 12,Evolution of Consciousness,"<p>Students explore literary art as an expression of human consciousness evolving from prehistoric to modern times. Students examine the origins of language, narrative, and poetry; the role and cultural context of ancient Sumerian, Babylonian, and Egyptian mythologies; the emergence of drama in ancient Greece and the use as literature for political means in ancient China; the rise of Persian romances and the fusion of ideas and art brought about by the Crusaders&rsquo; encounters with Near East cultures; troubadour poetry and the ideal of courtly love; the novel; early literary experimentation generated by Modernism; reflections of the Cold War; and the rise of planetary culture. They analyze the development of English as a global language, studying literature from former English colonies through the postcolonial world. They study works that address the world of the late 20th century, ending with science fiction, as students prepare to project themselves into the future.</p>
+",10,13,,,195|196|197|198|199,
+57,98,Science Grade 12,"Cosmos, Life, Brain, and Mind","<p>Students explore theories of the origin of the universe, the origin of life, and the eventual emergence of humanity and intelligence. They analyze evidence for the Big Bang Theory, explore 10 billion years of cosmic evolution, and discuss contemporary issues in cosmology. Students examine hypotheses regarding the origin of simple prokaryotic life, and the emergence of complex eukaryotic life. They reconstruct the origin of <em>Homo sapiens </em>within an evolutionary framework derived from fossil and genetic evidence. They discuss trends in human evolution in light of contemporary knowledge of our ancestors&rsquo; social organization and behavior. Students also examine the function and structure of evolutionary older and younger regions of the brain, as well as cognitive development and the segregation of brain functions. They conclude by discussing human consciousness and its relevance to the future of science.</p>
+",4,13,,,200|201|202|349,
+113,99,Mathematics: Advanced Calculus,,"<p>To begin their study of calculus, students explore limits and continuity and&nbsp;then use the limit of the slope of a secant line to define the slope of a tangent line. They use the difference quotient to develop the definition of the derivative, and they research the history of calculus. Students learn derivative rules and apply the derivative to solve real-world problems, including optimization problems and related rates. They use the first and second derivative tests to find critical values and determine whether they are local maxima, local minima, or inflection points. In their study of integrals, students begin with rectangular approximation methods for the area under a curve. They use the relationship between derivatives and integrals to derive the Fundamental Theorem of Calculus, evaluate and apply definite integrals, and find volumes of solids of revolution.</p>
+",3,13,,,433|434|435|436|437|438,
+99,100,Media Studies and Technology Grade 12,Evolution of Consciousness; Globalization and the Dynamics of Cultural Transformation,"<p>In Media Studies and Technology grade 12, students engage the knowledge gained throughout their school experience with the question &ldquo;What is media?&rdquo; as they enter Media Studies and Technology classrooms to share and learn with students across grade levels. Grade 12 students carefully analyze contemporary media issues such as the evolution of post-war media technology, technological determinism, noetic polities, the global present, and digital dignity. The culminating integrated project in grade 12 is the &ldquo;Media Debates,&rdquo; in which students engage in formal debates based on their study of contemporary media issues.</p>
+",5,13,,,330,
+95,101,Cultural History: Art History Grade 12,,"<p>This course re-examines the spiral of art history through the range of mentalities. Through the lens of the visual and literary arts, students explore art and the creative impulse as markers in the evolution of human consciousness. They begin with a study of light and images of creation from mythic prehistory, then they move from the artistic attributes of early civilizations to the destructive forces of creation and subsequent rebirth of the arts as media for cultural communication and exchange in emerging dynamical civilizations and the contemporary world. Students conclude with a consideration of the way in which art as media is guiding humanity to a new phase of planetary culture.</p>
+",7,13,,,316|317|318|319|320,
+122,102,Wellness: Yoga,,"<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">In this course, students examine an eclectic overview of yoga and meditation reflecting yogic traditions adapted to contemporary practices. Students explore the origins and evolution of yogic techniques, as well as the importance of yoga and meditation to lifelong emotional, mental, physical, and spiritual health and wellness.</p>
+
+<p move=""function (old_index, new_index) {
+    if (new_index &gt;= this.length) {
+        var k = new_index - this.length;
+        while ((k--) + 1) {
+            this.push(undefined);
+        }
+    }
+    this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this; // for testing purposes
+}"">Students practice a variety of yoga poses and movements that encourage the development of good muscle tone, overall body strength, flexibility, endurance, balance, concentration, and better posture. They learn and practice correct structural alignment and optimal breathing, allowing students to become able to think more clearly and to feel more emotionally balanced. Students learn essential elements of pose sequencing in order to develop a home yoga practice that will support a healthy lifestyle.</p>
+",8,13,,,475,
