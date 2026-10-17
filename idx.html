@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hagen Geissler — AI & Data Engineer</title>
+<meta name="description" content="Portfolio of Hagen Geissler — AI and Data Engineer with 15+ years of experience in Python, TypeScript, and data-driven systems." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%233DFFC3'>▣</text></svg>" />
+<style>
+  :root {
+    --bg: #050505;
+    --fg: #F2F2F7;
+    --muted: #7D7D82;
+    --accent: #3DFFC3;
+    --card: #0a0a0a;
+    --border: rgba(242,242,247,0.10);
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --display: "Editorial New", ui-serif, Georgia, serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .mono { font-family: var(--mono); }
+  .display { font-family: var(--display); }
+
+  /* Grid background */
+  .grid-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(242,242,247,0.035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(242,242,247,0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 80%);
+  }
+  .scanline {
+    position: fixed;
+    left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(61,255,195,0.25), transparent);
+    z-index: 1;
+    pointer-events: none;
+    animation: scan 9s linear infinite;
+  }
+  @keyframes scan { 0% { top: -2px; } 100% { top: 100vh; } }
+
+  main { position: relative; z-index: 2; }
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 6rem 0; }
+  @media (min-width: 768px) { section { padding: 8rem 0; } }
+
+  /* Section header */
+  .sec-head { margin-bottom: 3rem; }
+  @media (min-width: 768px) { .sec-head { margin-bottom: 4rem; } }
+  .sec-head .top { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+  .sec-head .idx { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.2em; }
+  .sec-head .line { flex: 1; height: 1px; background: var(--border); }
+  .sec-head h2 { font-family: var(--display); font-size: 1.875rem; letter-spacing: -0.02em; }
+  @media (min-width: 768px) { .sec-head h2 { font-size: 3rem; } }
+
+  /* Hero */
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 6rem 0 4rem; }
+  .hero .badge { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 1.5rem; }
+  .hero .badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: blink 1.4s ease-in-out infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .hero h1 { font-family: var(--display); font-size: clamp(2.5rem, 8vw, 5.5rem); line-height: 1.02; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  .hero h1 .accent { color: var(--accent); }
+  .hero p.tag { font-size: 1.125rem; color: rgba(242,242,247,0.65); max-width: 42rem; margin-bottom: 2.5rem; }
+  .hero .cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.05em; border: 1px solid var(--border); transition: all 0.2s; }
+  .btn-primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .btn-primary:hover { box-shadow: 0 0 24px -6px var(--accent); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .hero .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .hero .stats .stat { background: var(--bg); padding: 1.25rem; }
+  .hero .stats .stat .v { font-family: var(--display); font-size: 1.75rem; color: var(--accent); }
+  .hero .stats .stat .l { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+  /* About */
+  .about-grid { display: grid; gap: 3rem; }
+  @media (min-width: 768px) { .about-grid { grid-template-columns: 1.5fr 1fr; } }
+  .about-grid p { color: rgba(242,242,247,0.75); margin-bottom: 1rem; }
+  .about-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--card); }
+  .about-card .row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.8rem; }
+  .about-card .row:last-child { border-bottom: none; }
+  .about-card .row .k { color: var(--muted); }
+  .about-card .row .v { color: var(--accent); }
+
+  /* Skills */
+  .skills-grid { display: grid; gap: 1.5rem; }
+  @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(3, 1fr); } }
+  .skill-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--card); }
+  .skill-card h3 { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+  .skill-card .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip { font-family: var(--mono); font-size: 0.75rem; padding: 0.25rem 0.6rem; border: 1px solid var(--border); color: rgba(242,242,247,0.8); }
+
+  /* Experience */
+  .exp-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .exp-item { background: var(--bg); padding: 1.75rem; display: grid; gap: 1rem; }
+  @media (min-width: 768px) { .exp-item { grid-template-columns: 200px 1fr; } }
+  .exp-item .period { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.05em; }
+  .exp-item h3 { font-family: var(--display); font-size: 1.25rem; margin-bottom: 0.25rem; }
+  .exp-item .co { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
+  .exp-item p { color: rgba(242,242,247,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
+  .exp-item .hl { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
+  .exp-item .hl span { font-family: var(--mono); font-size: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(61,255,195,0.3); color: var(--accent); }
+  .exp-item .stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .exp-item .stack span { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
+
+  /* AI Projects */
+  .ai-grid { display: grid; gap: 1.5rem; }
+  @media (min-width: 768px) { .ai-grid { grid-template-columns: repeat(3, 1fr); } }
+  .ai-card { border: 1px solid var(--border); background: var(--card); overflow: hidden; transition: border-color 0.2s; }
+  .ai-card:hover { border-color: rgba(61,255,195,0.4); }
+  .ai-card .img { aspect-ratio: 16/10; overflow: hidden; background: #111; }
+  .ai-card .img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: transform 0.4s; }
+  .ai-card:hover .img img { transform: scale(1.04); }
+  .ai-card .body { padding: 1.25rem; }
+  .ai-card h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .ai-card p { font-size: 0.85rem; color: rgba(242,242,247,0.6); margin-bottom: 0.75rem; }
+  .ai-card .stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .ai-card .stack span { font-family: var(--mono); font-size: 0.65rem; padding: 0.15rem 0.45rem; border: 1px solid var(--border); color: var(--muted); }
+  .ai-card .links { display: flex; gap: 0.75rem; font-family: var(--mono); font-size: 0.75rem; }
+  .ai-card .links a { color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; }
+  .ai-card .links a.code { color: var(--muted); }
+  .ai-card .links a.code:hover { color: var(--accent); }
+
+  /* Data Projects */
+  .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2.5rem; }
+  .filter-btn { font-family: var(--mono); font-size: 0.75rem; padding: 0.35rem 0.75rem; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover { border-color: rgba(242,242,247,0.3); color: var(--fg); }
+  .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(61,255,195,0.05); }
+  .data-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  @media (min-width: 640px) { .data-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .data-grid { grid-template-columns: repeat(3, 1fr); } }
+  .data-card { background: var(--bg); padding: 1.5rem; display: flex; flex-direction: column; min-height: 220px; transition: background 0.2s; }
+  .data-card:hover { background: var(--card); }
+  .data-card .dot { width: 8px; height: 8px; border-radius: 50%; margin-bottom: 1.25rem; }
+  .data-card h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 0.5rem; transition: color 0.2s; }
+  .data-card:hover h3 { color: var(--accent); }
+  .data-card p { font-size: 0.85rem; color: rgba(242,242,247,0.55); flex: 1; }
+  .data-card .fmts { display: flex; flex-wrap: gap: 0.4rem; margin-top: 1.25rem; }
+  .data-card .fmts span { font-family: var(--mono); font-size: 0.625rem; padding: 0.15rem 0.45rem; border: 1px solid; }
+  .data-card .foot { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .data-card .foot .host { font-family: var(--mono); font-size: 0.625rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%; }
+
+  /* Vidcasts */
+  .vid-grid { display: grid; gap: 1rem; }
+  @media (min-width: 640px) { .vid-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .vid-grid { grid-template-columns: repeat(3, 1fr); } }
+  .vid-tile { position: relative; aspect-ratio: 16/9; background: var(--card); border: 1px solid var(--border); cursor: pointer; overflow: hidden; display: flex; align-items: center; justify-content: center; transition: border-color 0.2s; }
+  .vid-tile:hover { border-color: rgba(61,255,195,0.4); }
+  .vid-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; transition: opacity 0.2s; }
+  .vid-tile:hover video { opacity: 0.7; }
+  .vid-tile .overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--bg), transparent 60%); }
+  .vid-tile .play { position: relative; z-index: 2; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .vid-tile:hover .play { background: var(--accent); }
+  .vid-tile .play svg { width: 18px; height: 18px; fill: var(--accent); transition: fill 0.2s; margin-left: 2px; }
+  .vid-tile:hover .play svg { fill: var(--bg); }
+  .vid-tile .meta { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; z-index: 2; }
+  .vid-tile .meta .tag { font-family: var(--mono); font-size: 0.625rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+  .vid-tile .meta .title { font-family: var(--display); font-size: 0.95rem; margin-top: 0.25rem; }
+
+  /* Modal */
+  .modal { position: fixed; inset: 0; z-index: 100; background: rgba(0,0,0,0.92); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; padding: 1rem; }
+  .modal.open { display: flex; }
+  .modal-inner { width: 100%; max-width: 56rem; }
+  .modal-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+  .modal-head .tag { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; }
+  .modal-head h3 { font-family: var(--display); font-size: 1.25rem; margin-top: 0.25rem; }
+  .modal-close { background: none; border: none; color: var(--muted); cursor: pointer; transition: color 0.2s; }
+  .modal-close:hover { color: var(--accent); }
+  .modal video { width: 100%; border: 1px solid var(--border); background: #000; }
+
+  /* Contact */
+  .contact-grid { display: grid; gap: 2rem; }
+  @media (min-width: 768px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+  .contact-card { border: 1px solid var(--border); padding: 2rem; background: var(--card); }
+  .contact-card h3 { font-family: var(--display); font-size: 1.5rem; margin-bottom: 1rem; }
+  .contact-card p { color: rgba(242,242,247,0.65); margin-bottom: 1.5rem; }
+  .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+  .contact-links a { font-family: var(--mono); font-size: 0.85rem; display: flex; align-items: center; gap: 0.5rem; color: var(--muted); transition: color 0.2s; }
+  .contact-links a:hover { color: var(--accent); }
+  .contact-links a .k { color: var(--accent); width: 5rem; }
+
+  footer { border-top: 1px solid var(--border); padding: 2rem 0; }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+
+  .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.6s, transform 0.6s; }
+  .fade.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+<div class="grid-bg"></div>
+<div class="scanline"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="badge"><span class="dot"></span> ONLINE · BERLIN, DE</div>
+      <h1>Hagen Geissler<br /><span class="accent">AI &amp; Data Engineer</span></h1>
+      <p class="tag">Highly experienced AI and data engineering professional with 15+ years of experience in Python, TypeScript, and related technologies.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#data-projects">View Projects →</a>
+        <a class="btn btn-ghost" href="#contact">Contact</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="v">40+</div><div class="l">Projects</div></div>
+        <div class="stat"><div class="v">15+</div><div class="l">Years Exp.</div></div>
+        <div class="stat"><div class="v">20+</div><div class="l">Clients</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">01</span><span class="line"></span></div>
+        <h2>&lt;About/&gt;</h2>
+      </div>
+      <div class="about-grid">
+        <div class="fade">
+          <p>I build data-driven systems — from astrometric mapping platforms to AI persona engines and image forensics tooling. My work sits at the intersection of large-scale data engineering, applied AI, and thoughtful interface design.</p>
+          <p>Over 15 years I've led video and data engineering at Funke Mediengruppe and Gruner + Jahr, recovered flood-damaged archives, automated industrial print pipelines, and shipped a broad catalog of open-source data tools.</p>
+        </div>
+        <div class="about-card fade">
+          <div class="row"><span class="k">role</span><span class="v">AI &amp; Data Engineer</span></div>
+          <div class="row"><span class="k">location</span><span class="v">Berlin, DE</span></div>
+          <div class="row"><span class="k">experience</span><span class="v">15+ years</span></div>
+          <div class="row"><span class="k">focus</span><span class="v">Data · AI · Tooling</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">02</span><span class="line"></span></div>
+        <h2>&lt;Skills/&gt;</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card fade">
+          <h3>Frontend</h3>
+          <div class="chips"><span class="chip">React</span><span class="chip">Vue.js</span><span class="chip">TypeScript</span></div>
+        </div>
+        <div class="skill-card fade">
+          <h3>Backend</h3>
+          <div class="chips"><span class="chip">Node.js</span><span class="chip">Elasticsearch</span><span class="chip">Python</span><span class="chip">PostgreSQL</span></div>
+        </div>
+        <div class="skill-card fade">
+          <h3>Tools &amp; Others</h3>
+          <div class="chips"><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Minio</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">03</span><span class="line"></span></div>
+        <h2>&lt;Experience/&gt;</h2>
+      </div>
+      <div class="exp-list">
+        <div class="exp-item fade">
+          <div class="period">Jan 21 – Jul 22</div>
+          <div>
+            <h3>Lead Developer, Video/FT</h3>
+            <div class="co">Funke Mediengruppe, Berlin, Germany</div>
+            <p>Cost reduction, AI integration to support ad bidding within over 100 TV channels. LG integration, Middleware Development &amp; Supervising engineer of the Video ecosystem.</p>
+            <div class="hl"><span>Cost reduction</span><span>AI ad bidding</span></div>
+            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>Kaltura</span><span>Akamai</span><span>AWS</span></div>
+          </div>
+        </div>
+        <div class="exp-item fade">
+          <div class="period">Oct 19 – Dec 20</div>
+          <div>
+            <h3>Lead Data-engineer, FT</h3>
+            <div class="co">Gruner + Jahr — Bertelsmann SE, Dresden, Germany</div>
+            <p>Archive Transmigration (Sächsische Zeitung) + Recovering flood (Dresden 2002) damaged Archive Data.</p>
+            <div class="hl"><span>Archive transmigration</span><span>Flood data recovery</span></div>
+            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>OCR</span><span>Elasticsearch</span></div>
+          </div>
+        </div>
+        <div class="exp-item fade">
+          <div class="period">Jan 19 – Sep 19</div>
+          <div>
+            <h3>Lead Developer, Contract</h3>
+            <div class="co">UnitedPrint, Radebeul, Germany</div>
+            <p>Industrial Automation of remote Printing Machines. Connecting Order streams to Remote printing Machines, with automated Packaging and Shipping.</p>
+            <div class="hl"><span>Industrial automation</span><span>Automated packaging</span></div>
+            <div class="stack"><span>Python</span><span>Docker</span><span>AWS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI PROJECTS -->
+  <section id="ai-projects">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">04</span><span class="line"></span></div>
+        <h2>&lt;AI Projects/&gt;</h2>
+      </div>
+      <div class="ai-grid">
+        <a class="ai-card fade" href="http://prompt.only-agent.ai/" target="_blank" rel="noreferrer">
+          <div class="img"><img src="https://santenova.github.io/me/prompthub.png" alt="Prompt Hub" loading="lazy" /></div>
+          <div class="body">
+            <h3>Prompt Hub</h3>
+            <p>AI-powered prompt management and content generation platform with advanced collaboration, optimization, and local AI control.</p>
+            <div class="stack"><span>React</span><span>Ollama</span><span>Elasticsearch</span></div>
+            <div class="links"><a href="http://prompt.only-agent.ai/" target="_blank" rel="noreferrer">↗ Live</a><a class="code" href="https://github.com/santenova/prompt-only-agent" target="_blank" rel="noreferrer">↗ Code</a></div>
+          </div>
+        </a>
+        <a class="ai-card fade" href="https://advanced-model-meter.code-agent.ai/" target="_blank" rel="noreferrer">
+          <div class="img"><img src="https://santenova.github.io/me/llm2.png" alt="LLM Benchmark" loading="lazy" /></div>
+          <div class="body">
+            <h3>LLM Performance Benchmark</h3>
+            <p>AI model benchmarking platform to test, compare, and analyze language models' performance across accuracy, speed, cost, and energy efficiency.</p>
+            <div class="stack"><span>OpenAI</span><span>Ollama</span><span>LLM Validation</span></div>
+            <div class="links"><a href="https://advanced-model-meter.code-agent.ai/" target="_blank" rel="noreferrer">↗ Live</a><a class="code" href="https://github.com/santenova/knowledge-graph-validator" target="_blank" rel="noreferrer">↗ Code</a></div>
+          </div>
+        </a>
+        <a class="ai-card fade" href="https://games-neon-run.code-agent.ai/" target="_blank" rel="noreferrer">
+          <div class="img"><img src="https://santenova.github.io/me/ufo-pilot.png" alt="UFO Pilot" loading="lazy" /></div>
+          <div class="body">
+            <h3>UFO PILOT</h3>
+            <p>Endless arcade shooter — fly your craft against the enemy.</p>
+            <div class="stack"><span>React</span><span>TypeScript</span></div>
+            <div class="links"><a href="https://games-neon-run.code-agent.ai/" target="_blank" rel="noreferrer">↗ Live</a><a class="code" href="https://github.com/santenova/ufo-pilot" target="_blank" rel="noreferrer">↗ Code</a></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA PROJECTS -->
+  <section id="data-projects">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">05</span><span class="line"></span></div>
+        <h2>&lt;Data Projects/&gt;</h2>
+      </div>
+      <div class="filters fade" id="filters"></div>
+      <div class="data-grid" id="data-grid"></div>
+    </div>
+  </section>
+
+  <!-- VIDCASTS -->
+  <section id="vidcasts">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">06</span><span class="line"></span></div>
+        <h2>&lt;Project Casts/&gt;</h2>
+      </div>
+      <p class="mono fade" style="font-size:0.85rem;color:var(--muted);margin-bottom:2.5rem;max-width:42rem;">Short screen recordings of the data projects in action. Click any tile to play.</p>
+      <div class="vid-grid" id="vid-grid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">07</span><span class="line"></span></div>
+        <h2>&lt;Contact/&gt;</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card fade">
+          <h3>Let's build something.</h3>
+          <p>Open to data engineering, AI tooling, and applied research work. Reach out through any channel below.</p>
+        </div>
+        <div class="contact-card fade">
+          <div class="contact-links">
+            <a href="mailto:tokenfreeai@gmail.com"><span class="k">email</span>tokenfreeai@gmail.com</a>
+            <a href="tel:+4915560330873"><span class="k">phone</span>+49 155 60330873</a>
+            <a href="https://github.com/santenova" target="_blank" rel="noreferrer"><span class="k">github</span>github.com/santenova</a>
+            <a href="https://codepen.io/Hagen-Geissler" target="_blank" rel="noreferrer"><span class="k">codepen</span>codepen.io/Hagen-Geissler</a>
+            <a href="https://santenova.github.io/me/HagenGeissler-CV-2026.pdf" target="_blank" rel="noreferrer"><span class="k">cv</span>Download CV (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year"></span> Hagen Geissler</span>
+      <span>SanteNova · Data Terminal</span>
+    </div>
+  </footer>
+</main>
+
+<!-- Video modal -->
+<div class="modal" id="modal">
+  <div class="modal-inner">
+    <div class="modal-head">
+      <div>
+        <div class="tag" id="modal-tag"></div>
+        <h3 id="modal-title"></h3>
+      </div>
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <video id="modal-video" controls loop playsinline></video>
+  </div>
+</div>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* ---- Data ---- */
+var dataProjects = [
+  { title:"Seed", url:"https://santenova.github.io/me/seed/", description:"A curated index of data-related repositories — a living catalog of structured data work.", formats:["Repositories"], dataType:"repo" },
+  { title:"Exomap", url:"https://santenova.github.io/me/exomap/", description:"Astrometric visualization platform mapping celestial coordinate data from CSV sources.", formats:["CSV","Astrometrics"], dataType:"csv" },
+  { title:"Knowledge Database", url:"https://santenova.github.io/me/KnowledgeDatabase/", description:"A universal data UI for browsing and querying heterogeneous knowledge stores.", formats:["All","UI"], dataType:"ui" },
+  { title:"Spiral", url:"https://santenova.github.io/me/spiral/", description:"A lifelong JSON database with an interactive UI for accumulating and traversing personal knowledge over time.", formats:["JSON","DB","UI"], dataType:"json" },
+  { title:"Prompt Hub", url:"https://prompt.only-agent.ai/", description:"A collaboration platform for prompts and personas across multiple endpoints, built on JSON data structures.", formats:["JSON","Multi-endpoint","Collaboration"], dataType:"json" },
+  { title:"VectorVoyage", url:"https://github.com/santenova/VectorVoyage", description:"A concept + vector search engine combining CSV and JSON data into a navigable semantic space.", formats:["CSV","JSON","Vector"], dataType:"vector" },
+  { title:"FastImageClusters", url:"https://github.com/santenova/FastImageClusters", description:"High-performance image clustering pipeline that groups large image collections by visual similarity.", formats:["Image","Clustering"], dataType:"image" },
+  { title:"Real or AI", url:"https://real-or-ai.only-agent.ai/", description:"An image forensics tool that distinguishes authentic photographs from AI-generated imagery.", formats:["Image","Forensics"], dataType:"image" },
+  { title:"SOS", url:"https://santex.github.io/sos/", description:"A binaural audio messaging system for spatial, encrypted-style communication.", formats:["Audio","Binaural"], dataType:"audio" }
+];
+var dataFilters = ["All","CSV","JSON","Vector","Image","Audio","UI","repo"];
+var typeAccent = { csv:"#3DFFC3", json:"#7C9CFF", vector:"#C084FC", image:"#FFB347", audio:"#FF6B9D", ui:"#3DFFC3", repo:"#7D7D82" };
+
+var vidBase = "https://santenova.github.io/me/vidcast/";
+var vidcasts = [
+  { title:"Forensics", file:"forensics.mp4", tag:"Image Forensics" },
+  { title:"Data Acoustics", file:"data-acoustics.mp4", tag:"Binaural Audio" },
+  { title:"Automated Decision Making", file:"data-automaed-decission-making-procrdd.mp4", tag:"Data Pipeline" },
+  { title:"Prompt Hub Personas", file:"data-prompt-hub-personas.mp4", tag:"Prompt Hub" },
+  { title:"LLM Test Cases", file:"data-test-case-on-llm.mp4", tag:"LLM Benchmark" },
+  { title:"Finance", file:"finance.mp4", tag:"Data UI" },
+  { title:"Multi-Endpoint Ollama Batching", file:"muklti-end-point-ollama-template-batching-with-persona-routing.mp4", tag:"Prompt Hub" },
+  { title:"Persona Creation", file:"persona_creation_from_personas.mp4", tag:"Prompt Hub" },
+  { title:"Personalized Database for Life", file:"personalized-database-for-life.mp4", tag:"Spiral" },
+  { title:"Prompt Batching with UI", file:"prompt-batching-with-ui.mp4", tag:"Prompt Hub" },
+  { title:"Prompt Queue + Tool Execution", file:"prompt-queue-with-tool-execution-ollama.mp4", tag:"Prompt Hub" },
+  { title:"Team Collaboration Multi-Endpoint", file:"team-colaboration-on-multi-enpoint-prompts-and-personas.mp4", tag:"Prompt Hub" },
+  { title:"Chat", file:"chat.mp4", tag:"Collaboration" }
+].map(function(v){ v.url = vidBase + v.file; return v; });
+
+/* ---- Data Projects render + filter ---- */
+var currentFilter = "All";
+var filtersEl = document.getElementById("filters");
+var gridEl = document.getElementById("data-grid");
+
+function renderFilters() {
+  filtersEl.innerHTML = "";
+  dataFilters.forEach(function(f){
+    var b = document.createElement("button");
+    b.className = "filter-btn" + (f === currentFilter ? " active" : "");
+    b.textContent = f === "All" ? "// all" : f.toLowerCase();
+    b.onclick = function(){ currentFilter = f; renderFilters(); renderData(); };
+    filtersEl.appendChild(b);
+  });
+}
+function hostOf(url) {
+  try { return new URL(url).hostname.replace("www.",""); } catch(e){ return url; }
+}
+function renderData() {
+  gridEl.innerHTML = "";
+  var list = currentFilter === "All" ? dataProjects : dataProjects.filter(function(p){ return p.formats.indexOf(currentFilter) !== -1; });
+  list.forEach(function(p){
+    var accent = typeAccent[p.dataType] || "#3DFFC3";
+    var a = document.createElement("a");
+    a.className = "data-card fade in";
+    a.href = p.url; a.target = "_blank"; a.rel = "noreferrer";
+    var fmtChips = p.formats.map(function(f){ return '<span style="border-color:'+accent+'40;color:'+accent+'">'+f.toLowerCase()+'</span>'; }).join("");
+    a.innerHTML =
+      '<div class="dot" style="background:'+accent+';box-shadow:0 0 12px '+accent+'"></div>'+
+      '<h3>'+p.title+'</h3>'+
+      '<p>'+p.description+'</p>'+
+      '<div class="fmts">'+fmtChips+'</div>'+
+      '<div class="foot"><span class="host">'+hostOf(p.url)+'</span><span style="font-family:var(--mono);font-size:0.7rem;color:var(--muted)">↗</span></div>';
+    gridEl.appendChild(a);
+  });
+}
+renderFilters();
+renderData();
+
+/* ---- Vidcasts ---- */
+var vidGrid = document.getElementById("vid-grid");
+vidcasts.forEach(function(v){
+  var tile = document.createElement("div");
+  tile.className = "vid-tile";
+  tile.innerHTML =
+    '<video muted loop playsinline preload="metadata" src="'+v.url+'"></video>'+
+    '<div class="overlay"></div>'+
+    '<div class="play"><svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg></div>'+
+    '<div class="meta"><div class="tag">'+v.tag.toUpperCase()+'</div><div class="title">'+v.title+'</div></div>';
+  var vid = tile.querySelector("video");
+  tile.addEventListener("mouseenter", function(){ vid.play().catch(function(){}); });
+  tile.addEventListener("mouseleave", function(){ vid.pause(); });
+  tile.addEventListener("click", function(){ openModal(v); });
+  vidGrid.appendChild(tile);
+});
+
+/* ---- Modal ---- */
+var modal = document.getElementById("modal");
+var modalVideo = document.getElementById("modal-video");
+var modalTitle = document.getElementById("modal-title");
+var modalTag = document.getElementById("modal-tag");
+function openModal(v){
+  modalTitle.textContent = v.title;
+  modalTag.textContent = v.tag.toUpperCase();
+  modalVideo.src = v.url;
+  modal.classList.add("open");
+  modalVideo.play().catch(function(){});
+}
+function closeModal(){
+  modal.classList.remove("open");
+  modalVideo.pause();
+  modalVideo.removeAttribute("src");
+  modalVideo.load();
+}
+document.getElementById("modal-close").addEventListener("click", closeModal);
+modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
+document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeModal(); });
+
+/* ---- Scroll fade-in ---- */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll(".fade").forEach(function(el){ io.observe(el); });
+</script>
+</body>
+</html>
