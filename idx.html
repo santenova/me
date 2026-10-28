@@ -141,7 +141,8 @@
   .filter-btn { font-family: var(--mono); font-size: 0.75rem; padding: 0.35rem 0.75rem; border: 1px solid var(--border); color: var(--muted); background: transparent; cursor: pointer; transition: all 0.2s; }
   .filter-btn:hover { border-color: rgba(242,242,247,0.3); color: var(--fg); }
   .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(61,255,195,0.05); }
-  .data-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .data-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); transition: opacity 0.18s ease; }
+  .data-grid.fading { opacity: 0; }
   @media (min-width: 640px) { .data-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1024px) { .data-grid { grid-template-columns: repeat(3, 1fr); } }
   .data-card { background: var(--bg); padding: 1.5rem; display: flex; flex-direction: column; min-height: 220px; transition: background 0.2s; }
@@ -154,6 +155,21 @@
   .data-card .fmts span { font-family: var(--mono); font-size: 0.625rem; padding: 0.15rem 0.45rem; border: 1px solid; }
   .data-card .foot { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   .data-card .foot .host { font-family: var(--mono); font-size: 0.625rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%; }
+  .data-card .foot a { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; }
+  .data-vid { position: relative; aspect-ratio: 16/9; margin: -1.5rem -1.5rem 1.25rem; overflow: hidden; background: #000; cursor: pointer; }
+  .data-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transition: opacity 0.2s; }
+  .data-vid:hover video { opacity: 0.85; }
+  .data-vid .voverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.9), transparent 55%); }
+  .data-vid .vplay { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+  .data-vid:hover .vplay { background: var(--accent); }
+  .data-vid .vplay svg { width: 15px; height: 15px; fill: var(--accent); margin-left: 2px; transition: fill 0.2s; }
+  .data-vid:hover .vplay svg { fill: var(--bg); }
+  .data-vid .vtag { position: absolute; top: 0.5rem; left: 0.5rem; font-family: var(--mono); font-size: 0.55rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; background: rgba(5,5,5,0.6); padding: 0.15rem 0.4rem; }
+  .data-img { position: relative; aspect-ratio: 16/9; margin: -1.5rem -1.5rem 1.25rem; overflow: hidden; background: #000; }
+  .data-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.3s, transform 0.4s; }
+  .data-card:hover .data-img img { opacity: 0.85; transform: scale(1.04); }
+  .data-img .ioverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.9), transparent 55%); }
+  .data-img .itag { position: absolute; top: 0.5rem; left: 0.5rem; font-family: var(--mono); font-size: 0.55rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; background: rgba(5,5,5,0.6); padding: 0.15rem 0.4rem; border: 1px solid rgba(61,255,195,0.25); }
 
   /* Vidcasts */
   .vid-grid { display: grid; gap: 1rem; }
@@ -216,7 +232,11 @@
         <a class="btn btn-primary" href="#data-projects">View Projects →</a>
         <a class="btn btn-ghost" href="#contact">Contact</a>
       </div>
-     
+      <div class="stats">
+        <div class="stat"><div class="v">40+</div><div class="l">Projects</div></div>
+        <div class="stat"><div class="v">15+</div><div class="l">Years Exp.</div></div>
+        <div class="stat"><div class="v">20+</div><div class="l">Clients</div></div>
+      </div>
     </div>
   </section>
 
@@ -232,7 +252,12 @@
           <p>I build data-driven systems — from astrometric mapping platforms to AI persona engines and image forensics tooling. My work sits at the intersection of large-scale data engineering, applied AI, and thoughtful interface design.</p>
           <p>Over 15 years I've led video and data engineering at Funke Mediengruppe and Gruner + Jahr, recovered flood-damaged archives, automated industrial print pipelines, and shipped a broad catalog of open-source data tools.</p>
         </div>
-
+        <div class="about-card fade">
+          <div class="row"><span class="k">role</span><span class="v">AI &amp; Data Engineer</span></div>
+          <div class="row"><span class="k">location</span><span class="v">Berlin, DE</span></div>
+          <div class="row"><span class="k">experience</span><span class="v">15+ years</span></div>
+          <div class="row"><span class="k">focus</span><span class="v">Data · AI · Tooling</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -255,12 +280,57 @@
         </div>
         <div class="skill-card fade">
           <h3>Tools &amp; Others</h3>
-          <div class="chips"><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Minio</span></div>
+          <div class="chips"><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Minio</span><span class="chip">Ollama</span></div>
+        </div>
+        <div class="skill-card fade">
+          <h3>ETL &amp; Data</h3>
+          <div class="chips"><span class="chip">Pentaho Data Integration</span><span class="chip">Singer</span></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">03</span><span class="line"></span></div>
+        <h2>&lt;Experience/&gt;</h2>
+      </div>
+      <div class="exp-list">
+        <div class="exp-item fade">
+          <div class="period">Jan 21 – Jul 22</div>
+          <div>
+            <h3>Lead Developer, Video/FT</h3>
+            <div class="co">Funke Mediengruppe, Berlin, Germany</div>
+            <p>Cost reduction, AI integration to support ad bidding within over 100 TV channels. LG integration, Middleware Development &amp; Supervising engineer of the Video ecosystem.</p>
+            <div class="hl"><span>Cost reduction</span><span>AI ad bidding</span></div>
+            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>Kaltura</span><span>Akamai</span><span>AWS</span></div>
+          </div>
+        </div>
+        <div class="exp-item fade">
+          <div class="period">Oct 19 – Dec 20</div>
+          <div>
+            <h3>Lead Data-engineer, FT</h3>
+            <div class="co">Gruner + Jahr — Bertelsmann SE, Dresden, Germany</div>
+            <p>Archive Transmigration (Sächsische Zeitung) + Recovering flood (Dresden 2002) damaged Archive Data.</p>
+            <div class="hl"><span>Archive transmigration</span><span>Flood data recovery</span></div>
+            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>OCR</span><span>Elasticsearch</span></div>
+          </div>
+        </div>
+        <div class="exp-item fade">
+          <div class="period">Jan 19 – Sep 19</div>
+          <div>
+            <h3>Lead Developer, Contract</h3>
+            <div class="co">UnitedPrint, Radebeul, Germany</div>
+            <p>Industrial Automation of remote Printing Machines. Connecting Order streams to Remote printing Machines, with automated Packaging and Shipping.</p>
+            <div class="hl"><span>Industrial automation</span><span>Automated packaging</span></div>
+            <div class="stack"><span>Python</span><span>Docker</span><span>AWS</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- AI PROJECTS -->
   <section id="ai-projects">
@@ -379,15 +449,15 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 /* ---- Data ---- */
 var dataProjects = [
-  { title:"Seed", url:"https://santenova.github.io/me/seed/", description:"A curated index of data-related repositories — a living catalog of structured data work.", formats:["Repositories"], dataType:"repo" },
-  { title:"Exomap", url:"https://santenova.github.io/me/exomap/", description:"Astrometric visualization platform mapping celestial coordinate data from CSV sources.", formats:["CSV","Astrometrics"], dataType:"csv" },
-  { title:"Knowledge Database", url:"https://santenova.github.io/me/KnowledgeDatabase/", description:"A universal data UI for browsing and querying heterogeneous knowledge stores.", formats:["All","UI"], dataType:"ui" },
-  { title:"Spiral", url:"https://santenova.github.io/me/spiral/", description:"A lifelong JSON database with an interactive UI for accumulating and traversing personal knowledge over time.", formats:["JSON","DB","UI"], dataType:"json" },
-  { title:"Prompt Hub", url:"https://prompt.only-agent.ai/", description:"A collaboration platform for prompts and personas across multiple endpoints, built on JSON data structures.", formats:["JSON","Multi-endpoint","Collaboration"], dataType:"json" },
-  { title:"VectorVoyage", url:"https://github.com/santenova/VectorVoyage", description:"A concept + vector search engine combining CSV and JSON data into a navigable semantic space.", formats:["CSV","JSON","Vector"], dataType:"vector" },
+  { title:"Seed", url:"https://santenova.github.io/me/seed/", description:"A curated index of data-related repositories — a living catalog of structured data work.", formats:["Repositories"], dataType:"repo", video:"seed.mp4", videoTag:"Seed" },
+  { title:"Exomap", url:"https://santenova.github.io/me/exomap/", description:"Astrometric visualization platform mapping celestial coordinate data from CSV sources.", formats:["CSV","Astrometrics"], dataType:"csv", video:"exomap.mp4", videoTag:"Exomap" },
+  { title:"Knowledge Database", url:"https://santenova.github.io/me/KnowledgeDatabase/", description:"A universal data UI for browsing and querying heterogeneous knowledge stores.", formats:["All","UI"], dataType:"ui", video:"KnowledgeDatabase.mp4", videoTag:"Data UI" },
+  { title:"Spiral", url:"https://santenova.github.io/me/spiral/", description:"A lifelong JSON database with an interactive UI for accumulating and traversing personal knowledge over time.", formats:["JSON","DB","UI"], dataType:"json", video:"spiral.mp4", videoTag:"Spiral" },
+  { title:"Prompt Hub", url:"https://prompt.only-agent.ai/", description:"A collaboration platform for prompts and personas across multiple endpoints, built on JSON data structures.", formats:["JSON","Multi-endpoint","Collaboration"], dataType:"json", video:"prompts-hub.mp4", videoTag:"Prompt Hub" },
+  { title:"VectorVoyage", url:"https://github.com/santenova/VectorVoyage", description:"A concept + vector search engine combining CSV and JSON data into a navigable semantic space.", formats:["CSV","JSON","Vector"], dataType:"vector", image:"https://raw.githubusercontent.com/santenova/VectorVoyage/refs/heads/main/screenshot.gif" },
   { title:"FastImageClusters", url:"https://github.com/santenova/FastImageClusters", description:"High-performance image clustering pipeline that groups large image collections by visual similarity.", formats:["Image","Clustering"], dataType:"image" },
-  { title:"Real or AI", url:"https://real-or-ai.only-agent.ai/", description:"An image forensics tool that distinguishes authentic photographs from AI-generated imagery.", formats:["Image","Forensics"], dataType:"image" },
-  { title:"SOS", url:"https://santex.github.io/sos/", description:"A binaural audio messaging system for spatial, encrypted-style communication.", formats:["Audio","Binaural"], dataType:"audio" }
+  { title:"Real or AI", url:"https://real-or-ai.only-agent.ai/", description:"An image forensics tool that distinguishes authentic photographs from AI-generated imagery.", formats:["Image","Forensics"], dataType:"image", video:"forensics.mp4", videoTag:"Image Forensics" },
+  { title:"SOS", url:"https://santex.github.io/sos/", description:"A binaural audio messaging system for spatial, encrypted-style communication.", formats:["Audio","Binaural"], dataType:"audio", video:"data-acoustics.mp4", videoTag:"Binaural Audio" }
 ];
 var dataFilters = ["All","CSV","JSON","Vector","Image","Audio","UI","repo"];
 var typeAccent = { csv:"#3DFFC3", json:"#7C9CFF", vector:"#C084FC", image:"#FFB347", audio:"#FF6B9D", ui:"#3DFFC3", repo:"#7D7D82" };
@@ -428,22 +498,56 @@ function hostOf(url) {
   try { return new URL(url).hostname.replace("www.",""); } catch(e){ return url; }
 }
 function renderData() {
+  gridEl.classList.add("fading");
+  setTimeout(function(){
   gridEl.innerHTML = "";
   var list = currentFilter === "All" ? dataProjects : dataProjects.filter(function(p){ return p.formats.indexOf(currentFilter) !== -1; });
   list.forEach(function(p){
     var accent = typeAccent[p.dataType] || "#3DFFC3";
-    var a = document.createElement("a");
-    a.className = "data-card fade in";
-    a.href = p.url; a.target = "_blank"; a.rel = "noreferrer";
+    var card = document.createElement("div");
+    card.className = "data-card fade in";
     var fmtChips = p.formats.map(function(f){ return '<span style="border-color:'+accent+'40;color:'+accent+'">'+f.toLowerCase()+'</span>'; }).join("");
-    a.innerHTML =
+    var vidHtml = "";
+    if (p.video) {
+      var vurl = vidBase + p.video;
+      vidHtml =
+        '<div class="data-vid" data-vurl="'+vurl+'" data-vtitle="'+p.title+'" data-vtag="'+(p.videoTag||"")+'">'+
+          '<video muted loop playsinline preload="metadata" src="'+vurl+'"></video>'+
+          '<div class="voverlay"></div>'+
+          '<div class="vplay"><svg viewBox="0 0 24 24"><polygon points="6,4 20,12 6,20"/></svg></div>'+
+          '<span class="vtag">'+(p.videoTag||"").toUpperCase()+'</span>'+
+        '</div>';
+    }
+    var imgHtml = "";
+    if (!p.video && p.image) {
+      imgHtml =
+        '<div class="data-img">'+
+          '<img src="'+p.image+'" alt="'+p.title+'" loading="lazy" />'+
+          '<div class="ioverlay"></div>'+
+          '<span class="itag">'+p.dataType+'</span>'+
+        '</div>';
+    }
+    card.innerHTML =
+      vidHtml + imgHtml +
       '<div class="dot" style="background:'+accent+';box-shadow:0 0 12px '+accent+'"></div>'+
       '<h3>'+p.title+'</h3>'+
       '<p>'+p.description+'</p>'+
       '<div class="fmts">'+fmtChips+'</div>'+
-      '<div class="foot"><span class="host">'+hostOf(p.url)+'</span><span style="font-family:var(--mono);font-size:0.7rem;color:var(--muted)">↗</span></div>';
-    gridEl.appendChild(a);
+      '<div class="foot"><span class="host">'+hostOf(p.url)+'</span><a href="'+p.url+'" target="_blank" rel="noreferrer">↗ open</a></div>';
+    if (p.video) {
+      var vidEl = card.querySelector(".data-vid");
+      var vid = card.querySelector("video");
+      vidEl.addEventListener("mouseenter", function(){ vid.play().catch(function(){}); });
+      vidEl.addEventListener("mouseleave", function(){ vid.pause(); });
+      vidEl.addEventListener("click", function(e){
+        e.preventDefault();
+        openModal({ title: p.title, tag: p.videoTag || "", url: vidBase + p.video });
+      });
+    }
+    gridEl.appendChild(card);
   });
+  gridEl.classList.remove("fading");
+  }, 180);
 }
 renderFilters();
 renderData();
