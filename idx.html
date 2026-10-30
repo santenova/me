@@ -3,9 +3,32 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Hagen Geissler — AI & Data Engineer</title>
-<meta name="description" content="Portfolio of Hagen Geissler — AI and Data Engineer with 15+ years of experience in Python, TypeScript, and data-driven systems." />
+<title>Hagen Geissler — AI &amp; Data Engineer</title>
+<meta name="description" content="15+ years building data systems that outlive the hype — AI engineering, pipelines and the infrastructure underneath, in Python and TypeScript." />
+<meta name="author" content="Hagen Geissler" />
+<meta name="theme-color" content="#050505" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Hagen Geissler — AI & Data Engineer" />
+<meta property="og:description" content="Data pipelines, retrieval and model evaluation on infrastructure you own. Open-source projects, research notes and project casts." />
+<meta property="og:image" content="https://santenova.github.io/me/prompthub.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Hagen Geissler — AI & Data Engineer" />
+<meta name="twitter:description" content="Data pipelines, retrieval and model evaluation on infrastructure you own." />
+<link rel="preconnect" href="https://santenova.github.io" crossorigin />
+<link rel="preconnect" href="https://media.base44.com" crossorigin />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%233DFFC3'>▣</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hagen Geissler",
+  "jobTitle": "AI & Data Engineer",
+  "email": "mailto:tokenfreeai@gmail.com",
+  "url": "https://santenova.github.io/me/",
+  "sameAs": ["https://github.com/santenova", "https://codepen.io/Hagen-Geissler"],
+  "knowsAbout": ["Data Engineering", "ETL", "Elasticsearch", "LLM evaluation", "Vector search", "Ollama"]
+}
+</script>
 <style>
   :root {
     --bg: #050505;
@@ -60,6 +83,37 @@
   section { padding: 6rem 0; }
   @media (min-width: 768px) { section { padding: 8rem 0; } }
 
+  /* Nav */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    border-bottom: 1px solid var(--border);
+    background: rgba(5,5,5,0.9);
+    backdrop-filter: blur(8px);
+  }
+  header.nav .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
+  }
+  header.nav .brand { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.15em; }
+  header.nav .brand span { color: var(--accent); }
+  header.nav .brand:hover { color: var(--accent); }
+  header.nav nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+  header.nav nav a {
+    font-family: var(--mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  header.nav nav a:hover { color: var(--fg); }
+  header.nav nav a.active { color: var(--accent); }
+
   /* Section header */
   .sec-head { margin-bottom: 3rem; }
   @media (min-width: 768px) { .sec-head { margin-bottom: 4rem; } }
@@ -68,6 +122,7 @@
   .sec-head .line { flex: 1; height: 1px; background: var(--border); }
   .sec-head h2 { font-family: var(--display); font-size: 1.875rem; letter-spacing: -0.02em; }
   @media (min-width: 768px) { .sec-head h2 { font-size: 3rem; } }
+  .sec-head .desc { margin-top: 1rem; max-width: 46rem; color: rgba(242,242,247,0.6); font-size: 0.95rem; }
 
   /* Hero */
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 6rem 0 4rem; }
@@ -87,36 +142,67 @@
   .hero .stats .stat .v { font-family: var(--display); font-size: 1.75rem; color: var(--accent); }
   .hero .stats .stat .l { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* About */
-  .about-grid { display: grid; gap: 3rem; }
-  @media (min-width: 768px) { .about-grid { grid-template-columns: 1.5fr 1fr; } }
-  .about-grid p { color: rgba(242,242,247,0.75); margin-bottom: 1rem; }
-  .about-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--card); }
-  .about-card .row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.8rem; }
-  .about-card .row:last-child { border-bottom: none; }
-  .about-card .row .k { color: var(--muted); }
-  .about-card .row .v { color: var(--accent); }
+  /* Skills terminal */
+  .terminal { border: 1px solid var(--border); background: var(--card); }
+  .terminal .bar { display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+  .terminal .bar .d { width: 10px; height: 10px; border-radius: 50%; }
+  .terminal .bar .name { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); margin-left: 0.75rem; }
+  .terminal .body { padding: 1.5rem; font-family: var(--mono); font-size: 0.85rem; }
+  .terminal .prompt { color: var(--muted); margin-bottom: 1.75rem; }
+  .terminal .prompt .cur { color: var(--accent); animation: blink 1s step-end infinite; }
+  .terminal .cat { color: var(--accent); margin-bottom: 0.5rem; }
+  .terminal .cat + ul { margin-bottom: 1.75rem; }
+  .terminal .cat:last-of-type + ul { margin-bottom: 0; }
+  .terminal ul { list-style: none; padding-left: 1rem; }
+  .terminal ul li { color: rgba(242,242,247,0.75); padding: 0.18rem 0; }
+  .terminal ul li::before { content: "▸ "; color: var(--muted); }
 
-  /* Skills */
-  .skills-grid { display: grid; gap: 1.5rem; }
+  .skills-grid { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 2.5rem; }
   @media (min-width: 768px) { .skills-grid { grid-template-columns: repeat(3, 1fr); } }
-  .skill-card { border: 1px solid var(--border); padding: 1.5rem; background: var(--card); }
+  .skill-card { background: var(--bg); padding: 1.5rem; }
   .skill-card h3 { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
-  .skill-card .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .chip { font-family: var(--mono); font-size: 0.75rem; padding: 0.25rem 0.6rem; border: 1px solid var(--border); color: rgba(242,242,247,0.8); }
+  .skill-card ul { list-style: none; }
+  .skill-card li { font-size: 0.9rem; color: rgba(242,242,247,0.7); padding: 0.2rem 0; }
 
-  /* Experience */
-  .exp-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
-  .exp-item { background: var(--bg); padding: 1.75rem; display: grid; gap: 1rem; }
-  @media (min-width: 768px) { .exp-item { grid-template-columns: 200px 1fr; } }
-  .exp-item .period { font-family: var(--mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.05em; }
-  .exp-item h3 { font-family: var(--display); font-size: 1.25rem; margin-bottom: 0.25rem; }
-  .exp-item .co { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); margin-bottom: 0.75rem; }
-  .exp-item p { color: rgba(242,242,247,0.7); font-size: 0.95rem; margin-bottom: 0.75rem; }
-  .exp-item .hl { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; }
-  .exp-item .hl span { font-family: var(--mono); font-size: 0.7rem; padding: 0.2rem 0.5rem; border: 1px solid rgba(61,255,195,0.3); color: var(--accent); }
-  .exp-item .stack { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .exp-item .stack span { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
+  /* Research */
+  .research-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .research-item { background: var(--bg); padding: 1.75rem; }
+  @media (min-width: 768px) { .research-item { padding: 2rem; } }
+  .research-item .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; font-family: var(--mono); font-size: 0.6875rem; }
+  .research-item .meta .date { color: var(--muted); }
+  .research-item .meta .tag { color: var(--accent); letter-spacing: 0.12em; }
+  .research-item h3 { font-family: var(--display); font-size: 1.25rem; margin-top: 1rem; }
+  .research-item p { margin-top: 0.75rem; max-width: 52rem; font-size: 0.9rem; color: rgba(242,242,247,0.6); }
+  .research-item ul { list-style: none; margin-top: 1.25rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
+  .research-item ul li { padding: 0.15rem 0; }
+  .research-item ul li::before { content: "→ "; color: var(--accent); }
+
+  /* Philosophy */
+  .phil-group { margin-bottom: 3.5rem; }
+  .phil-group:last-child { margin-bottom: 0; }
+  .phil-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); margin-bottom: 2rem; }
+  .phil-head .n { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.18em; }
+  .phil-head h3 { font-family: var(--display); font-size: 1.5rem; }
+  .phil-head .tl { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+  .phil-items { display: grid; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  @media (min-width: 768px) { .phil-items { grid-template-columns: repeat(2, 1fr); } }
+  .phil-item { background: var(--bg); padding: 1.75rem; }
+  .phil-item .n { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.15em; }
+  .phil-item h4 { font-family: var(--display); font-size: 1.1rem; margin: 0.75rem 0 0.5rem; }
+  .phil-item p { font-size: 0.875rem; color: rgba(242,242,247,0.6); }
+
+  /* Contributions */
+  .contrib-list { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .contrib { background: var(--bg); padding: 1.75rem; display: grid; gap: 1rem; transition: background 0.2s; }
+  .contrib:hover { background: var(--card); }
+  @media (min-width: 768px) { .contrib { grid-template-columns: 220px 1fr; padding: 2rem; } }
+  .contrib h3 { font-family: var(--mono); font-size: 0.875rem; transition: color 0.2s; }
+  .contrib:hover h3 { color: var(--accent); }
+  .contrib .role { display: block; font-family: var(--mono); font-size: 0.625rem; color: var(--muted); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.25rem; }
+  .contrib .desc { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+  .contrib .desc p { font-size: 0.875rem; color: rgba(242,242,247,0.6); }
+  .contrib .desc svg { flex-shrink: 0; width: 16px; height: 16px; color: var(--muted); transition: color 0.2s; }
+  .contrib:hover .desc svg { color: var(--accent); }
 
   /* AI Projects */
   .ai-grid { display: grid; gap: 1.5rem; }
@@ -151,23 +237,23 @@
   .data-card h3 { font-family: var(--display); font-size: 1.15rem; margin-bottom: 0.5rem; transition: color 0.2s; }
   .data-card:hover h3 { color: var(--accent); }
   .data-card p { font-size: 0.85rem; color: rgba(242,242,247,0.55); flex: 1; }
-  .data-card .fmts { display: flex; flex-wrap: gap: 0.4rem; margin-top: 1.25rem; }
+  .data-card .fmts { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1.25rem; }
   .data-card .fmts span { font-family: var(--mono); font-size: 0.625rem; padding: 0.15rem 0.45rem; border: 1px solid; }
   .data-card .foot { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
   .data-card .foot .host { font-family: var(--mono); font-size: 0.625rem; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 70%; }
   .data-card .foot a { font-family: var(--mono); font-size: 0.7rem; color: var(--accent); display: inline-flex; align-items: center; gap: 0.25rem; }
   .data-vid { position: relative; aspect-ratio: 16/9; margin: -1.5rem -1.5rem 1.25rem; overflow: hidden; background: #000; cursor: pointer; }
-  .data-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transition: opacity 0.2s; }
-  .data-vid:hover video { opacity: 0.85; }
-  .data-vid .voverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.9), transparent 55%); }
+  .data-vid video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.2s; }
+  .data-vid:hover video { opacity: 1; }
+  .data-vid .voverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.55), transparent 55%); }
   .data-vid .vplay { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--accent); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
   .data-vid:hover .vplay { background: var(--accent); }
   .data-vid .vplay svg { width: 15px; height: 15px; fill: var(--accent); margin-left: 2px; transition: fill 0.2s; }
   .data-vid:hover .vplay svg { fill: var(--bg); }
   .data-vid .vtag { position: absolute; top: 0.5rem; left: 0.5rem; font-family: var(--mono); font-size: 0.55rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; background: rgba(5,5,5,0.6); padding: 0.15rem 0.4rem; }
   .data-img { position: relative; aspect-ratio: 16/9; margin: -1.5rem -1.5rem 1.25rem; overflow: hidden; background: #000; }
-  .data-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: opacity 0.3s, transform 0.4s; }
-  .data-card:hover .data-img img { opacity: 0.85; transform: scale(1.04); }
+  .data-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; opacity: 0.75; transition: opacity 0.3s, transform 0.4s; }
+  .data-card:hover .data-img img { opacity: 0.95; transform: scale(1.03); }
   .data-img .ioverlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(5,5,5,0.9), transparent 55%); }
   .data-img .itag { position: absolute; top: 0.5rem; left: 0.5rem; font-family: var(--mono); font-size: 0.55rem; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; background: rgba(5,5,5,0.6); padding: 0.15rem 0.4rem; border: 1px solid rgba(61,255,195,0.25); }
 
@@ -213,52 +299,91 @@
   footer { border-top: 1px solid var(--border); padding: 2rem 0; }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); }
 
+  /* Hero extras */
+  .hero-role { font-size: 0.75rem; letter-spacing: 0.16em; color: var(--muted); text-transform: uppercase; margin-bottom: 1.25rem; }
+  .hero-role b { color: var(--accent); font-weight: 400; }
+  .scroll-cue {
+    display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 3rem;
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    transition: color 0.2s;
+  }
+  .scroll-cue:hover { color: var(--accent); }
+  .scroll-cue span { animation: nudge 1.8s ease-in-out infinite; }
+  @keyframes nudge { 0%,100% { transform: translateY(0); opacity: 0.6; } 50% { transform: translateY(4px); opacity: 1; } }
+
+  /* Buttons as grid tiles / anchors */
+  .vid-tile, .data-vid { font: inherit; color: inherit; }
+  .vid-tile { width: 100%; text-align: left; padding: 0; }
+
+  /* Footer */
+  footer a { color: var(--muted); transition: color 0.2s; }
+  footer a:hover { color: var(--accent); }
+
+  /* Mobile: single scrollable nav row */
+  @media (max-width: 640px) {
+    header.nav .wrap { flex-wrap: nowrap; overflow: hidden; padding: 0.6rem 1rem; }
+    header.nav nav {
+      flex-wrap: nowrap; overflow-x: auto; gap: 0 0.9rem;
+      scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 2px;
+    }
+    header.nav nav::-webkit-scrollbar { display: none; }
+    header.nav nav a { white-space: nowrap; }
+    .hero .stats .stat { padding: 0.9rem; }
+    .hero .stats .stat .v { font-size: 1.35rem; }
+    .data-vid, .data-img { margin: -1rem -1rem 1rem; }
+    .data-card { padding: 1rem; }
+  }
+
   .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.6s, transform 0.6s; }
   .fade.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+    .fade { opacity: 1; transform: none; }
+    .scanline { display: none; }
+  }
 </style>
 </head>
-<body>
+<body id="top">
 <div class="grid-bg"></div>
 <div class="scanline"></div>
 
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top"><span>●</span> HAGEN GEISSLER</a>
+    <nav id="navlinks">
+      <a href="https://data-nova-vault.base44.app/">home</a>
+      <a href="https://data-nova-vault.base44.app/skills">skills</a>
+      <a href="https://data-nova-vault.base44.app/research">research</a>
+      <a href="https://data-nova-vault.base44.app/philosophy">philosophy</a>
+      <a href="https://data-nova-vault.base44.app/contributions">contributions</a>
+      <a href="https://data-nova-vault.base44.app/project-gallery">ai projects</a>
+      <a href="https://data-nova-vault.base44.app/project-gallery">data projects</a>
+      <a href="https://data-nova-vault.base44.app/vidcasts">vidcasts</a>
+    </nav>
+  </div>
+</header>
+
 <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="wrap">
       <div class="badge"><span class="dot"></span> ONLINE · BERLIN, DE</div>
       <h1>Hagen Geissler<br /><span class="accent">AI &amp; Data Engineer</span></h1>
-      <p class="tag">Highly experienced AI and data engineering professional with 15+ years of experience in Python, TypeScript, and related technologies.</p>
+      <div class="hero-role mono">pipelines <b>·</b> retrieval <b>·</b> model evaluation <b>·</b> local-first AI</div>
+      <p class="tag">15+ years building data systems that outlive the hype — AI engineering, pipelines and the infrastructure underneath, in Python and TypeScript.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="#data-projects">View Projects →</a>
-        <a class="btn btn-ghost" href="#contact">Contact</a>
+        <a class="btn btn-primary" href="https://data-nova-vault.base44.app/project-gallery">View Projects →</a>
+        <a class="btn btn-ghost" href="https://data-nova-vault.base44.app/contributions">Open Source</a>
+        <a class="btn btn-ghost" href="https://santenova.github.io/me/HagenGeissler-CV-2026.pdf" target="_blank" rel="noreferrer">CV ↓</a>
       </div>
       <div class="stats">
         <div class="stat"><div class="v">40+</div><div class="l">Projects</div></div>
         <div class="stat"><div class="v">15+</div><div class="l">Years Exp.</div></div>
         <div class="stat"><div class="v">20+</div><div class="l">Clients</div></div>
       </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="wrap">
-      <div class="sec-head fade">
-        <div class="top"><span class="idx">01</span><span class="line"></span></div>
-        <h2>&lt;About/&gt;</h2>
-      </div>
-      <div class="about-grid">
-        <div class="fade">
-          <p>I build data-driven systems — from astrometric mapping platforms to AI persona engines and image forensics tooling. My work sits at the intersection of large-scale data engineering, applied AI, and thoughtful interface design.</p>
-          <p>Over 15 years I've led video and data engineering at Funke Mediengruppe and Gruner + Jahr, recovered flood-damaged archives, automated industrial print pipelines, and shipped a broad catalog of open-source data tools.</p>
-        </div>
-        <div class="about-card fade">
-          <div class="row"><span class="k">role</span><span class="v">AI &amp; Data Engineer</span></div>
-          <div class="row"><span class="k">location</span><span class="v">Berlin, DE</span></div>
-          <div class="row"><span class="k">experience</span><span class="v">15+ years</span></div>
-          <div class="row"><span class="k">focus</span><span class="v">Data · AI · Tooling</span></div>
-        </div>
-      </div>
+      <a class="scroll-cue mono" href="https://data-nova-vault.base44.app/skills">scroll <span>↓</span></a>
     </div>
   </section>
 
@@ -268,66 +393,250 @@
       <div class="sec-head fade">
         <div class="top"><span class="idx">02</span><span class="line"></span></div>
         <h2>&lt;Skills/&gt;</h2>
+        <p class="desc">Data science and AI methodology, as I actually apply it: pipelines, retrieval, model evaluation and the infrastructure underneath.</p>
       </div>
-      <div class="skills-grid">
-        <div class="skill-card fade">
+
+      <div class="terminal fade">
+        <div class="bar">
+          <span class="d" style="background:#FF6B9D"></span>
+          <span class="d" style="background:#FFB347"></span>
+          <span class="d" style="background:#3DFFC3"></span>
+          <span class="name">skills.sh — data / ai profile</span>
+        </div>
+        <div class="body">
+          <div class="prompt">$ profile --skills --focus=data-ai<span class="cur">_</span></div>
+          <div class="cat">[data-engineering]</div>
+          <ul>
+            <li>Batch and streaming ETL (Pentaho, Singer)</li>
+            <li>Archive transmigration and OCR pipelines</li>
+            <li>Elasticsearch indexing and retrieval design</li>
+            <li>Schemas for heterogeneous, partly unknown data</li>
+          </ul>
+          <div class="cat">[ai-llm]</div>
+          <ul>
+            <li>Prompt and persona orchestration</li>
+            <li>Multi-endpoint model routing (Ollama, OpenAI)</li>
+            <li>Benchmarking on accuracy, speed, cost and energy</li>
+            <li>Vector and hybrid semantic search</li>
+          </ul>
+          <div class="cat">[methods]</div>
+          <ul>
+            <li>Evaluation-first prototyping</li>
+            <li>Reproducible experiment logs</li>
+            <li>Human-in-the-loop review of model output</li>
+            <li>Iteration driven by failure cases</li>
+          </ul>
+          <div class="cat">[infrastructure]</div>
+          <ul>
+            <li>Docker and Kubernetes operations</li>
+            <li>MinIO / S3 object storage</li>
+            <li>Python, TypeScript, Node.js</li>
+            <li>Automated validation as part of the pipeline</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills-grid fade">
+        <div class="skill-card">
           <h3>Frontend</h3>
-          <div class="chips"><span class="chip">React</span><span class="chip">Vue.js</span><span class="chip">TypeScript</span></div>
+          <ul><li>React</li><li>Vue.js</li><li>TypeScript</li></ul>
         </div>
-        <div class="skill-card fade">
+        <div class="skill-card">
           <h3>Backend</h3>
-          <div class="chips"><span class="chip">Node.js</span><span class="chip">Elasticsearch</span><span class="chip">Python</span><span class="chip">PostgreSQL</span></div>
+          <ul><li>Node.js</li><li>Elasticsearch</li><li>Python</li></ul>
         </div>
-        <div class="skill-card fade">
+        <div class="skill-card">
           <h3>Tools &amp; Others</h3>
-          <div class="chips"><span class="chip">Git</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Minio</span><span class="chip">Ollama</span></div>
+          <ul><li>Git</li><li>Docker</li><li>Minio</li><li>Ollama</li></ul>
         </div>
-        <div class="skill-card fade">
+        <div class="skill-card">
           <h3>ETL &amp; Data</h3>
-          <div class="chips"><span class="chip">Pentaho Data Integration</span><span class="chip">Singer</span></div>
+          <ul><li>Pentaho Data Integration</li><li>Singer</li></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
+  <!-- RESEARCH -->
+  <section id="research">
     <div class="wrap">
       <div class="sec-head fade">
         <div class="top"><span class="idx">03</span><span class="line"></span></div>
-        <h2>&lt;Experience/&gt;</h2>
+        <h2>&lt;Research/&gt;</h2>
+        <p class="desc">Short working notes from current AI and data research — what I tested, what held up, and what I abandoned.</p>
       </div>
-      <div class="exp-list">
-        <div class="exp-item fade">
-          <div class="period">Jan 21 – Jul 22</div>
-          <div>
-            <h3>Lead Developer, Video/FT</h3>
-            <div class="co">Funke Mediengruppe, Berlin, Germany</div>
-            <p>Cost reduction, AI integration to support ad bidding within over 100 TV channels. LG integration, Middleware Development &amp; Supervising engineer of the Video ecosystem.</p>
-            <div class="hl"><span>Cost reduction</span><span>AI ad bidding</span></div>
-            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>Kaltura</span><span>Akamai</span><span>AWS</span></div>
+      <div class="research-list">
+        <article class="research-item fade">
+          <div class="meta"><span class="date">2026-10-26</span><span class="tag">[MEMORY]</span></div>
+          <h3>Elasticsearch keeps the chat memory lane in one index</h3>
+          <p>Conversation memory does not need a separate vector database. One Elasticsearch index holding a document per turn carries both the embedding and the original text, so a long-running chat retrieves its own past by keyword and by meaning in the same query — and stays filterable by conversation, persona and time.</p>
+          <ul>
+            <li>One document per turn: conversation id, turn index and UTC timestamp as metadata</li>
+            <li>Dense vector field for recall, BM25 on the raw turn for exact names and ids</li>
+            <li>Recency decay applied to the score, never as a hard cutoff on the filter</li>
+            <li>Near-duplicate turns collapsed before they reach the prompt budget</li>
+            <li>Swapping the embedding model means re-embedding the whole lane, in place</li>
+          </ul>
+        </article>
+        <article class="research-item fade">
+          <div class="meta"><span class="date">2026-10-18</span><span class="tag">[RETRIEVAL]</span></div>
+          <h3>Hybrid retrieval keeps winning on small corpora</h3>
+          <p>Pure vector search is convenient but leaks precision on internal collections of a few thousand documents. Blending keyword scoring with embeddings per query gives sharper top-10 results without a re-index.</p>
+          <ul>
+            <li>Keyword weight tuned per collection, not globally</li>
+            <li>Re-ranker only pays off above a few hundred candidates</li>
+            <li>Latency stays flat when the blend runs in one pass</li>
+          </ul>
+        </article>
+        <article class="research-item fade">
+          <div class="meta"><span class="date">2026-10-04</span><span class="tag">[FORENSICS]</span></div>
+          <h3>What still gives a generated image away</h3>
+          <p>Frequency-domain artefacts outlived every prompt-level tell I tested. Local noise statistics around high-contrast edges remain the most reliable single signal for separating generated imagery from camera output.</p>
+          <ul>
+            <li>Compression history matters more than model family</li>
+            <li>Edge-region noise beats global histogram features</li>
+            <li>Batch pipelines must handle mixed compression first</li>
+          </ul>
+        </article>
+        <article class="research-item fade">
+          <div class="meta"><span class="date">2026-09-19</span><span class="tag">[BENCHMARKING]</span></div>
+          <h3>Cost and energy belong in the model scorecard</h3>
+          <p>Accuracy tables are misleading when the cheapest model finishes the task. Every benchmark I run now records wall-clock time, token cost and energy per solved case alongside correctness.</p>
+          <ul>
+            <li>Score per solved case, never per raw prompt</li>
+            <li>Small models often win once retries are counted</li>
+            <li>Keep the harness runnable on local hardware</li>
+          </ul>
+        </article>
+        <article class="research-item fade">
+          <div class="meta"><span class="date">2026-09-02</span><span class="tag">[KNOWLEDGE BASES]</span></div>
+          <h3>Append-only JSON stores age better than tidy schemas</h3>
+          <p>Notes I have kept for years survive schema churn because writes only ever append. The reading layer adapts, the stored record stays immutable, and history remains queryable.</p>
+          <ul>
+            <li>One event per line, timestamps in UTC</li>
+            <li>Migrate on read, never on write</li>
+            <li>Full-text index rebuilt from the append log</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">04</span><span class="line"></span></div>
+        <h2>&lt;Data Philosophy/&gt;</h2>
+        <p class="desc">I treat data as the durable asset and models as replaceable readers of it. The ethics below bank on open source and local deployment, so privacy, cost, jurisdiction and vendor decisions stay with the people who own the data.</p>
+      </div>
+
+      <div class="phil-group fade">
+        <div class="phil-head">
+          <span class="n">01</span>
+          <h3>Data Ethics</h3>
+          <span class="tl">Banking on open source</span>
+        </div>
+        <div class="phil-items">
+          <div class="phil-item">
+            <span class="n">01</span>
+            <h4>Data Sovereignty</h4>
+            <p>Complete data privacy with local deployment. No third parties reading prompts, because both the data and the models that read it stay on infrastructure you own.</p>
+          </div>
+          <div class="phil-item">
+            <span class="n">02</span>
+            <h4>Regulatory Compliance</h4>
+            <p>Perfect for companies bound by GDPR, industry regulations, or government restrictions, where records and prompt content must never leave the company's own boundary.</p>
           </div>
         </div>
-        <div class="exp-item fade">
-          <div class="period">Oct 19 – Dec 20</div>
-          <div>
-            <h3>Lead Data-engineer, FT</h3>
-            <div class="co">Gruner + Jahr — Bertelsmann SE, Dresden, Germany</div>
-            <p>Archive Transmigration (Sächsische Zeitung) + Recovering flood (Dresden 2002) damaged Archive Data.</p>
-            <div class="hl"><span>Archive transmigration</span><span>Flood data recovery</span></div>
-            <div class="stack"><span>Python</span><span>Kubernetes</span><span>Docker</span><span>OCR</span><span>Elasticsearch</span></div>
+      </div>
+
+      <div class="phil-group fade">
+        <div class="phil-head">
+          <span class="n">02</span>
+          <h3>AI Ethics</h3>
+          <span class="tl">Banking on open and local solutions</span>
+        </div>
+        <div class="phil-items">
+          <div class="phil-item">
+            <span class="n">03</span>
+            <h4>Zero Operational AI Costs</h4>
+            <p>Use open-source models like Ollama, reducing AI spend by 90%+. No per-token billing between you and the work.</p>
+          </div>
+          <div class="phil-item">
+            <span class="n">04</span>
+            <h4>Geopolitical Independence</h4>
+            <p>No dependency on US tech giants or foreign governments. The stack keeps running regardless of vendor policy, export rules or regional outages.</p>
+          </div>
+          <div class="phil-item">
+            <span class="n">05</span>
+            <h4>Hybrid Architecture</h4>
+            <p>Flexibility to mix local models with cloud APIs where appropriate: sensitive work stays in-house, everything else goes wherever it performs best.</p>
           </div>
         </div>
-        <div class="exp-item fade">
-          <div class="period">Jan 19 – Sep 19</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUTIONS -->
+  <section id="contributions">
+    <div class="wrap">
+      <div class="sec-head fade">
+        <div class="top"><span class="idx">05</span><span class="line"></span></div>
+        <h2>&lt;Contributions/&gt;</h2>
+        <p class="desc">Open source repositories I build and maintain: local-first AI, vector search and image forensics.</p>
+      </div>
+      <div class="contrib-list">
+        <a class="contrib fade" href="https://github.com/santenova/tactical" target="_blank" rel="noreferrer">
           <div>
-            <h3>Lead Developer, Contract</h3>
-            <div class="co">UnitedPrint, Radebeul, Germany</div>
-            <p>Industrial Automation of remote Printing Machines. Connecting Order streams to Remote printing Machines, with automated Packaging and Shipping.</p>
-            <div class="hl"><span>Industrial automation</span><span>Automated packaging</span></div>
-            <div class="stack"><span>Python</span><span>Docker</span><span>AWS</span></div>
+            <h3>tactical</h3>
+            <span class="role">Author &amp; maintainer</span>
           </div>
-        </div>
+          <div class="desc">
+            <p>Local-first AI console: persona-driven chat with a memory inspector, endpoint manager, prompt library, transcript archive, media repository and a scheduler, all reading and writing JSON memory stores.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+        </a>
+        <a class="contrib fade" href="https://github.com/santenova/VectorVoyage" target="_blank" rel="noreferrer">
+          <div>
+            <h3>VectorVoyage</h3>
+            <span class="role">Author &amp; maintainer</span>
+          </div>
+          <div class="desc">
+            <p>Vector search on Elasticsearch: keywords generated per document at ingest are embedded with all-MiniLM-L6-v2, served through a FastAPI backend and a React/TypeScript front end.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+        </a>
+        <a class="contrib fade" href="https://github.com/santenova/prompt-hub" target="_blank" rel="noreferrer">
+          <div>
+            <h3>prompt-hub</h3>
+            <span class="role">Author &amp; maintainer</span>
+          </div>
+          <div class="desc">
+            <p>AI workspace for creating, managing and organising prompts and personas, with placeholder templates, a persona library and AI-assisted project insights.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+        </a>
+        <a class="contrib fade" href="https://github.com/santenova/ollama-spaceship" target="_blank" rel="noreferrer">
+          <div>
+            <h3>ollama-spaceship</h3>
+            <span class="role">Author &amp; maintainer</span>
+          </div>
+          <div class="desc">
+            <p>Local-first Ollama client library: model and prompt routing, endpoint failover, request batching, circuit breaking, cost estimation and telemetry for open models running on your own hardware.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+        </a>
+        <a class="contrib fade" href="https://github.com/santenova/is-it-real-or-ai" target="_blank" rel="noreferrer">
+          <div>
+            <h3>is-it-real-or-ai</h3>
+            <span class="role">Author &amp; maintainer</span>
+          </div>
+          <div class="desc">
+            <p>Image forensics pipeline that labels a photograph as real or AI-generated through reverse search, watermark detection, image-type classification, scene analysis and a final verdict.</p>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </div>
+        </a>
       </div>
     </div>
   </section>
@@ -336,7 +645,7 @@
   <section id="ai-projects">
     <div class="wrap">
       <div class="sec-head fade">
-        <div class="top"><span class="idx">04</span><span class="line"></span></div>
+        <div class="top"><span class="idx">06</span><span class="line"></span></div>
         <h2>&lt;AI Projects/&gt;</h2>
       </div>
       <div class="ai-grid">
@@ -375,7 +684,7 @@
   <section id="data-projects">
     <div class="wrap">
       <div class="sec-head fade">
-        <div class="top"><span class="idx">05</span><span class="line"></span></div>
+        <div class="top"><span class="idx">07</span><span class="line"></span></div>
         <h2>&lt;Data Projects/&gt;</h2>
       </div>
       <div class="filters fade" id="filters"></div>
@@ -387,10 +696,10 @@
   <section id="vidcasts">
     <div class="wrap">
       <div class="sec-head fade">
-        <div class="top"><span class="idx">06</span><span class="line"></span></div>
+        <div class="top"><span class="idx">08</span><span class="line"></span></div>
         <h2>&lt;Project Casts/&gt;</h2>
+        <p class="desc mono" style="font-size:0.85rem;">Short screen recordings of the data projects in action. Click any tile to play.</p>
       </div>
-      <p class="mono fade" style="font-size:0.85rem;color:var(--muted);margin-bottom:2.5rem;max-width:42rem;">Short screen recordings of the data projects in action. Click any tile to play.</p>
       <div class="vid-grid" id="vid-grid"></div>
     </div>
   </section>
@@ -399,21 +708,21 @@
   <section id="contact">
     <div class="wrap">
       <div class="sec-head fade">
-        <div class="top"><span class="idx">07</span><span class="line"></span></div>
+        <div class="top"><span class="idx">09</span><span class="line"></span></div>
         <h2>&lt;Contact/&gt;</h2>
       </div>
       <div class="contact-grid">
         <div class="contact-card fade">
-          <h3>Let's build something.</h3>
-          <p>Open to data engineering, AI tooling, and applied research work. Reach out through any channel below.</p>
+          <h3>Let's talk data</h3>
+          <p>Pipelines, retrieval, model evaluation or a local-first AI stack — tell me what the data looks like and what it has to do.</p>
+          <a class="btn btn-primary" href="mailto:tokenfreeai@gmail.com">tokenfreeai@gmail.com</a>
         </div>
         <div class="contact-card fade">
           <div class="contact-links">
-            <a href="mailto:tokenfreeai@gmail.com"><span class="k">email</span>tokenfreeai@gmail.com</a>
-            <a href="tel:+4915560330873"><span class="k">phone</span>+49 155 60330873</a>
-            <a href="https://github.com/santenova" target="_blank" rel="noreferrer"><span class="k">github</span>github.com/santenova</a>
-            <a href="https://codepen.io/Hagen-Geissler" target="_blank" rel="noreferrer"><span class="k">codepen</span>codepen.io/Hagen-Geissler</a>
-            <a href="https://santenova.github.io/me/HagenGeissler-CV-2026.pdf" target="_blank" rel="noreferrer"><span class="k">cv</span>Download CV (PDF)</a>
+            <a href="https://github.com/santenova" target="_blank" rel="noreferrer"><span class="k">github</span> github.com/santenova</a>
+            <a href="https://codepen.io/Hagen-Geissler" target="_blank" rel="noreferrer"><span class="k">codepen</span> codepen.io/Hagen-Geissler</a>
+            <a href="https://santenova.github.io/me/HagenGeissler-CV-2026.pdf" target="_blank" rel="noreferrer"><span class="k">cv</span> HagenGeissler-CV-2026.pdf</a>
+            <a href="tel:+4915560330873"><span class="k">phone</span> +49 155 60330873</a>
           </div>
         </div>
       </div>
@@ -424,12 +733,13 @@
     <div class="wrap">
       <span>© <span id="year"></span> Hagen Geissler</span>
       <span>SanteNova · Data Terminal</span>
+      <a href="#top">↑ back to top</a>
     </div>
   </footer>
 </main>
 
 <!-- Video modal -->
-<div class="modal" id="modal">
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Video player" aria-hidden="true">
   <div class="modal-inner">
     <div class="modal-head">
       <div>
@@ -449,13 +759,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 /* ---- Data ---- */
 var dataProjects = [
+  { title:"Tactical", url:"https://github.com/santenova/tactical", description:"A local-first AI console: persona-driven chat with a memory inspector, endpoint manager, prompt library, transcript archive and scheduled tasks in one workspace.", formats:["JSON","UI","Memory"], dataType:"json" },
   { title:"Seed", url:"https://santenova.github.io/me/seed/", description:"A curated index of data-related repositories — a living catalog of structured data work.", formats:["Repositories"], dataType:"repo", video:"seed.mp4", videoTag:"Seed" },
   { title:"Exomap", url:"https://santenova.github.io/me/exomap/", description:"Astrometric visualization platform mapping celestial coordinate data from CSV sources.", formats:["CSV","Astrometrics"], dataType:"csv", video:"exomap.mp4", videoTag:"Exomap" },
   { title:"Knowledge Database", url:"https://santenova.github.io/me/KnowledgeDatabase/", description:"A universal data UI for browsing and querying heterogeneous knowledge stores.", formats:["All","UI"], dataType:"ui", video:"KnowledgeDatabase.mp4", videoTag:"Data UI" },
   { title:"Spiral", url:"https://santenova.github.io/me/spiral/", description:"A lifelong JSON database with an interactive UI for accumulating and traversing personal knowledge over time.", formats:["JSON","DB","UI"], dataType:"json", video:"spiral.mp4", videoTag:"Spiral" },
-  { title:"Prompt Hub", url:"https://prompt.only-agent.ai/", description:"A collaboration platform for prompts and personas across multiple endpoints, built on JSON data structures.", formats:["JSON","Multi-endpoint","Collaboration"], dataType:"json", video:"prompts-hub.mp4", videoTag:"Prompt Hub" },
+  { title:"Prompt Hub", url:"https://prompt.only-agent.ai/", description:"A collaboration platform for prompts and personas across multiple endpoints, built on JSON data structures.", formats:["JSON","Multi-endpoint","Collaboration"], dataType:"json", video:"persona_creation_from_personas.mp4", videoTag:"Prompt Hub" },
   { title:"VectorVoyage", url:"https://github.com/santenova/VectorVoyage", description:"A concept + vector search engine combining CSV and JSON data into a navigable semantic space.", formats:["CSV","JSON","Vector"], dataType:"vector", image:"https://raw.githubusercontent.com/santenova/VectorVoyage/refs/heads/main/screenshot.gif" },
-  { title:"FastImageClusters", url:"https://github.com/santenova/FastImageClusters", description:"High-performance image clustering pipeline that groups large image collections by visual similarity.", formats:["Image","Clustering"], dataType:"image" },
+  { title:"FastImageClusters", url:"https://github.com/santenova/FastImageClusters", description:"High-performance image clustering pipeline that groups large image collections by visual similarity.", formats:["Image","Clustering"], dataType:"image", image:"https://media.base44.com/images/public/6ad393bf10162bd2501989c7/c0a0e88a0_generated_image.png" },
   { title:"Real or AI", url:"https://real-or-ai.only-agent.ai/", description:"An image forensics tool that distinguishes authentic photographs from AI-generated imagery.", formats:["Image","Forensics"], dataType:"image", video:"forensics.mp4", videoTag:"Image Forensics" },
   { title:"SOS", url:"https://santex.github.io/sos/", description:"A binaural audio messaging system for spatial, encrypted-style communication.", formats:["Audio","Binaural"], dataType:"audio", video:"data-acoustics.mp4", videoTag:"Binaural Audio" }
 ];
@@ -522,7 +833,7 @@ function renderData() {
     if (!p.video && p.image) {
       imgHtml =
         '<div class="data-img">'+
-          '<img src="'+p.image+'" alt="'+p.title+'" loading="lazy" />'+
+          '<img src="'+p.image+'" alt="'+p.title+'" loading="lazy" decoding="async" />'+
           '<div class="ioverlay"></div>'+
           '<span class="itag">'+p.dataType+'</span>'+
         '</div>';
@@ -537,6 +848,15 @@ function renderData() {
     if (p.video) {
       var vidEl = card.querySelector(".data-vid");
       var vid = card.querySelector("video");
+      vidEl.setAttribute("role", "button");
+      vidEl.setAttribute("tabindex", "0");
+      vidEl.setAttribute("aria-label", "Play demo: " + p.title);
+      vidEl.addEventListener("keydown", function(e){
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          openModal({ title: p.title, tag: p.videoTag || "", url: vidBase + p.video });
+        }
+      });
       vidEl.addEventListener("mouseenter", function(){ vid.play().catch(function(){}); });
       vidEl.addEventListener("mouseleave", function(){ vid.pause(); });
       vidEl.addEventListener("click", function(e){
@@ -555,8 +875,10 @@ renderData();
 /* ---- Vidcasts ---- */
 var vidGrid = document.getElementById("vid-grid");
 vidcasts.forEach(function(v){
-  var tile = document.createElement("div");
+  var tile = document.createElement("button");
+  tile.type = "button";
   tile.className = "vid-tile";
+  tile.setAttribute("aria-label", "Play cast: " + v.title);
   tile.innerHTML =
     '<video muted loop playsinline preload="metadata" src="'+v.url+'"></video>'+
     '<div class="overlay"></div>'+
@@ -575,14 +897,21 @@ var modalVideo = document.getElementById("modal-video");
 var modalTitle = document.getElementById("modal-title");
 var modalTag = document.getElementById("modal-tag");
 function openModal(v){
+  document.querySelectorAll("video").forEach(function(el){ el.pause(); });
   modalTitle.textContent = v.title;
-  modalTag.textContent = v.tag.toUpperCase();
+  modalTag.textContent = (v.tag || "").toUpperCase();
   modalVideo.src = v.url;
   modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
   modalVideo.play().catch(function(){});
+  document.getElementById("modal-close").focus();
 }
 function closeModal(){
+  if (!modal.classList.contains("open")) return;
   modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
   modalVideo.pause();
   modalVideo.removeAttribute("src");
   modalVideo.load();
@@ -590,6 +919,22 @@ function closeModal(){
 document.getElementById("modal-close").addEventListener("click", closeModal);
 modal.addEventListener("click", function(e){ if(e.target === modal) closeModal(); });
 document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeModal(); });
+
+/* ---- Nav active state ---- */
+var navLinks = Array.prototype.slice.call(document.querySelectorAll("#navlinks a"));
+var navSections = navLinks.map(function(a){
+  var h = a.getAttribute("href") || "";
+  return h.charAt(0) === "#" ? document.querySelector(h) : null;
+});
+function syncNav(){
+  if (!navSections.some(function(s){ return !!s; })) return;
+  var pos = window.scrollY + 140;
+  var active = 0;
+  navSections.forEach(function(s, i){ if (s && s.offsetTop <= pos) active = i; });
+  navLinks.forEach(function(a, i){ if (navSections[i]) a.classList.toggle("active", i === active); });
+}
+window.addEventListener("scroll", syncNav, { passive: true });
+syncNav();
 
 /* ---- Scroll fade-in ---- */
 var io = new IntersectionObserver(function(entries){
